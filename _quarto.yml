@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "NCSP methods class website"
+  author: "TPH"
+  date: "5/1/2026"
+  search: true
+  cover-image: img/lkh_flying.png
+  repo-url: https://github.com/hhcr-ncsp/main 
+  repo-actions: [edit]
+  site-url: https://hhcr-ncsp.github.io/
+  sidebar:
+    collapse-level: 2
+    pinned: true
+  chapters:
+    - index.qmd
+execute:
+  freeze: auto
+code-fold: true
+number-depth: 3
+toc-depth: 5
+reference-location: margin
+format:
+  html:
+    html-math-method: 
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    theme: 
+      - cosmo
+      - custom_doc.scss
+    grid:
+      sidebar-width: 210px
+      body-width: 900px
+
+
+
