@@ -8,5 +8,15 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Datafiles",
+    "section": "",
+    "text": "5.1.dta\nmus10data.dta\nrhc_calss_tph.dta",
+    "crumbs": [
+      "Datafiles"
+    ]
   }
 ]

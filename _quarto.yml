@@ -16,6 +16,7 @@ book:
     pinned: true
   chapters:
     - index.qmd
+    - data.qmd
 execute:
   freeze: auto
 code-fold: true
