@@ -5,9 +5,9 @@ project:
 website:
   title: "NCSP methods class website"
   search: true
-  repo-url: https://github.com/hhcr-ncsp/main 
+  repo-url: https://github.com/tphofer/ncsp-hhcr/ 
   repo-actions: [edit]
-  site-url: https://hhcr-ncsp.github.io/
+  site-url: https://tphofer.github.io/ncsp-hhcr/
   sidebar:
     collapse-level: 2
     pinned: true
