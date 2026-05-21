@@ -1,5 +1,5 @@
 # Home {.unnumbered .hide-heading}
 
-This website is for resources and materials related to NCSP 710 and 711
+This website is for resources and materials related to HHCR 710 and 711
 ![testing](img/lkh_flying.png){width=30% fig-align="right"}
 
