@@ -1,0 +1,110 @@
+---
+title: "Left Heart Catheterization data"
+author: "SUPPORT trial"
+date: "2016-01-01"
+categories: [Causal I]
+---
+
+## Source 
+
+ICU data from SUPPORT trial.  
+As modified by TPH
+
+## Dataset
+
+[rhc_class_tph.dta](data/rhc_class_tph.dta)
+
+or use directly in code
+```
+use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta
+```
+
+## Dataset description
+
+### Features
+
+mortality, hospitalized patients, extensive sociodemographic and comorbidity data
+
+### Variables
+
+
+```
+Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta
+ Observations:         5,735                  
+    Variables:            66                  22 Feb 2025 12:46
+                                              (_dta has notes)
+--------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------
+id              int     %9.0g                 
+ptid            str5    %-9s                  Patient ID
+age             double  %10.0g                Age
+agecat          byte    %9.0g      agecat     Age (5 categories)
+sex             byte    %12.0g     sex        
+edu             double  %10.0g                Years of Education
+male            byte    %9.0g                 
+race            byte    %12.0g     race       Race (3 categories)
+income          byte    %12.0g     income     Income (4 categories)
+ninsclas        byte    %12.0g     ninsclas   Insurance type (6 category)
+sadmdte         int     %10.0g                study admission date
+lstctdte        int     %10.0g                date of last contact
+dschdte         int     %10.0g                hospital discharge date
+dthdte          int     %10.0g                date of death
+t3d30           byte    %12.0g                min{dthdte - sadmdte, 30}
+dth30           byte    %12.0g     yn         Outcome:Death within 30d
+dth60           byte    %9.0g                 Death within 60d
+death           byte    %12.0g     yn         death in followup (anytime)
+swang1          byte    %12.0g     yn         Treatement:RHC at <= 24 hours
+cat1            byte    %12.0g     cat1     * Primary disease category
+cat2            byte    %12.0g     cat2       Secondary disease category
+resp            byte    %12.0g     yn         Admit dx resp (up to 4 total)
+seps            byte    %12.0g     yn         Admit dx sepsis (up to 4 total)
+card            byte    %12.0g     yn         Admit dx card (up to 4 total)
+meta            byte    %12.0g     yn         Admit dx metabolic (up to 4 total)
+renal           byte    %12.0g     yn         Admit dx renal (up to 4 total)
+gastr           byte    %12.0g     yn         Admit dx gastr (up to 4 total)
+hema            byte    %12.0g     yn         Admit dx hema (up to 4 total)
+neuro           byte    %12.0g     yn         Admit dx neuro (up to 4 total)
+ortho           byte    %12.0g     yn         Admit dx ortho (up to 4 total)
+trauma          byte    %12.0g     yn         Admit dx trauma (up to 4 total)
+dnr1            byte    %12.0g     yn         DNR status day 1
+das2d3pc        double  %10.0g              * DASI ( Duke Activity Status Index)
+adld3pc         float   %9.0g               * ADLs lost @ 2 wks prior
+surv2md1        double  %10.0g                2M model survival prediction at day 1
+scoma1          byte    %12.0g                SUPPORT Coma Score based on Glasgow D1
+transhx         byte    %12.0g                Transfer (> 24 Hours) from Another Hospital
+ca              byte    %12.0g     ca         Cancer (3 catgory)
+resp1           double  %10.0g                respiration rate Day 1
+meanbp1         double  %10.0g                Mean Blood Pressure Day 1
+hrt1            int     %12.0g                heart rate Day 1
+temp1           double  %10.0g                temperature (celcius) Day 1
+wtkilo1         double  %10.0g                weight in kilograms
+urin1           double  %10.0g                Urine Output Day 1
+pafi1           double  %10.0g                PaO2/(.01*FiO2) Day 1
+aps1            int     %12.0g                Apache III score (w.o. Coma) Day 1
+wblc1           double  %10.0g                white blood cell count Day 1
+hema1           double  %10.0g                hematocrit Day 1
+sod1            int     %12.0g                serum sodium Day 1
+pot1            double  %10.0g                serum potassium Day 1
+crea1           double  %10.0g                serum creatinine Day 1
+alb1            double  %10.0g                albumin Day 1
+bili1           double  %10.0g                bilirubin Day 1
+ph1             double  %10.0g                serum ph (arterial) Day 1
+paco21          double  %10.0g                paco2 Day 1
+cardiohx        byte    %12.0g                cardio comorbidity
+chfhx           byte    %12.0g                chf comorbidity
+amihx           byte    %12.0g                ami comorbidity
+chrpulhx        byte    %12.0g                chrpul comorbidity
+renalhx         byte    %12.0g                renal comorbidity
+liverhx         byte    %12.0g                liver comorbidity
+gibledhx        byte    %12.0g                gibled comorbidity
+dementhx        byte    %12.0g                dement comorbidity
+psychhx         byte    %12.0g                psych comorbidity
+malighx         byte    %12.0g                malig comorbidity
+immunhx         byte    %12.0g                immun comorbidity
+                                            * indicated variables have notes
+--------------------------------------------------------------------------------------------------------------
+Sorted by: id
+
+```

@@ -1,0 +1,44 @@
+---
+title: "Synthetic CVD dataset"
+author: "TPH"
+date: "2023-09-13"
+categories: [Logistic regression]
+---
+
+## Source
+
+This is a simple synthetic datset of CV events by age, sex and smoking exposure.  It attempts to recreate historical data from the early days of smoking at the beginning of the 20th century when it was a new and trendy activity largely adopted by younger people.  Cigarettes were rapidly adopted by the young and [by 1920 over half of young men smoked](https://pubmed.ncbi.nlm.nih.gov/6577223/).
+
+## Dataset
+
+[cvd_data.dta](../../data/cvd_data.dta)
+
+or use directly in code
+```
+use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/cvd_data.dta
+```
+
+## Dataset description 
+
+### Features
+
+dichotomous, cardiology, historical, confounding
+
+### Variables
+
+```
+Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/cvd_data.dta
+ Observations:         1,000                  Written by R.              
+    Variables:             4                  
+--------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------
+age             double  %9.0g                 age
+male            long    %9.0g                 male
+smoke           double  %9.0g                 smoke
+cvd_event       double  %9.0g                 cvd_event
+--------------------------------------------------------------------------------------------------------------
+Sorted by: 
+
+```

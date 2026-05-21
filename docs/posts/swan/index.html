@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="TPH">
-<meta name="dcterms.date" content="2026-05-21">
+<meta name="author" content="SUPPORT trial">
+<meta name="dcterms.date" content="2016-01-01">
 
-<title>Datafiles – NCSP methods class website</title>
+<title>Left Heart Catheterization data – NCSP methods class website</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,24 +28,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-37a8cdd4984d236c9912f813eb5f4335.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-37a8cdd4984d236c9912f813eb5f4335.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,65 +71,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -144,7 +84,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data.html">Datafiles</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      NCSP methods class website
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +101,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">NCSP methods class website</a> 
+      <a href="../../">NCSP methods class website</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -171,13 +113,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datafiles</span></a>
   </div>
 </li>
@@ -187,15 +129,30 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Qm9vdHN0cmFwLVNpbXVsYXRpb24=">Bootstrap-Simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2F1c2FsJTIwSQ==">Causal I <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TG9naXN0aWMlMjByZWdyZXNzaW9u">Logistic regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TXVsdGlsZXZlbCUyMEk=">Multilevel I <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#source" id="toc-source" class="nav-link active" data-scroll-target="#source">Source</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset description</a>
+  <ul>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/hhcr-ncsp/main/edit/main/posts/swan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Datafiles</h1>
-</div>
+<h1 class="title">Left Heart Catheterization data</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Causal I</div>
+  </div>
+  </div>
 
 
 
@@ -204,14 +161,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>TPH </p>
+             <p>SUPPORT trial </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 21, 2026</p>
+      <p class="date">January 1, 2016</p>
     </div>
   </div>
   
@@ -223,166 +180,109 @@ window.Quarto = {
 </header>
 
 
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<p>ICU data from SUPPORT trial.<br>
+As modified by TPH</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p><a href="data/rhc_class_tph.dta">rhc_class_tph.dta</a></p>
+<p>or use directly in code</p>
+<pre><code>use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta</code></pre>
+</section>
+<section id="dataset-description" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>
+<section id="features" class="level3">
+<h3 class="anchored" data-anchor-id="features">Features</h3>
+<p>mortality, hospitalized patients, extensive sociodemographic and comorbidity data</p>
+</section>
+<section id="variables" class="level3">
+<h3 class="anchored" data-anchor-id="variables">Variables</h3>
+<pre><code>Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta
+ Observations:         5,735                  
+    Variables:            66                  22 Feb 2025 12:46
+                                              (_dta has notes)
+--------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------
+id              int     %9.0g                 
+ptid            str5    %-9s                  Patient ID
+age             double  %10.0g                Age
+agecat          byte    %9.0g      agecat     Age (5 categories)
+sex             byte    %12.0g     sex        
+edu             double  %10.0g                Years of Education
+male            byte    %9.0g                 
+race            byte    %12.0g     race       Race (3 categories)
+income          byte    %12.0g     income     Income (4 categories)
+ninsclas        byte    %12.0g     ninsclas   Insurance type (6 category)
+sadmdte         int     %10.0g                study admission date
+lstctdte        int     %10.0g                date of last contact
+dschdte         int     %10.0g                hospital discharge date
+dthdte          int     %10.0g                date of death
+t3d30           byte    %12.0g                min{dthdte - sadmdte, 30}
+dth30           byte    %12.0g     yn         Outcome:Death within 30d
+dth60           byte    %9.0g                 Death within 60d
+death           byte    %12.0g     yn         death in followup (anytime)
+swang1          byte    %12.0g     yn         Treatement:RHC at &lt;= 24 hours
+cat1            byte    %12.0g     cat1     * Primary disease category
+cat2            byte    %12.0g     cat2       Secondary disease category
+resp            byte    %12.0g     yn         Admit dx resp (up to 4 total)
+seps            byte    %12.0g     yn         Admit dx sepsis (up to 4 total)
+card            byte    %12.0g     yn         Admit dx card (up to 4 total)
+meta            byte    %12.0g     yn         Admit dx metabolic (up to 4 total)
+renal           byte    %12.0g     yn         Admit dx renal (up to 4 total)
+gastr           byte    %12.0g     yn         Admit dx gastr (up to 4 total)
+hema            byte    %12.0g     yn         Admit dx hema (up to 4 total)
+neuro           byte    %12.0g     yn         Admit dx neuro (up to 4 total)
+ortho           byte    %12.0g     yn         Admit dx ortho (up to 4 total)
+trauma          byte    %12.0g     yn         Admit dx trauma (up to 4 total)
+dnr1            byte    %12.0g     yn         DNR status day 1
+das2d3pc        double  %10.0g              * DASI ( Duke Activity Status Index)
+adld3pc         float   %9.0g               * ADLs lost @ 2 wks prior
+surv2md1        double  %10.0g                2M model survival prediction at day 1
+scoma1          byte    %12.0g                SUPPORT Coma Score based on Glasgow D1
+transhx         byte    %12.0g                Transfer (&gt; 24 Hours) from Another Hospital
+ca              byte    %12.0g     ca         Cancer (3 catgory)
+resp1           double  %10.0g                respiration rate Day 1
+meanbp1         double  %10.0g                Mean Blood Pressure Day 1
+hrt1            int     %12.0g                heart rate Day 1
+temp1           double  %10.0g                temperature (celcius) Day 1
+wtkilo1         double  %10.0g                weight in kilograms
+urin1           double  %10.0g                Urine Output Day 1
+pafi1           double  %10.0g                PaO2/(.01*FiO2) Day 1
+aps1            int     %12.0g                Apache III score (w.o. Coma) Day 1
+wblc1           double  %10.0g                white blood cell count Day 1
+hema1           double  %10.0g                hematocrit Day 1
+sod1            int     %12.0g                serum sodium Day 1
+pot1            double  %10.0g                serum potassium Day 1
+crea1           double  %10.0g                serum creatinine Day 1
+alb1            double  %10.0g                albumin Day 1
+bili1           double  %10.0g                bilirubin Day 1
+ph1             double  %10.0g                serum ph (arterial) Day 1
+paco21          double  %10.0g                paco2 Day 1
+cardiohx        byte    %12.0g                cardio comorbidity
+chfhx           byte    %12.0g                chf comorbidity
+amihx           byte    %12.0g                ami comorbidity
+chrpulhx        byte    %12.0g                chrpul comorbidity
+renalhx         byte    %12.0g                renal comorbidity
+liverhx         byte    %12.0g                liver comorbidity
+gibledhx        byte    %12.0g                gibled comorbidity
+dementhx        byte    %12.0g                dement comorbidity
+psychhx         byte    %12.0g                psych comorbidity
+malighx         byte    %12.0g                malig comorbidity
+immunhx         byte    %12.0g                immun comorbidity
+                                            * indicated variables have notes
+--------------------------------------------------------------------------------------------------------------
+Sorted by: id
+</code></pre>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TXVsdGlsZXZlbCUyMEk=" data-listing-date-sort="1777694400000" data-listing-file-modified-sort="1779384309833" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="753">
-<div class="thumbnail"><a href="./posts/uk-school/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/uk-school/index.html" class="no-external">UK School Testing Data</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TXVsdGlsZXZlbCUyMEk='); return false;">Multilevel I</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/uk-school/index.html" class="no-external">
-Educational scores, social class and school from Introduction to Multilevel Modelling Stata Practical - University of Bristol
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/uk-school/index.html" class="no-external">
-<div class="listing-date">
-May 2, 2026
-</div>
-<div class="listing-author">
-TPH
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TG9naXN0aWMlMjByZWdyZXNzaW9u" data-listing-date-sort="1694577600000" data-listing-file-modified-sort="1779383748390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="325">
-<div class="thumbnail"><a href="./posts/cvd-synth-data/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/cvd-synth-data/index.html" class="no-external">Synthetic CVD dataset</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9naXN0aWMlMjByZWdyZXNzaW9u'); return false;">Logistic regression</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/cvd-synth-data/index.html" class="no-external">
-This is a simple synthetic datset of CV events by age, sex and smoking exposure. It attempts to recreate historical data from the early days of smoking at the beginning of…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/cvd-synth-data/index.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2023
-</div>
-<div class="listing-author">
-TPH
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Q2F1c2FsJTIwSQ==" data-listing-date-sort="1515906000000" data-listing-file-modified-sort="1779383875219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="932">
-<div class="thumbnail"><a href="./posts/low-bw/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/low-bw/index.html" class="no-external">Low birthweight and smoking</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSQ=='); return false;">Causal I</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/low-bw/index.html" class="no-external">
-Excerpt from Cattaneo (2010) Journal of Econometrics 155: 138-154
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/low-bw/index.html" class="no-external">
-<div class="listing-date">
-Jan 14, 2018
-</div>
-<div class="listing-author">
-Cattaneo
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2F1c2FsJTIwSQ==" data-listing-date-sort="1451624400000" data-listing-file-modified-sort="1779383868324" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2362">
-<div class="thumbnail"><a href="./posts/swan/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/swan/index.html" class="no-external">Left Heart Catheterization data</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSQ=='); return false;">Causal I</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/swan/index.html" class="no-external">
-ICU data from SUPPORT trial.<br>
-As modified by TPH
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/swan/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2016
-</div>
-<div class="listing-author">
-SUPPORT trial
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Qm9vdHN0cmFwLVNpbXVsYXRpb24=" data-listing-date-sort="1009861200000" data-listing-file-modified-sort="1779381923622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1124">
-<div class="thumbnail"><a href="./posts/doc-visits/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/doc-visits/index.html" class="no-external">Doctor Visit Data</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Qm9vdHN0cmFwLVNpbXVsYXRpb24='); return false;">Bootstrap-Simulation</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/doc-visits/index.html" class="no-external">
-This is Doctor visit data from Cameron &amp; Trivedi Microeconometrics Using Stata, Second Edition using data from the 2002 Medical Expenditure Panel Survey age 24-65, private…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/doc-visits/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2002
-</div>
-<div class="listing-author">
-Cameron &amp; Trivedi
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -788,4 +688,4 @@ Cameron &amp; Trivedi
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/hhcr-ncsp/main/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/hhcr-ncsp/main/edit/main/posts/swan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

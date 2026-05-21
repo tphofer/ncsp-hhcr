@@ -1,11 +1,9 @@
-# Datafiles {.unnumbered}
-
-
-
-[5.1.dta](data/5.1.dta)
-
-
-[mus10data.dta](data/mus10data.dta)
-
-[rhc_calss_tph.dta](data/rhc_class_tph.dta)
+---
+title: "Datafiles"
+listing:
+    contents: posts
+    sort: "date desc"
+    type: default
+    categories: true
+---
 

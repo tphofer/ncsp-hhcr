@@ -1,27 +1,26 @@
 project:
-  type: book
+  type: website
   output-dir: docs
 
-book:
+website:
   title: "NCSP methods class website"
-  author: "TPH"
-  date: "5/1/2026"
   search: true
-  cover-image: img/lkh_flying.png
   repo-url: https://github.com/hhcr-ncsp/main 
   repo-actions: [edit]
   site-url: https://hhcr-ncsp.github.io/
   sidebar:
     collapse-level: 2
     pinned: true
-  chapters:
-    - index.qmd
-    - data.qmd
-execute:
-  freeze: auto
+    contents:
+      - index.qmd
+      - data.qmd
+author: "TPH"
+date: "today"
 code-fold: true
 number-depth: 3
+toc: true
 toc-depth: 5
+toc-location: right
 reference-location: margin
 format:
   html:

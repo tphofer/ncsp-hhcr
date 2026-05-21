@@ -1,0 +1,80 @@
+---
+title: "UK School Testing Data"
+author: "TPH"
+date: "2026-05-02"
+categories: [Multilevel I]
+---
+
+## Source
+
+Educational scores, social class and school from Introduction to Multilevel Modelling Stata Practical - University of Bristol
+
+[source document](https://www.bristol.ac.uk/cmm/media/learning/lemma/5-stata-sample.pdf)
+
+__University of Bristol acknowledgement__
+We are grateful to Linda Croxford (Centre for Educational Sociology, University of Edinburgh) for
+providing us with these data. The dataset was constructed as part of an ESRC-funded project on
+Education and Youth Transitions in England, Wales and Scotland 1984-2002.
+Further analyses of the data can be found in Croxford, L. and Raffe, D. (2006) “Education Markets
+and Social Class Inequality: A Comparison of Trends in England, Scotland and Wales”. In R. Teese
+(Ed.) Inequality Revisited. Berlin: Springer.
+
+## Dataset
+
+Download: [5.1.dta](../../data/5.1.dta)
+
+or use directly in code
+```
+use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/5.1.dta
+```
+
+## Dataset description
+
+### Features
+
+There are 33,988 students in 508 schools.
+
+hierarchical data, continuous outcome, education
+
+Scores are based on GSCE subject-based examinations,
+typically taken in up to ten subjects in England and Wales and up to eight subjects in
+Scotland. Each subject is separately certificated, and graded on a scale from A* to G
+(GCSEs) or 1 to 7 (Standard grades). For the analyses below we have calculated an
+attainment score by allocating 7 points for an A or 1, 6 points for B or 2, 5 points for
+C or 3, and so on. 
+
+### Variables
+
+| Variable name | Description and codes |
+| :--- | :--- |
+| caseid | Anonymised student identifier |
+| schoolid | Anonymised school identifier |
+| score | Point score calculated from awards in Standard grades taken at <br> age 16. Scores range from 0 to 75, with a higher score indicating <br> a higher attainment |
+| cohort90 | The sample includes the following cohorts: 1984, 1986, 1988, 1990, 1996 and 1998. The cohort90 variable is calculated by subtracting 1990 from each value. Thus values range from - 6 (corresponding to 1984) to $8(1998)$, with 1990 coded as zero |
+| female | Sex of student (1 = female, $0=$ male) |
+| sclass | Social class, defined as the higher class of mother or father (1 = managerial and professional, $2=$ intermediate, $3=$ working, $4=$ unclassified) |
+| schtype | School type, distinguishing independent schools from statefunded schools ( $1=$ independent, $0=$ state-funded) |
+| schurban | Urban-rural classification of school (1 = urban, 0 = town or rural) |
+| schdenom | School denomination (1 = Roman Catholic, $0=$ nondenominational) |
+
+```text
+Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/5.1.dta
+ Observations:        33,988                  
+    Variables:             9                  30 Nov 2009 16:28
+--------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------
+caseid          float   %9.0g                 Case ID
+schoolid        int     %9.0g                 School ID
+score           byte    %9.0g                 Score
+cohort90        byte    %9.0g                 Cohort
+female          byte    %9.0g                 Female
+sclass          byte    %9.0g                 Social class
+schtype         byte    %9.0g                 School type
+schurban        byte    %9.0g                 School urban-rural classification
+schdenom        byte    %9.0g                 School denomination
+--------------------------------------------------------------------------------------------------------------
+Sorted by: 
+
+```

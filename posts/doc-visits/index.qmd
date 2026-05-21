@@ -1,0 +1,69 @@
+---
+title: "Doctor Visit Data"
+author: "Cameron & Trivedi"
+date: "2002-01-01"
+categories: [Bootstrap-Simulation]
+---
+
+## Source
+
+This is Doctor visit data from Cameron & Trivedi Microeconometrics Using Stata, Second Edition 
+using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sector not self-employed, excludes public insurance Medicare/Medicaid
+
+## Dataset
+
+[mus10data.dta](../../data/mus10data.dta)
+
+or use directly in code
+```
+use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/mus10data.dta
+```
+
+## Dataset description 
+
+### Features
+
+count, healthcare utilization, longitudinal
+
+### Variables
+
+```text
+Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/mus10data.dta
+ Observations:        30,124                  
+    Variables:            28                  28 Feb 2007 16:04
+--------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------
+educ            byte    %8.0g                 Years of schooling
+docvis          int     %8.0g                 number of doctor visits
+age             float   %9.0g                 Age in years / 10
+income          float   %9.0g                 Income in $ / 1000
+female          byte    %8.0g                 = 1 if female
+black           byte    %8.0g                 = 1 if black
+hispanic        byte    %8.0g                 = 1 if hispanic
+married         byte    %8.0g                 = 1 if married
+noreast         byte    %8.0g                 = 1 if Northeast
+midwest         byte    %8.0g                 = 1 if Midwest
+south           byte    %8.0g                 = 1 if South
+msa             byte    %8.0g                 = 1 if metropolitan statistical area
+firmsize        float   %9.0g                 Size of firm/100
+vegood          byte    %8.0g                 = 1 if very good health
+good            byte    %8.0g                 = 1 if good health
+physlim         byte    %8.0g                 = 1 if physical limitation
+fairpoor        byte    %8.0g                 = 1 if fair or poor health
+age2            float   %9.0g                 = age x age
+year97          byte    %8.0g                 = 1 if year 1997
+year98          byte    %8.0g                 = 1 if year 1998
+year99          byte    %8.0g                 = 1 if year 1999
+year00          byte    %8.0g                 = 1 if year 2000
+year01          byte    %8.0g                 = 1 if year 2001
+year02          byte    %8.0g                 = 1 if year 2003
+famsize         byte    %8.0g                 Family size
+injury          byte    %8.0g                 = 1 if an injury
+private         byte    %8.0g                 = 1 if private insurance
+chronic         byte    %8.0g                 = 1 if a chronic condition
+--------------------------------------------------------------------------------------------------------------
+Sorted by: 
+```
+
