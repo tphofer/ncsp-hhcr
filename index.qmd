@@ -1,5 +1,9 @@
 # Home {.unnumbered .hide-heading}
 
 This website is for resources and materials related to HHCR 710 and 711
-![testing](img/lkh_flying.png){width=30% fig-align="right"}
+
+::: {.column-margin}
+![Learning statistics may require pushing yourself to try things you have previously chosen to avoid.](img/lkh_flying.png){#fig-leap fig-align="right" .lightbox}
+:::
+
 
