@@ -198,19 +198,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
-<pre><code>Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/cvd_data.dta
- Observations:         1,000                  Written by R.              
-    Variables:             4                  
---------------------------------------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
---------------------------------------------------------------------------------------------------------------
-age             double  %9.0g                 age
-male            long    %9.0g                 male
-smoke           double  %9.0g                 smoke
-cvd_event       double  %9.0g                 cvd_event
---------------------------------------------------------------------------------------------------------------
-Sorted by: 
+<pre><code>. codebook,compact
+
+Variable    Obs Unique    Mean  Min  Max  Label
+-------------------------------------------------------------------------------------------------------------------------
+age        1000     61  47.438   25   86  age
+male       1000      2      .6    0    1  male
+smoke      1000      2    .327    0    1  smoke
+cvd_event  1000      2    .217    0    1  cvd_event
+-------------------------------------------------------------------------------------------------------------------------
 </code></pre>
 
 

@@ -188,38 +188,34 @@ ul.task-list li input[type="checkbox"] {
 <section id="variables" class="level2">
 <h2 class="anchored" data-anchor-id="variables">Variables</h2>
 <pre><code>Contains data from https://www.stata-press.com/data/r16/cattaneo2.dta
- Observations:         4,642                  Excerpt from Cattaneo (2010) Journal of Econometrics 155:
-                                                138-154
-    Variables:            23                  14 Jan 2018 09:49
---------------------------------------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
---------------------------------------------------------------------------------------------------------------
-bweight         int     %9.0g                 infant birthweight (grams)
-mmarried        byte    %10.0g     mmarried   1 if mother married
-mhisp           byte    %9.0g                 1 if mother hispanic
-fhisp           byte    %9.0g                 1 if father hispanic
-foreign         byte    %9.0g                 1 if mother born abroad
-alcohol         byte    %9.0g                 1 if alcohol consumed during pregnancy
-deadkids        byte    %9.0g                 previous births where newborn died
-mage            byte    %9.0g                 mother's age
-medu            byte    %9.0g                 mother's education attainment
-fage            byte    %9.0g                 father's age
-fedu            byte    %9.0g                 father's education attainment
-nprenatal       byte    %9.0g                 number of prenatal care visits
-monthslb        int     %9.0g                 months since last birth
-order           byte    %9.0g                 order of birth of the infant
-msmoke          byte    %27.0g     smoke2     cigarettes smoked during pregnancy
-mbsmoke         byte    %9.0g      mbsmoke    1 if mother smoked
-mrace           byte    %9.0g                 1 if mother is white
-frace           byte    %9.0g                 1 if father is white
-prenatal        byte    %9.0g                 trimester of first prenatal care visit
-birthmonth      byte    %9.0g                 month of birth
-lbweight        byte    %9.0g                 1 if low birthweight baby
-fbaby           byte    %9.0g      YesNo      1 if first baby
-prenatal1       byte    %9.0g      YesNo      1 if first prenatal visit in 1 trimester
---------------------------------------------------------------------------------------------------------------
-Sorted by: 
+. codebook,compact
+
+Variable     Obs Unique      Mean  Min   Max  Label
+-------------------------------------------------------------------------------------------------------------------------
+bweight     4642    732   3361.68  340  5500  infant birthweight (grams)
+mmarried    4642      2  .6996984    0     1  1 if mother married
+mhisp       4642      2  .0340371    0     1  1 if mother hispanic
+fhisp       4642      2   .037053    0     1  1 if father hispanic
+foreign     4642      2  .0534252    0     1  1 if mother born abroad
+alcohol     4642      2  .0323137    0     1  1 if alcohol consumed during pregnancy
+deadkids    4642      2   .259371    0     1  previous births where newborn died
+mage        4642     33  26.50452   13    45  mother's age
+medu        4642     18  12.68957    0    17  mother's education attainment
+fage        4642     46  27.26713    0    60  father's age
+fedu        4642     17   12.3072    0    17  father's education attainment
+nprenatal   4642     30  10.75808    0    40  number of prenatal care visits
+monthslb    4642    173  23.07497    0   272  months since last birth
+order       4642     12  1.892072    0    12  order of birth of the infant
+msmoke      4642      4  .3996122    0     3  cigarettes smoked during pregnancy
+mbsmoke     4642      2  .1861267    0     1  1 if mother smoked
+mrace       4642      2   .840586    0     1  1 if mother is white
+frace       4642      2  .8136579    0     1  1 if father is white
+prenatal    4642      4  1.201853    0     3  trimester of first prenatal care visit
+birthmonth  4642     12  6.540069    1    12  month of birth
+lbweight    4642      2  .0603188    0     1  1 if low birthweight baby
+fbaby       4642      2  .4379578    0     1  1 if first baby
+prenatal1   4642      2  .8013787    0     1  1 if first prenatal visit in 1 trimester
+-------------------------------------------------------------------------------------------------------------------------
 </code></pre>
 
 

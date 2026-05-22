@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="SUPPORT trial">
-<meta name="dcterms.date" content="2016-01-01">
+<meta name="author" content="CMS">
+<meta name="dcterms.date" content="2008-01-01">
 
-<title>Left Heart Catheterization data – NCSP methods class website</title>
+<title>CMS Synthetic datasets – NCSP methods class website</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -141,16 +141,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/swan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/cms-synth/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Left Heart Catheterization data</h1>
+<h1 class="title">CMS Synthetic datasets</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Causal I</div>
+    <div class="quarto-category">Data Management</div>
   </div>
   </div>
 
@@ -161,14 +161,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>SUPPORT trial </p>
+             <p>CMS </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2016</p>
+      <p class="date">January 1, 2008</p>
     </div>
   </div>
   
@@ -182,94 +182,91 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source">Source</h2>
-<p>ICU data from SUPPORT trial.<br>
-As modified by TPH</p>
+<p>CMS started to provide sythetic datasets so that people can familiarize themselves working with CMS data.</p>
+<p>On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF) to be used by data entrepreneurs for writing programs and developing applications or research protocols that can be applied to CMS claims data. This public release will aid entrepreneurs and researchers in understanding the complexity and abundance of information in these data. The DE- SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland- based research, evaluation and technical assistance.</p>
+<p>All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.</p>
+<p>To date, this is still the only release available</p>
 </section>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p><a href="data/rhc_class_tph.dta">rhc_class_tph.dta</a></p>
-<p>or use directly in code</p>
-<pre><code>use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta</code></pre>
+<p>Available at <a href="https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files/cms-2008-2010-data-entrepreneurs-synthetic-public-use-file-de-synpuf">this CMS website</a></p>
 </section>
 <section id="dataset-description" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>
+<p><a href="https://www.cms.gov/research-statistics-data-and-systems/downloadable-public-use-files/synpufs/downloads/synpuf_dug.pdf">Data documentation</a></p>
+<p>The DE-SynPUF is based from a 5% sample of enrolled Medicare beneficiaries in 2008. It includes three years of claims (2008, 2009, and 2010) for the beneficiaries and four types of claims (Inpatient, Outpatient, Carrier, PDE – Prescription Drug Event) in addition to a beneficiary summary file for each year.</p>
+<p>Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample). All claims for a particular beneficiary are in samples with the same number (i.e.&nbsp;all beneficiaries in sample 1 have all their claims in the sample 1 files). This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.</p>
+<p><strong>Sample 1 files</strong> (.csv files)</p>
+<p>DE1.0 Sample 1 2008 Beneficiary Summary File (ZIP)<br>
+DE1.0 Sample 1 2008-2010 Carrier Claims 1<br>
+DE1.0 Sample 1 2008-2010 Carrier Claims 2<br>
+DE1.0 Sample 1 2008-2010 Inpatient Claims (ZIP)<br>
+DE1.0 Sample 1 2008-2010 Outpatient Claims (ZIP)<br>
+DE1.0 Sample 1 2008-2010 Prescription Drug Events<br>
+DE1.0 Sample 1 2009 Beneficiary Summary File (ZIP)<br>
+DE1.0 Sample 1 2010 Beneficiary Summary File (ZIP)</p>
 <section id="features" class="level3">
 <h3 class="anchored" data-anchor-id="features">Features</h3>
-<p>mortality, hospitalized patients, extensive sociodemographic and comorbidity data</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">DE-SynPUF</th>
+<th style="text-align: left;">Unit of record</th>
+<th style="text-align: left;">Number of Records 2008</th>
+<th style="text-align: left;">Number of Records 2009</th>
+<th style="text-align: left;">Number of Records 2010</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Beneficiary Summary</td>
+<td style="text-align: left;">Beneficiary</td>
+<td style="text-align: left;">2,326,856</td>
+<td style="text-align: left;">2,291,320</td>
+<td style="text-align: left;">2,255,098</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Inpatient Claims</td>
+<td style="text-align: left;">claim</td>
+<td style="text-align: left;">547,800</td>
+<td style="text-align: left;">504,941</td>
+<td style="text-align: left;">280,081</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Outpatient Claims</td>
+<td style="text-align: left;">claim</td>
+<td style="text-align: left;">5,673,808</td>
+<td style="text-align: left;">6,519,340</td>
+<td style="text-align: left;">3,633,839</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carrier Claims</td>
+<td style="text-align: left;">claim</td>
+<td style="text-align: left;">34,276,324</td>
+<td style="text-align: left;">37,304,993</td>
+<td style="text-align: left;">23,282,135</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prescription Drug Events (PDE)</td>
+<td style="text-align: left;">event</td>
+<td style="text-align: left;">39,927,827</td>
+<td style="text-align: left;">43,379,293</td>
+<td style="text-align: left;">27,778,849</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Claim counts for 2010 are lower due to attrition from death, and some effects of disclosure treatment.</p>
 </section>
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
-<pre><code>. codebook,compact
-
-Variable    Obs Unique      Mean       Min       Max  Label
----------------------------------------------------------------------------------------------------------
-id         5735   5735      2868         1      5735  
-ptid       5735   5735         .         .         .  Patient ID
-age        5735   5036  61.37591    18.042   101.848  Age
-agecat     5735      5  2.809416         1         5  Age (5 categories)
-sex        5735      2  1.556582         1         2  
-edu        5735     42  11.67846         0        30  Years of Education
-male       5735      2  .5565824         0         1  
-race       5735      3   1.34612         1         4  Race (3 categories)
-income     5735      4   1.75048         1         4  Income (4 categories)
-ninsclas   5735      6  3.331125         1         6  Insurance type (6 category)
-sadmdte    5735   1401  11638.69     10754     12441  study admission date
-lstctdte   5735    932  11781.26     10756     12644  date of last contact
-dschdte    5734   1486  11660.05     10757     12560  hospital discharge date
-dthdte     3722   1592  11753.87     10757     12783  date of death
-t3d30      5735     29  23.61221         2        30  min{dthdte - sadmdte, 30}
-dth30      5735      2  .3344377         0         1  Outcome:Death within 30d
-dth60      5735      2  .4034874         0         1  Death within 60d
-death      5735      2  .6489974         0         1  death in followup (anytime)
-swang1     5735      2  .3808195         0         1  Treatement:RHC at &lt;= 24 hours
-cat1       5735      9  3.905493         1         9  Primary disease category
-cat2       5735      7  9.648649         4        10  Secondary disease category
-resp       5735      2  .3684394         0         1  Admit dx resp (up to 4 total)
-seps       5735      2  .1797733         0         1  Admit dx sepsis (up to 4 total)
-card       5735      2  .3367044         0         1  Admit dx card (up to 4 total)
-meta       5735      2  .0462075         0         1  Admit dx metabolic (up to 4 total)
-renal      5735      2  .0514385         0         1  Admit dx renal (up to 4 total)
-gastr      5735      2  .1642546         0         1  Admit dx gastr (up to 4 total)
-hema       5735      2  .0617262         0         1  Admit dx hema (up to 4 total)
-neuro      5735      2   .120837         0         1  Admit dx neuro (up to 4 total)
-ortho      5735      2  .0012206         0         1  Admit dx ortho (up to 4 total)
-trauma     5735      2  .0090671         0         1  Admit dx trauma (up to 4 total)
-dnr1       5735      2  .1140366         0         1  DNR status day 1
-das2d3pc   5735   1023  20.49689        11        33  DASI ( Duke Activity Status Index)
-adld3pc    5735   1139  1.571261         0         7  ADLs lost @  2 wks prior
-surv2md1   5735   1522  .5924501         0  .9619999  2M model survival prediction at day 1
-scoma1     5735     11  21.00418         0       100  SUPPORT Coma Score based on Glasgow D1
-transhx    5735      2  .1154316         0         1  Transfer (&gt; 24 Hours) from Another Hospital
-ca         5735      3    1.3034         1         3  Cancer (3 catgory)
-resp1      5735     72  28.09212         0       100  respiration rate Day 1
-meanbp1    5735    178  78.52005         0       259  Mean Blood Pressure Day 1
-hrt1       5735    189  115.1789         0       250  heart rate Day 1
-temp1      5735    118  37.61836        27        43  temperature (celcius) Day 1
-wtkilo1    5735    922  67.82782         0       244  weight in kilograms
-urin1      2707   1440  2192.454         0      9000  Urine Output Day 1
-pafi1      5735   1342  222.2737  11.59961     937.5  PaO2/(.01*FiO2) Day 1
-aps1       5735    123  54.66765         3       147  Apache III score (w.o. Coma) Day 1
-wblc1      5735    520  15.64516         0       192  white blood cell count Day 1
-hema1      5735    450  31.86548         2   66.1875  hematocrit Day 1
-sod1       5735     73   136.769       101       178  serum sodium Day 1
-pot1       5735     81  4.066693  1.099854  11.89844  serum potassium Day 1
-crea1      5735    148  2.133017  .0999908  25.09766  serum creatinine Day 1
-alb1       5735     57  3.092743  .2999878        29  albumin Day 1
-bili1      5735    266  2.267067  .0999908  58.19531  bilirubin Day 1
-ph1        5735     96  7.388413  6.579102  7.769531  serum ph (arterial) Day 1
-paco21     5735    266  38.74897         1       156  paco2 Day 1
-cardiohx   5735      2  .1766347         0         1  cardio comorbidity
-chfhx      5735      2  .1780296         0         1  chf comorbidity
-amihx      5735      2  .0348736         0         1  ami comorbidity
-chrpulhx   5735      2  .1898867         0         1  chrpul comorbidity
-renalhx    5735      2  .0444638         0         1  renal comorbidity
-liverhx    5735      2  .0699215         0         1  liver comorbidity
-gibledhx   5735      2  .0322581         0         1  gibled comorbidity
-dementhx   5735      2  .0983435         0         1  dement comorbidity
-psychhx    5735      2   .067306         0         1  psych comorbidity
-malighx    5735      2  .2294682         0         1  malig comorbidity
-immunhx    5735      2  .2690497         0         1  immun comorbidity
-----------------------------------------------------------------------------------------------------</code></pre>
+<p>Vary by file</p>
 
 
 </section>
@@ -681,4 +678,4 @@ immunhx    5735      2  .2690497         0         1  immun comorbidity
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/swan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/cms-synth/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

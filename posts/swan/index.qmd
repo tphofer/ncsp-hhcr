@@ -29,82 +29,75 @@ mortality, hospitalized patients, extensive sociodemographic and comorbidity dat
 
 
 ```
-Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta
- Observations:         5,735                  
-    Variables:            66                  22 Feb 2025 12:46
-                                              (_dta has notes)
---------------------------------------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
---------------------------------------------------------------------------------------------------------------
-id              int     %9.0g                 
-ptid            str5    %-9s                  Patient ID
-age             double  %10.0g                Age
-agecat          byte    %9.0g      agecat     Age (5 categories)
-sex             byte    %12.0g     sex        
-edu             double  %10.0g                Years of Education
-male            byte    %9.0g                 
-race            byte    %12.0g     race       Race (3 categories)
-income          byte    %12.0g     income     Income (4 categories)
-ninsclas        byte    %12.0g     ninsclas   Insurance type (6 category)
-sadmdte         int     %10.0g                study admission date
-lstctdte        int     %10.0g                date of last contact
-dschdte         int     %10.0g                hospital discharge date
-dthdte          int     %10.0g                date of death
-t3d30           byte    %12.0g                min{dthdte - sadmdte, 30}
-dth30           byte    %12.0g     yn         Outcome:Death within 30d
-dth60           byte    %9.0g                 Death within 60d
-death           byte    %12.0g     yn         death in followup (anytime)
-swang1          byte    %12.0g     yn         Treatement:RHC at <= 24 hours
-cat1            byte    %12.0g     cat1     * Primary disease category
-cat2            byte    %12.0g     cat2       Secondary disease category
-resp            byte    %12.0g     yn         Admit dx resp (up to 4 total)
-seps            byte    %12.0g     yn         Admit dx sepsis (up to 4 total)
-card            byte    %12.0g     yn         Admit dx card (up to 4 total)
-meta            byte    %12.0g     yn         Admit dx metabolic (up to 4 total)
-renal           byte    %12.0g     yn         Admit dx renal (up to 4 total)
-gastr           byte    %12.0g     yn         Admit dx gastr (up to 4 total)
-hema            byte    %12.0g     yn         Admit dx hema (up to 4 total)
-neuro           byte    %12.0g     yn         Admit dx neuro (up to 4 total)
-ortho           byte    %12.0g     yn         Admit dx ortho (up to 4 total)
-trauma          byte    %12.0g     yn         Admit dx trauma (up to 4 total)
-dnr1            byte    %12.0g     yn         DNR status day 1
-das2d3pc        double  %10.0g              * DASI ( Duke Activity Status Index)
-adld3pc         float   %9.0g               * ADLs lost @ 2 wks prior
-surv2md1        double  %10.0g                2M model survival prediction at day 1
-scoma1          byte    %12.0g                SUPPORT Coma Score based on Glasgow D1
-transhx         byte    %12.0g                Transfer (> 24 Hours) from Another Hospital
-ca              byte    %12.0g     ca         Cancer (3 catgory)
-resp1           double  %10.0g                respiration rate Day 1
-meanbp1         double  %10.0g                Mean Blood Pressure Day 1
-hrt1            int     %12.0g                heart rate Day 1
-temp1           double  %10.0g                temperature (celcius) Day 1
-wtkilo1         double  %10.0g                weight in kilograms
-urin1           double  %10.0g                Urine Output Day 1
-pafi1           double  %10.0g                PaO2/(.01*FiO2) Day 1
-aps1            int     %12.0g                Apache III score (w.o. Coma) Day 1
-wblc1           double  %10.0g                white blood cell count Day 1
-hema1           double  %10.0g                hematocrit Day 1
-sod1            int     %12.0g                serum sodium Day 1
-pot1            double  %10.0g                serum potassium Day 1
-crea1           double  %10.0g                serum creatinine Day 1
-alb1            double  %10.0g                albumin Day 1
-bili1           double  %10.0g                bilirubin Day 1
-ph1             double  %10.0g                serum ph (arterial) Day 1
-paco21          double  %10.0g                paco2 Day 1
-cardiohx        byte    %12.0g                cardio comorbidity
-chfhx           byte    %12.0g                chf comorbidity
-amihx           byte    %12.0g                ami comorbidity
-chrpulhx        byte    %12.0g                chrpul comorbidity
-renalhx         byte    %12.0g                renal comorbidity
-liverhx         byte    %12.0g                liver comorbidity
-gibledhx        byte    %12.0g                gibled comorbidity
-dementhx        byte    %12.0g                dement comorbidity
-psychhx         byte    %12.0g                psych comorbidity
-malighx         byte    %12.0g                malig comorbidity
-immunhx         byte    %12.0g                immun comorbidity
-                                            * indicated variables have notes
---------------------------------------------------------------------------------------------------------------
-Sorted by: id
+. codebook,compact
 
+Variable    Obs Unique      Mean       Min       Max  Label
+---------------------------------------------------------------------------------------------------------
+id         5735   5735      2868         1      5735  
+ptid       5735   5735         .         .         .  Patient ID
+age        5735   5036  61.37591    18.042   101.848  Age
+agecat     5735      5  2.809416         1         5  Age (5 categories)
+sex        5735      2  1.556582         1         2  
+edu        5735     42  11.67846         0        30  Years of Education
+male       5735      2  .5565824         0         1  
+race       5735      3   1.34612         1         4  Race (3 categories)
+income     5735      4   1.75048         1         4  Income (4 categories)
+ninsclas   5735      6  3.331125         1         6  Insurance type (6 category)
+sadmdte    5735   1401  11638.69     10754     12441  study admission date
+lstctdte   5735    932  11781.26     10756     12644  date of last contact
+dschdte    5734   1486  11660.05     10757     12560  hospital discharge date
+dthdte     3722   1592  11753.87     10757     12783  date of death
+t3d30      5735     29  23.61221         2        30  min{dthdte - sadmdte, 30}
+dth30      5735      2  .3344377         0         1  Outcome:Death within 30d
+dth60      5735      2  .4034874         0         1  Death within 60d
+death      5735      2  .6489974         0         1  death in followup (anytime)
+swang1     5735      2  .3808195         0         1  Treatement:RHC at <= 24 hours
+cat1       5735      9  3.905493         1         9  Primary disease category
+cat2       5735      7  9.648649         4        10  Secondary disease category
+resp       5735      2  .3684394         0         1  Admit dx resp (up to 4 total)
+seps       5735      2  .1797733         0         1  Admit dx sepsis (up to 4 total)
+card       5735      2  .3367044         0         1  Admit dx card (up to 4 total)
+meta       5735      2  .0462075         0         1  Admit dx metabolic (up to 4 total)
+renal      5735      2  .0514385         0         1  Admit dx renal (up to 4 total)
+gastr      5735      2  .1642546         0         1  Admit dx gastr (up to 4 total)
+hema       5735      2  .0617262         0         1  Admit dx hema (up to 4 total)
+neuro      5735      2   .120837         0         1  Admit dx neuro (up to 4 total)
+ortho      5735      2  .0012206         0         1  Admit dx ortho (up to 4 total)
+trauma     5735      2  .0090671         0         1  Admit dx trauma (up to 4 total)
+dnr1       5735      2  .1140366         0         1  DNR status day 1
+das2d3pc   5735   1023  20.49689        11        33  DASI ( Duke Activity Status Index)
+adld3pc    5735   1139  1.571261         0         7  ADLs lost @  2 wks prior
+surv2md1   5735   1522  .5924501         0  .9619999  2M model survival prediction at day 1
+scoma1     5735     11  21.00418         0       100  SUPPORT Coma Score based on Glasgow D1
+transhx    5735      2  .1154316         0         1  Transfer (> 24 Hours) from Another Hospital
+ca         5735      3    1.3034         1         3  Cancer (3 catgory)
+resp1      5735     72  28.09212         0       100  respiration rate Day 1
+meanbp1    5735    178  78.52005         0       259  Mean Blood Pressure Day 1
+hrt1       5735    189  115.1789         0       250  heart rate Day 1
+temp1      5735    118  37.61836        27        43  temperature (celcius) Day 1
+wtkilo1    5735    922  67.82782         0       244  weight in kilograms
+urin1      2707   1440  2192.454         0      9000  Urine Output Day 1
+pafi1      5735   1342  222.2737  11.59961     937.5  PaO2/(.01*FiO2) Day 1
+aps1       5735    123  54.66765         3       147  Apache III score (w.o. Coma) Day 1
+wblc1      5735    520  15.64516         0       192  white blood cell count Day 1
+hema1      5735    450  31.86548         2   66.1875  hematocrit Day 1
+sod1       5735     73   136.769       101       178  serum sodium Day 1
+pot1       5735     81  4.066693  1.099854  11.89844  serum potassium Day 1
+crea1      5735    148  2.133017  .0999908  25.09766  serum creatinine Day 1
+alb1       5735     57  3.092743  .2999878        29  albumin Day 1
+bili1      5735    266  2.267067  .0999908  58.19531  bilirubin Day 1
+ph1        5735     96  7.388413  6.579102  7.769531  serum ph (arterial) Day 1
+paco21     5735    266  38.74897         1       156  paco2 Day 1
+cardiohx   5735      2  .1766347         0         1  cardio comorbidity
+chfhx      5735      2  .1780296         0         1  chf comorbidity
+amihx      5735      2  .0348736         0         1  ami comorbidity
+chrpulhx   5735      2  .1898867         0         1  chrpul comorbidity
+renalhx    5735      2  .0444638         0         1  renal comorbidity
+liverhx    5735      2  .0699215         0         1  liver comorbidity
+gibledhx   5735      2  .0322581         0         1  gibled comorbidity
+dementhx   5735      2  .0983435         0         1  dement comorbidity
+psychhx    5735      2   .067306         0         1  psych comorbidity
+malighx    5735      2  .2294682         0         1  malig comorbidity
+immunhx    5735      2  .2690497         0         1  immun comorbidity
+----------------------------------------------------------------------------------------------------
 ```

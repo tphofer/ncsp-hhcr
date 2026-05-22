@@ -58,23 +58,18 @@ C or 3, and so on.
 | schdenom | School denomination (1 = Roman Catholic, $0=$ nondenominational) |
 
 ```text
-Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/5.1.dta
- Observations:        33,988                  
-    Variables:             9                  30 Nov 2009 16:28
---------------------------------------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
---------------------------------------------------------------------------------------------------------------
-caseid          float   %9.0g                 Case ID
-schoolid        int     %9.0g                 School ID
-score           byte    %9.0g                 Score
-cohort90        byte    %9.0g                 Cohort
-female          byte    %9.0g                 Female
-sclass          byte    %9.0g                 Social class
-schtype         byte    %9.0g                 School type
-schurban        byte    %9.0g                 School urban-rural classification
-schdenom        byte    %9.0g                 School denomination
---------------------------------------------------------------------------------------------------------------
-Sorted by: 
+. codebook,compact
 
+Variable     Obs Unique      Mean  Min    Max  Label
+-------------------------------------------------------------------------------------------------------------------------
+caseid     33988  33988  18465.74    1  38192  Case ID
+schoolid   33988    508  254.3612    1    511  School ID
+score      33988     73  31.09462    0     75  Score
+cohort90   33988      6  .2767447   -6      8  Cohort
+female     33988      2  .5276274    0      1  Female
+sclass     33988      4  2.146611    1      4  Social class
+schtype    33988      2  .0453101    0      1  School type
+schurban   33988      2  .7095445    0      1  School urban-rural classification
+schdenom   33988      2  .1576439    0      1  School denomination
+-------------------------------------------------------------------------------------------------------------------------
 ```

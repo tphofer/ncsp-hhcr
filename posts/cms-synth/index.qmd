@@ -1,0 +1,64 @@
+---
+title: "CMS Synthetic datasets"
+author: "CMS"
+date: "2008-01-01"
+categories: [Data Management]
+---
+
+## Source 
+
+CMS started to provide sythetic datasets so that people can familiarize themselves working with CMS data.
+
+On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File
+(DE-SynPUF) to be used by data entrepreneurs for writing programs and developing applications or
+research protocols that can be applied to CMS claims data. This public release will aid entrepreneurs
+and researchers in understanding the complexity and abundance of information in these data. The DE-
+SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-
+based research, evaluation and technical assistance.  
+
+All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.
+
+To date, this is still the only release available
+
+## Dataset
+
+Available at [this CMS website](https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files/cms-2008-2010-data-entrepreneurs-synthetic-public-use-file-de-synpuf)
+
+
+## Dataset description
+
+[Data documentation](https://www.cms.gov/research-statistics-data-and-systems/downloadable-public-use-files/synpufs/downloads/synpuf_dug.pdf)
+
+The DE-SynPUF is based from a 5% sample of enrolled Medicare beneficiaries in 2008. It includes three
+years of claims (2008, 2009, and 2010) for the beneficiaries and four types of claims (Inpatient,
+Outpatient, Carrier, PDE – Prescription Drug Event) in addition to a beneficiary summary file for each
+year.
+
+Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample).  All claims for a particular beneficiary are in samples with the same number (i.e. all beneficiaries in sample 1 have all their claims in the sample 1 files).  This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.  
+
+__Sample 1 files__  (.csv files)
+
+DE1.0 Sample 1 2008 Beneficiary Summary File (ZIP)  
+DE1.0 Sample 1 2008-2010 Carrier Claims 1  
+DE1.0 Sample 1 2008-2010 Carrier Claims 2  
+DE1.0 Sample 1 2008-2010 Inpatient Claims (ZIP)  
+DE1.0 Sample 1 2008-2010 Outpatient Claims (ZIP)  
+DE1.0 Sample 1 2008-2010 Prescription Drug Events  
+DE1.0 Sample 1 2009 Beneficiary Summary File (ZIP)  
+DE1.0 Sample 1 2010 Beneficiary Summary File (ZIP)
+
+### Features
+
+| DE-SynPUF | Unit of record | Number of Records 2008 | Number of Records 2009 | Number of Records 2010 |
+| :--- | :--- | :--- | :--- | :--- |
+| Beneficiary Summary | Beneficiary | 2,326,856 | 2,291,320 | 2,255,098 |
+| Inpatient Claims | claim | 547,800 | 504,941 | 280,081 |
+| Outpatient Claims | claim | 5,673,808 | 6,519,340 | 3,633,839 |
+| Carrier Claims | claim | 34,276,324 | 37,304,993 | 23,282,135 |
+| Prescription Drug Events (PDE) | event | 39,927,827 | 43,379,293 | 27,778,849 |
+Note: Claim counts for 2010 are lower due to attrition from death, and some effects of disclosure treatment.
+
+
+### Variables
+
+Vary by file

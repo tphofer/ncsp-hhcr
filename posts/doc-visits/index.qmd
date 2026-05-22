@@ -28,42 +28,39 @@ count, healthcare utilization, longitudinal
 ### Variables
 
 ```text
-Contains data from https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/mus10data.dta
- Observations:        30,124                  
-    Variables:            28                  28 Feb 2007 16:04
---------------------------------------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
---------------------------------------------------------------------------------------------------------------
-educ            byte    %8.0g                 Years of schooling
-docvis          int     %8.0g                 number of doctor visits
-age             float   %9.0g                 Age in years / 10
-income          float   %9.0g                 Income in $ / 1000
-female          byte    %8.0g                 = 1 if female
-black           byte    %8.0g                 = 1 if black
-hispanic        byte    %8.0g                 = 1 if hispanic
-married         byte    %8.0g                 = 1 if married
-noreast         byte    %8.0g                 = 1 if Northeast
-midwest         byte    %8.0g                 = 1 if Midwest
-south           byte    %8.0g                 = 1 if South
-msa             byte    %8.0g                 = 1 if metropolitan statistical area
-firmsize        float   %9.0g                 Size of firm/100
-vegood          byte    %8.0g                 = 1 if very good health
-good            byte    %8.0g                 = 1 if good health
-physlim         byte    %8.0g                 = 1 if physical limitation
-fairpoor        byte    %8.0g                 = 1 if fair or poor health
-age2            float   %9.0g                 = age x age
-year97          byte    %8.0g                 = 1 if year 1997
-year98          byte    %8.0g                 = 1 if year 1998
-year99          byte    %8.0g                 = 1 if year 1999
-year00          byte    %8.0g                 = 1 if year 2000
-year01          byte    %8.0g                 = 1 if year 2001
-year02          byte    %8.0g                 = 1 if year 2003
-famsize         byte    %8.0g                 Family size
-injury          byte    %8.0g                 = 1 if an injury
-private         byte    %8.0g                 = 1 if private insurance
-chronic         byte    %8.0g                 = 1 if a chronic condition
---------------------------------------------------------------------------------------------------------------
-Sorted by: 
+. codebook,compact
+
+Variable     Obs Unique      Mean      Min      Max  Label
+-------------------------------------------------------------------------------------------------------------------------
+educ       30124     18  12.72431        0       17  Years of schooling
+docvis     30124    106  3.818251        0      160  number of doctor visits
+age        30124     40  4.074266      2.5      6.4  Age in years / 10
+income     30124  15739  31.89734  -49.999  280.777  Income in $ / 1000
+female     30124      2  .4722148        0        1  = 1 if female
+black      30124      2  .1134643        0        1  = 1 if black
+hispanic   30124      2  .2142146        0        1  = 1 if hispanic
+married    30124      2  .6580135        0        1  = 1 if married
+noreast    30124      2  .1686695        0        1  = 1 if Northeast
+midwest    30124      2  .2203227        0        1  = 1 if Midwest
+south      30124      2  .3694065        0        1  = 1 if South
+msa        30124      2  .8105165        0        1  = 1 if metropolitan statistical area
+firmsize   30124    236  14.61772        0       50  Size of firm/100
+vegood     30124      2  .3470987        0        1  = 1 if very good health
+good       30124      2  .2824658        0        1  = 1 if good health
+physlim    30124      2  .1548931        0        1  = 1 if physical limitation
+fairpoor   30124      2  .0890984        0        1  = 1 if fair or poor health
+age2       30124     40  17.61898     6.25    40.96  = age x age
+year97     30124      2   .110875        0        1  = 1 if year 1997
+year98     30124      2  .1040698        0        1  = 1 if year 1998
+year99     30124      2  .1307595        0        1  = 1 if year 1999
+year00     30124      2  .1035055        0        1  = 1 if year 2000
+year01     30124      2  .2052848        0        1  = 1 if year 2001
+year02     30124      2  .1464613        0        1  = 1 if year 2003
+famsize    30124     15  3.157881        1       17  Family size
+injury     30124      2  .2018988        0        1  = 1 if an injury
+private    30124      2  .8197119        0        1  = 1 if private insurance
+chronic    30124      2  .3364427        0        1  = 1 if a chronic condition
+-------------------------------------------------------------------------------------------------------------------------
+
 ```
 
