@@ -71,10 +71,44 @@ analysis_data <- demo |>
     )) |>
   select(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) |>
   filter(year >= 2015)
+var_labels <- c(
+  year     = "Survey year",
+  seqn     = "Respondent sequence number",
+  ridageyr = "Age in years",
+  age_grp  = "Age group",
+  sddsrvyr = "Data release cycle",
+  education = "Education level (recoded)",
+  dmdmartl = "Marital status",
+  indfmpir = "Family poverty income ratio",
+  ridreth3 = "Race/Hispanic origin (incl. NH Asian)",
+  riagendr = "Sex",
+  bpxsy1   = "Systolic BP, reading 1 (mm Hg)",
+  bpxsy2   = "Systolic BP, reading 2 (mm Hg)",
+  bpxsy3   = "Systolic BP, reading 3 (mm Hg)",
+  bpxsy4   = "Systolic BP, reading 4 (mm Hg)",
+  bpxdi1   = "Diastolic BP, reading 1 (mm Hg)",
+  bpxdi2   = "Diastolic BP, reading 2 (mm Hg)",
+  bpxdi3   = "Diastolic BP, reading 3 (mm Hg)",
+  bpxdi4   = "Diastolic BP, reading 4 (mm Hg)",
+  bmxbmi   = "Body mass index (kg/m^2)",
+  bpq050a  = "Now taking prescribed medicine for HBP",
+  ridexprg = "Pregnancy status at exam",
+  sdmvstra = "Masked variance pseudo-stratum",
+  sdmvpsu  = "Masked variance pseudo-PSU",
+  wtmec2yr = "MEC 2-year exam weight"
+)
 
+for (v in names(var_labels)) {
+  attr(analysis_data[[v]], "label") <- var_labels[[v]]
+}
 haven::write_dta(analysis_data, "data/nhanes_ncsp.dta")
 ```
 
+```{stata, include="false"}
+use "../../data/nhanes_ncsp.dta",clear
+compress
+save,replace
+```
 
 __Example__
 
@@ -85,21 +119,20 @@ from [Report - NCHS Data Brief No. 364, April 2020 ](https://www.cdc.gov/nchs/pr
 
 Full [SAS code](https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB364_SAS.sas) is available for all of the tables and figures in the report.
 
-Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp datset and the stata code folded below
+Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp dataset and the stata code folded below
 ```{stata, results="hide"}
 use "../../data/nhanes_ncsp.dta",clear
 * Table excludes preganant women
 encode ridexprg , gen(pregnant) label(preg)
-
+encode riagendr , gen(gender) label(gender)
 * If (diastolic) BP value is 0 then change to missing
-egen sys_mean=rowmean(bpxsy*)
-egen dia_mean=rowmean(bpxdi*)
-
 foreach var of var bpxdi*	{
 	replace `var'=. if `var'==0
 }
+egen sys_mean=rowmean(bpxsy*)
+egen dia_mean=rowmean(bpxdi*)
 
-
+* Define hyperternsive variable using new AHA/ACC guidelines 130/80
 gen new_htn=. 
 * elevated diastolic or systolic is counted as hypertensive or reporting on BP med
 replace new_htn=1 if sys_mean>=130&sys_mean<. | dia_mean>=80&dia_mean<. | bpq050a=="Yes"
@@ -108,27 +141,29 @@ egen sys_no_miss=rownonmiss(bpxsy*)
 egen dia_no_miss=rownonmiss(bpxdi*)
 replace new_htn=0 if (sys_no_mis>0 & dia_no_mis>0) & new_htn==.
 
-* Define subpop  non-pregant persons >18, with one or more non-missing BPs in 2017-2019 cohort
-gen include=(ridageyr>=18 & !missing(ridageyr)) & pregnant!=3 & (sys_no_miss!=0 | dia_no_miss!=0) & year==2017
+* Define subpop  non-pregant persons >18, with one or more 
+*      non-missing BPs in 2017-2019 cohort
+gen include=(ridageyr>=18 & !missing(ridageyr)) & pregnant!=3 & ///
+    (sys_no_miss!=0 | dia_no_miss!=0) & year==2017
 
+* Calculate HTN prevalence
+replace new_htn=100 if new_htn==1   // prevalence as %
 svyset [w=wtmec2yr], psu(sdmvpsu) strata(sdmvstra) vce(linearized)
-encode riagendr , gen(gender) label(gender)
-replace new_htn=100 if new_htn==1
-
-collect clear
-
 collect: svy: mean new_htn, over(age_grp gender) subpop(include)
 
+* Produce Table
 collect layout (age_grp) (gender#result[_r_b _r_se])
 collect style header result, level(label) title(hide)
 collect label levels result _r_b "%" _r_se "SE", modify
 collect style cell result[_r_b],  nformat(%5.1f)
-collect style cell result[_r_se], nformat(%5.2f) sformat("(%s)")
+collect style cell result[_r_se], nformat(%5.1f) sformat("(%s)")
 collect title "Hypertension prevalence (%), adults 18+, NHANES"
 collect style autolevels gender 2 1
 collect style header gender, title(hide) level(label)
+collect preview
 collect export htn_table.html, replace
 ```
+
 
 ```{=html}
 {{< include htn_table.html >}}
@@ -147,45 +182,35 @@ continuous, repeated measures, demographics
 You can look up variables on the [NCHS website variable lookup tool](https://wwwn.cdc.gov/nchs/nhanes/search/default.aspx)
 
 ```stata
-. codebook,compact
+. codebook, compact
 
-Variable       Obs Unique      Mean       Min       Max  Label
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-year         11891      2   2015.98      2015      2017  
-seqn         11891  11891  93393.81     83732    102956  
-ridageyr     11891     65  47.21882        16        80  
-age_grp      11891      4   2.88218         1         4  
-sddsrvyr     11891      2         .         .         .  
-education    10724      5  3.476035         1         5  
-dmdmartl     10739      7         .         .         .  
-indfmpir     10495    487  2.446261         0         5  
-ridreth3     11891      6         .         .         .  
-riagendr     11891      2         .         .         .  
-bpxsy1       10876     74  124.7269        72       236  
-bpxsy2       11255     75  124.7012        72       238  
-bpxsy3       11214     78  124.2804        72       238  
-bpxsy4         737     62  134.1493        76       234  
-bpxdi1       10806     55  70.52841        14       136  
-bpxdi2       11195     57  70.62439        20       144  
-bpxdi3       11156     59  70.55199         2       140  
-bpxdi4         727     44  76.67125        30       132  
-bmxbmi       11713    449  29.31031      13.2      86.2  
-bpq050a       3620      2         .         .         .  
-ridexprg      2297      3         .         .         .  
-sdmvstra     11891     30  133.4681       119       148  
-sdmvpsu      11891      2  1.501219         1         2  
-wtmec2yr     11891   5411  21529.58         0  419762.8  
-pregnant      2297      3  2.019155         1         3  
-sys_no_miss  11891      4  2.866201         0         3  
-dia_no_miss  11891      4  2.866201         0         3  
-sys_mean     11421    237  124.8151  72.66666       238  
-dia_mean     11421    190  70.30456         0  138.6667  
-new_htn      11527      2  49.86553         0       100  
-include      11891      2  .9000925         0         1  
-gender       11891      2  1.482213         1         2  
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+Variable     Obs Unique      Mean       Min       Max  Label
+----------------------------------------------------------------------------------------------
+year       11891      2   2015.98      2015      2017  Survey year
+seqn       11891  11891  93393.81     83732    102956  Respondent sequence number
+ridageyr   11891     65  47.21882        16        80  Age in years
+age_grp    11891      4   2.88218         1         4  Age group
+sddsrvyr   11891      2         .         .         .  Data release cycle
+education  10724      5  3.476035         1         5  Education level (recoded)
+dmdmartl   10739      7         .         .         .  Marital status
+indfmpir   10495    487  2.446261         0         5  Family poverty income ratio
+ridreth3   11891      6         .         .         .  Race/Hispanic origin (incl. NH Asian)
+riagendr   11891      2         .         .         .  Sex
+bpxsy1     10876     74  124.7269        72       236  Systolic BP, reading 1 (mm Hg)
+bpxsy2     11255     75  124.7012        72       238  Systolic BP, reading 2 (mm Hg)
+bpxsy3     11214     78  124.2804        72       238  Systolic BP, reading 3 (mm Hg)
+bpxsy4       737     62  134.1493        76       234  Systolic BP, reading 4 (mm Hg)
+bpxdi1     10876     56  70.07448         0       136  Diastolic BP, reading 1 (mm Hg)
+bpxdi2     11255     58  70.24789         0       144  Diastolic BP, reading 2 (mm Hg)
+bpxdi3     11214     60  70.18709         0       140  Diastolic BP, reading 3 (mm Hg)
+bpxdi4       737     45  75.63094         0       132  Diastolic BP, reading 4 (mm Hg)
+bmxbmi     11713    449  29.31031      13.2      86.2  Body mass index (kg/m^2)
+bpq050a     3620      2         .         .         .  Now taking prescribed medicine for HBP
+ridexprg    2297      3         .         .         .  Pregnancy status at exam
+sdmvstra   11891     30  133.4681       119       148  Masked variance pseudo-stratum
+sdmvpsu    11891      2  1.501219         1         2  Masked variance pseudo-PSU
+wtmec2yr   11891  10512  42517.69  4579.581  419762.8  MEC 2-year exam weight
+------------------------------------------------------------------------------------------------
 ```
 
 

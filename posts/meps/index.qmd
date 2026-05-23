@@ -20,15 +20,15 @@ __Example__
 
 ```stata
 /* 2018 Dental Visits */
-cd "C:/MEPS"
+* Change to project directory
 copy "https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip" ///
-"C:/MEPS/h206bdta.zip"
-unzipfile "C:/MEPS/h206bdta.zip"
-use "C:/MEPS/h206b.dta", clear
+    "h206bdta.zip"
+unzipfile "h206bdta.zip"
+use "h206b.dta", clear
 /* View dataset */
 browse
 // For analysis use svy commands for example for dental expenditures in 2018
-use DUPERSID PERWT18F VARPSU VARSTR DVXP18X using "C:\MEPS\h206b.dta", clear
+use DUPERSID PERWT18F VARPSU VARSTR DVXP18X using "h206b.dta", clear
 svyset VARPSU [pweight=PERWT18F], str(VARSTR)
 svy: total DVXP18X
 ```
@@ -36,7 +36,7 @@ svy: total DVXP18X
 For other files switch out `h206b` for the correct code see [list of filenames](https://github.com/HHS-AHRQ/MEPS/blob/master/Quick_Reference_Guides/meps_file_names.csv)
 
 For example for 2018 ER visits you would substitute `h206e`
-You can check the download site for the file by then inserting the code in the following 
+You can check the documentation site for the file by then inserting the code in the following 
 [https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E](https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E)
 
 

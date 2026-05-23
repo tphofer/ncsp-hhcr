@@ -232,19 +232,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Data from the Household Component of MEPS are <a href="https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp">available for download as public use files</a>. For data years 2017 and later (and also for the 2016 Medical Conditions file), .zip files for multiple file formats are available, including ASCII (.dat), SAS V9 (.sas7bdat), Stata (.dta), and Excel (.xlsx). Prior to 2017, ASCII (.dat) and SAS transport (.ssp) files are provided for all datasets. The following table summarizes the various file formats available by data year:</p>
 <p><strong>Example</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* 2018 Dental Visits */</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cd <span class="st">"C:/MEPS"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>* Change to project directory</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>copy <span class="st">"https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip"</span> <span class="co">///</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">"C:/MEPS/h206bdta.zip"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>unzipfile <span class="st">"C:/MEPS/h206bdta.zip"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"C:/MEPS/h206b.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"h206bdta.zip"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>unzipfile <span class="st">"h206bdta.zip"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"h206b.dta"</span>, <span class="kw">clear</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">/* View dataset */</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>browse</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">// For analysis use svy commands for example for dental expenditures in 2018</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> DUPERSID PERWT18F VARPSU VARSTR DVXP18X <span class="kw">using</span> <span class="st">"C:\MEPS\h206b.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> DUPERSID PERWT18F VARPSU VARSTR DVXP18X <span class="kw">using</span> <span class="st">"h206b.dta"</span>, <span class="kw">clear</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">svyset</span> VARPSU [<span class="kw">pweight</span>=PERWT18F], str(VARSTR)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">svy</span>: <span class="kw">total</span> DVXP18X</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For other files switch out <code>h206b</code> for the correct code see <a href="https://github.com/HHS-AHRQ/MEPS/blob/master/Quick_Reference_Guides/meps_file_names.csv">list of filenames</a></p>
-<p>For example for 2018 ER visits you would substitute <code>h206e</code> You can check the download site for the file by then inserting the code in the following <a href="https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E">https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E</a></p>
+<p>For example for 2018 ER visits you would substitute <code>h206e</code> You can check the documentation site for the file by then inserting the code in the following <a href="https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E">https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E</a></p>
 </section>
 <section id="dataset-description" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>

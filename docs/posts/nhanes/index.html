@@ -274,58 +274,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) <span class="sc">|&gt;</span></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2015</span>)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">write_dta</span>(analysis_data, <span class="st">"data/nhanes_ncsp.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>var_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">year     =</span> <span class="st">"Survey year"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">seqn     =</span> <span class="st">"Respondent sequence number"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">ridageyr =</span> <span class="st">"Age in years"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">age_grp  =</span> <span class="st">"Age group"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">sddsrvyr =</span> <span class="st">"Data release cycle"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">education =</span> <span class="st">"Education level (recoded)"</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">dmdmartl =</span> <span class="st">"Marital status"</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="at">indfmpir =</span> <span class="st">"Family poverty income ratio"</span>,</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="at">ridreth3 =</span> <span class="st">"Race/Hispanic origin (incl. NH Asian)"</span>,</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">riagendr =</span> <span class="st">"Sex"</span>,</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxsy1   =</span> <span class="st">"Systolic BP, reading 1 (mm Hg)"</span>,</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxsy2   =</span> <span class="st">"Systolic BP, reading 2 (mm Hg)"</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxsy3   =</span> <span class="st">"Systolic BP, reading 3 (mm Hg)"</span>,</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxsy4   =</span> <span class="st">"Systolic BP, reading 4 (mm Hg)"</span>,</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxdi1   =</span> <span class="st">"Diastolic BP, reading 1 (mm Hg)"</span>,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxdi2   =</span> <span class="st">"Diastolic BP, reading 2 (mm Hg)"</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxdi3   =</span> <span class="st">"Diastolic BP, reading 3 (mm Hg)"</span>,</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpxdi4   =</span> <span class="st">"Diastolic BP, reading 4 (mm Hg)"</span>,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">bmxbmi   =</span> <span class="st">"Body mass index (kg/m^2)"</span>,</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">bpq050a  =</span> <span class="st">"Now taking prescribed medicine for HBP"</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">ridexprg =</span> <span class="st">"Pregnancy status at exam"</span>,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">sdmvstra =</span> <span class="st">"Masked variance pseudo-stratum"</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">sdmvpsu  =</span> <span class="st">"Masked variance pseudo-PSU"</span>,</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">wtmec2yr =</span> <span class="st">"MEC 2-year exam weight"</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (v <span class="cf">in</span> <span class="fu">names</span>(var_labels)) {</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">attr</span>(analysis_data[[v]], <span class="st">"label"</span>) <span class="ot">&lt;-</span> var_labels[[v]]</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">write_dta</span>(analysis_data, <span class="st">"data/nhanes_ncsp.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p><strong>Example</strong></p>
 <p>Reproduce a <a href="https://www.cdc.gov/nchs/data/databriefs/db364-tables-508.pdf#page=1">table of hypertension prevalence</a> from <a href="https://www.cdc.gov/nchs/products/databriefs/db364.htm">Report - NCHS Data Brief No.&nbsp;364, April 2020</a></p>
 <p><img src="../../img/HTN_prev.png" class="img-fluid"></p>
 <p>Full <a href="https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB364_SAS.sas">SAS code</a> is available for all of the tables and figures in the report.</p>
-<p>Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp datset and the stata code folded below</p>
+<p>Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp dataset and the stata code folded below</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"../../data/nhanes_ncsp.dta"</span>,<span class="kw">clear</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>* Table excludes preganant women</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">encode</span> ridexprg , <span class="kw">gen</span>(pregnant) <span class="kw">label</span>(preg)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">encode</span> riagendr , <span class="kw">gen</span>(gender) <span class="kw">label</span>(gender)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>* If (diastolic) BP <span class="ot">value</span> is 0 then change to <span class="fu">missing</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_mean=<span class="fu">rowmean</span>(bpxsy*)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_mean=<span class="fu">rowmean</span>(bpxdi*)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> <span class="kw">var</span> <span class="kw">of</span> <span class="kw">var</span> bpxdi*   {</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> <span class="ot">`var'</span>=. <span class="kw">if</span> <span class="ot">`var'</span>==0</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> new_htn=. </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>* elevated diastolic <span class="kw">or</span> systolic is counted <span class="kw">as</span> hypertensive <span class="kw">or</span> reporting <span class="kw">on</span> BP med</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=1 <span class="kw">if</span> sys_mean&gt;=130&amp;sys_mean&lt;. | dia_mean&gt;=80&amp;dia_mean&lt;. | bpq050a==<span class="st">"Yes"</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>* Include <span class="kw">as</span> non-hypertensive those with non-<span class="fu">missing</span> and non-high BPs</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_no_miss=<span class="fu">rownonmiss</span>(bpxsy*)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_no_miss=<span class="fu">rownonmiss</span>(bpxdi*)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=0 <span class="kw">if</span> (sys_no_mis&gt;0 &amp; dia_no_mis&gt;0) &amp; new_htn==.</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>* Define subpop  non-pregant persons &gt;18, with one <span class="kw">or</span> <span class="kw">more</span> non-<span class="fu">missing</span> BPs <span class="kw">in</span> 2017-2019 cohort</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="kw">include</span>=(ridageyr&gt;=18 &amp; !<span class="fu">missing</span>(ridageyr)) &amp; pregnant!=3 &amp; (sys_no_miss!=0 | dia_no_miss!=0) &amp; <span class="fu">year</span>==2017</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">svyset</span> [<span class="fu">w</span>=wtmec2yr], psu(sdmvpsu) <span class="kw">strata</span>(sdmvstra) <span class="kw">vce</span>(<span class="kw">linearized</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">encode</span> riagendr , <span class="kw">gen</span>(gender) <span class="kw">label</span>(gender)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=100 <span class="kw">if</span> new_htn==1</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">clear</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> <span class="kw">var</span> <span class="kw">of</span> <span class="kw">var</span> bpxdi*   {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> <span class="ot">`var'</span>=. <span class="kw">if</span> <span class="ot">`var'</span>==0</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_mean=<span class="fu">rowmean</span>(bpxsy*)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_mean=<span class="fu">rowmean</span>(bpxdi*)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>* Define hyperternsive <span class="kw">variable</span> <span class="kw">using</span> <span class="kw">new</span> AHA/ACC guidelines 130/80</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> new_htn=. </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>* elevated diastolic <span class="kw">or</span> systolic is counted <span class="kw">as</span> hypertensive <span class="kw">or</span> reporting <span class="kw">on</span> BP med</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=1 <span class="kw">if</span> sys_mean&gt;=130&amp;sys_mean&lt;. | dia_mean&gt;=80&amp;dia_mean&lt;. | bpq050a==<span class="st">"Yes"</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>* Include <span class="kw">as</span> non-hypertensive those with non-<span class="fu">missing</span> and non-high BPs</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_no_miss=<span class="fu">rownonmiss</span>(bpxsy*)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_no_miss=<span class="fu">rownonmiss</span>(bpxdi*)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=0 <span class="kw">if</span> (sys_no_mis&gt;0 &amp; dia_no_mis&gt;0) &amp; new_htn==.</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>* Define subpop  non-pregant persons &gt;18, with one <span class="kw">or</span> <span class="kw">more</span> </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>*      non-<span class="fu">missing</span> BPs <span class="kw">in</span> 2017-2019 cohort</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="kw">include</span>=(ridageyr&gt;=18 &amp; !<span class="fu">missing</span>(ridageyr)) &amp; pregnant!=3 &amp; <span class="co">///</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    (sys_no_miss!=0 | dia_no_miss!=0) &amp; <span class="fu">year</span>==2017</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>* Calculate HTN prevalence</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=100 <span class="kw">if</span> new_htn==1   <span class="co">// prevalence as %</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="kw">svyset</span> [<span class="fu">w</span>=wtmec2yr], psu(sdmvpsu) <span class="kw">strata</span>(sdmvstra) <span class="kw">vce</span>(<span class="kw">linearized</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>collect: <span class="kw">svy</span>: <span class="kw">mean</span> new_htn, <span class="bn">over</span>(age_grp gender) subpop(<span class="kw">include</span>)</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>collect: <span class="kw">svy</span>: <span class="kw">mean</span> new_htn, <span class="bn">over</span>(age_grp gender) subpop(<span class="kw">include</span>)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>collect layout (age_grp) (gender#result[_r_b _r_se])</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>collect style header result, <span class="dv">level</span>(<span class="kw">label</span>) <span class="bn">title</span>(hide)</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">label</span> <span class="kw">levels</span> result _r_b <span class="st">"%"</span> _r_se <span class="st">"SE"</span>, modify</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_b],  nformat(%5.1f)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_se], nformat(%5.2f) sformat(<span class="st">"(%s)"</span>)</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>collect <span class="bn">title</span> <span class="st">"Hypertension prevalence (%), adults 18+, NHANES"</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>collect style autolevels gender 2 1</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>collect style header gender, <span class="bn">title</span>(hide) <span class="dv">level</span>(<span class="kw">label</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>* Produce Table</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>collect layout (age_grp) (gender#result[_r_b _r_se])</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>collect style header result, <span class="dv">level</span>(<span class="kw">label</span>) <span class="bn">title</span>(hide)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">label</span> <span class="kw">levels</span> result _r_b <span class="st">"%"</span> _r_se <span class="st">"SE"</span>, modify</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_b],  nformat(%5.1f)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_se], nformat(%5.1f) sformat(<span class="st">"(%s)"</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>collect <span class="bn">title</span> <span class="st">"Hypertension prevalence (%), adults 18+, NHANES"</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>collect style autolevels gender 2 1</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>collect style header gender, <span class="bn">title</span>(hide) <span class="dv">level</span>(<span class="kw">label</span>)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>collect preview</span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">export</span> htn_table.html, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -636,23 +665,23 @@ Hypertension prevalence (%), adults 18+, NHANES
 <tr class="default1_3_x odd">
 <td class="default1_x_1 default1_3_1"><span class="default1_3_1_span"> 18-39 </span></td>
 <td class="default1_x_2 default1_3_2"><span class="default1_3_2_span"> 31.2 </span></td>
-<td class="default1_x_3 default1_3_3"><span class="default1_3_3_span"> (1.78) </span></td>
+<td class="default1_x_3 default1_3_3"><span class="default1_3_3_span"> (1.8) </span></td>
 <td class="default1_x_4 default1_3_4"><span class="default1_3_4_span"> 13.0 </span></td>
-<td class="default1_x_5 default1_3_5"><span class="default1_3_5_span"> (1.42) </span></td>
+<td class="default1_x_5 default1_3_5"><span class="default1_3_5_span"> (1.4) </span></td>
 </tr>
 <tr class="default1_4_x even">
 <td class="default1_x_1 default1_4_1"><span class="default1_4_1_span"> 40-59 </span></td>
 <td class="default1_x_2 default1_4_2"><span class="default1_4_2_span"> 59.4 </span></td>
-<td class="default1_x_3 default1_4_3"><span class="default1_4_3_span"> (3.43) </span></td>
+<td class="default1_x_3 default1_4_3"><span class="default1_4_3_span"> (3.4) </span></td>
 <td class="default1_x_4 default1_4_4"><span class="default1_4_4_span"> 49.9 </span></td>
-<td class="default1_x_5 default1_4_5"><span class="default1_4_5_span"> (2.39) </span></td>
+<td class="default1_x_5 default1_4_5"><span class="default1_4_5_span"> (2.4) </span></td>
 </tr>
 <tr class="default1_5_x odd">
 <td class="default1_x_1 default1_5_1"><span class="default1_5_1_span"> &gt; 60 </span></td>
 <td class="default1_x_2 default1_5_2"><span class="default1_5_2_span"> 75.2 </span></td>
-<td class="default1_x_3 default1_5_3"><span class="default1_5_3_span"> (3.01) </span></td>
+<td class="default1_x_3 default1_5_3"><span class="default1_5_3_span"> (3.0) </span></td>
 <td class="default1_x_4 default1_5_4"><span class="default1_5_4_span"> 73.9 </span></td>
-<td class="default1_x_5 default1_5_5"><span class="default1_5_5_span"> (2.04) </span></td>
+<td class="default1_x_5 default1_5_5"><span class="default1_5_5_span"> (2.0) </span></td>
 </tr>
 </tbody>
 </table>
@@ -670,44 +699,35 @@ Hypertension prevalence (%), adults 18+, NHANES
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
 <p>You can look up variables on the <a href="https://wwwn.cdc.gov/nchs/nhanes/search/default.aspx">NCHS website variable lookup tool</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>. <span class="kw">codebook</span>,compact</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>. <span class="kw">codebook</span>, compact</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Variable       Obs Unique      Mean       Min       Max  Label</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>         11891      2   2015.98      2015      2017  </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>seqn         11891  11891  93393.81     83732    102956  </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ridageyr     11891     65  47.21882        16        80  </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>age_grp      11891      4   2.88218         1         4  </span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>sddsrvyr     11891      2         .         .         .  </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>education    10724      5  3.476035         1         5  </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>dmdmartl     10739      7         .         .         .  </span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>indfmpir     10495    487  2.446261         0         5  </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ridreth3     11891      6         .         .         .  </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>riagendr     11891      2         .         .         .  </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>bpxsy1       10876     74  124.7269        72       236  </span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>bpxsy2       11255     75  124.7012        72       238  </span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>bpxsy3       11214     78  124.2804        72       238  </span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>bpxsy4         737     62  134.1493        76       234  </span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>bpxdi1       10806     55  70.52841        14       136  </span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>bpxdi2       11195     57  70.62439        20       144  </span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>bpxdi3       11156     59  70.55199         2       140  </span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>bpxdi4         727     44  76.67125        30       132  </span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>bmxbmi       11713    449  29.31031      13.2      86.2  </span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>bpq050a       3620      2         .         .         .  </span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ridexprg      2297      3         .         .         .  </span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>sdmvstra     11891     30  133.4681       119       148  </span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>sdmvpsu      11891      2  1.501219         1         2  </span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>wtmec2yr     11891   5411  21529.58         0  419762.8  </span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>pregnant      2297      3  2.019155         1         3  </span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>sys_no_miss  11891      4  2.866201         0         3  </span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>dia_no_miss  11891      4  2.866201         0         3  </span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>sys_mean     11421    237  124.8151  72.66666       238  </span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>dia_mean     11421    190  70.30456         0  138.6667  </span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>new_htn      11527      2  49.86553         0       100  </span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">include</span>      11891      2  .9000925         0         1  </span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>gender       11891      2  1.482213         1         2  </span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Variable     Obs Unique      Mean       Min       Max  Label</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>----------------------------------------------------------------------------------------------</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>       11891      2   2015.98      2015      2017  Survey <span class="fu">year</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>seqn       11891  11891  93393.81     83732    102956  Respondent sequence number</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ridageyr   11891     65  47.21882        16        80  Age <span class="kw">in</span> years</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>age_grp    11891      4   2.88218         1         4  Age <span class="fu">group</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>sddsrvyr   11891      2         .         .         .  Data release cycle</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>education  10724      5  3.476035         1         5  Education <span class="dv">level</span> (recoded)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>dmdmartl   10739      7         .         .         .  Marital status</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>indfmpir   10495    487  2.446261         0         5  Family poverty income <span class="kw">ratio</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ridreth3   11891      6         .         .         .  Race/Hispanic origin (incl. NH Asian)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>riagendr   11891      2         .         .         .  Sex</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>bpxsy1     10876     74  124.7269        72       236  Systolic BP, reading 1 (mm Hg)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>bpxsy2     11255     75  124.7012        72       238  Systolic BP, reading 2 (mm Hg)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>bpxsy3     11214     78  124.2804        72       238  Systolic BP, reading 3 (mm Hg)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>bpxsy4       737     62  134.1493        76       234  Systolic BP, reading 4 (mm Hg)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>bpxdi1     10876     56  70.07448         0       136  Diastolic BP, reading 1 (mm Hg)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>bpxdi2     11255     58  70.24789         0       144  Diastolic BP, reading 2 (mm Hg)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>bpxdi3     11214     60  70.18709         0       140  Diastolic BP, reading 3 (mm Hg)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>bpxdi4       737     45  75.63094         0       132  Diastolic BP, reading 4 (mm Hg)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>bmxbmi     11713    449  29.31031      13.2      86.2  Body mass <span class="fu">index</span> (kg/<span class="fu">m</span>^2)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>bpq050a     3620      2         .         .         .  Now taking prescribed medicine <span class="kw">for</span> HBP</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ridexprg    2297      3         .         .         .  Pregnancy status <span class="fu">at</span> exam</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>sdmvstra   11891     30  133.4681       119       148  Masked <span class="kw">variance</span> pseudo-stratum</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>sdmvpsu    11891      2  1.501219         1         2  Masked <span class="kw">variance</span> pseudo-PSU</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>wtmec2yr   11891  10512  42517.69  4579.581  419762.8  MEC 2-<span class="fu">year</span> exam <span class="kw">weight</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------------------------</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="to-obtain-data-directly-yourself" class="level3">
 <h3 class="anchored" data-anchor-id="to-obtain-data-directly-yourself">To obtain data directly yourself</h3>
