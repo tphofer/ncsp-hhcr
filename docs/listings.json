@@ -2,12 +2,14 @@
   {
     "listing": "/data.html",
     "items": [
-      "/posts/uk-school/index.html",
+      "/posts/meps/index.html",
+      "/posts/nhanes/index.html",
       "/posts/cvd-synth-data/index.html",
-      "/posts/low-bw/index.html",
       "/posts/swan/index.html",
-      "/posts/cms-synth/index.html",
-      "/posts/doc-visits/index.html"
+      "/posts/low-bw/index.html",
+      "/posts/uk-school/index.html",
+      "/posts/doc-visits/index.html",
+      "/posts/cms-synth/index.html"
     ]
   }
 ]

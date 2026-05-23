@@ -1,0 +1,56 @@
+---
+title: "MEPS Datat"
+author: "AHRQ"
+date: "5/20/2026"
+date-modified: "5/23/2026"
+categories: [Survey, National]
+---
+
+## Source 
+
+AHRQ maintains a [github site with MEPS data](https://github.com/HHS-AHRQ/MEPS) (Medical Expenditure Panel Survey) and instructions for how to download.
+
+The repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality's Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience.
+
+## Dataset
+
+Data from the Household Component of MEPS are [available for download as public use files](https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp). For data years 2017 and later (and also for the 2016 Medical Conditions file), .zip files for multiple file formats are available, including ASCII (.dat), SAS V9 (.sas7bdat), Stata (.dta), and Excel (.xlsx). Prior to 2017, ASCII (.dat) and SAS transport (.ssp) files are provided for all datasets. The following table summarizes the various file formats available by data year:
+
+__Example__
+
+```stata
+/* 2018 Dental Visits */
+cd "C:/MEPS"
+copy "https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip" ///
+"C:/MEPS/h206bdta.zip"
+unzipfile "C:/MEPS/h206bdta.zip"
+use "C:/MEPS/h206b.dta", clear
+/* View dataset */
+browse
+// For analysis use svy commands for example for dental expenditures in 2018
+use DUPERSID PERWT18F VARPSU VARSTR DVXP18X using "C:\MEPS\h206b.dta", clear
+svyset VARPSU [pweight=PERWT18F], str(VARSTR)
+svy: total DVXP18X
+```
+
+For other files switch out `h206b` for the correct code see [list of filenames](https://github.com/HHS-AHRQ/MEPS/blob/master/Quick_Reference_Guides/meps_file_names.csv)
+
+For example for 2018 ER visits you would substitute `h206e`
+You can check the download site for the file by then inserting the code in the following 
+[https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E](https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E)
+
+
+## Dataset description
+
+[Quick Reference Guides](https://github.com/HHS-AHRQ/MEPS/tree/master/Quick_Reference_Guides#programming-statements)
+
+[Example do file](use_expenditures_2019.do) for estimating 2019 Total Expenditures by event type and source of payment
+
+
+### Features
+
+[AHRQ website with full descriptions of MEPS](https://meps.ahrq.gov/mepsweb/)  
+
+### Variables
+
+Vary by file

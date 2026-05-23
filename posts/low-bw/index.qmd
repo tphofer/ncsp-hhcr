@@ -1,24 +1,31 @@
 ---
 title: "Low birthweight and smoking"
 author: "Cattaneo"
-date: "2018-01-14"
+date: "5/20/2026"
+date-modified: "5/23/2026"
 categories: [Causal I]
 ---
 
 ## Source
 
-Excerpt from Cattaneo (2010) Journal of Econometrics 155: 138-154
+Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata [Treaetment Effects](https://www.stata-press.com/data/r19/causal.html) reference manuals starting in Stata 13 and in use through Stata 19
 
 
-## Dataset
+## Dataset description 
 
+### Features
+
+The data are a subset of that originally described by Almond 2005 (Quarterly Journal of Economics, 120 (2005), pp. 1031-1083) as being from the 1989-1991 Linked National Natality-Mortality Detail Files used for a study focusing on smoking during pregnancy and birth weight for the 497,139 singleton births in Pennsylvania between 1989 and 1991. Pennsylvania was chosen since there was complete smoking information for over 95 percent of the mothers in 1989-1991. In the singleton sample, about 21 percent of Pennsylvanian women report smoking during pregnancy in this time period.
 
 use directly in code
-```
+
+```stata
 use https://www.stata-press.com/data/r16/cattaneo2 , clear
 ```
 
-## Variables
+Published example of causal inference methods paper using this dataset. ([Ghosh 2021 Stat Sin](https://pmc.ncbi.nlm.nih.gov/articles/PMC8439424/#S21))
+
+### Variables
 
 ```
 Contains data from https://www.stata-press.com/data/r16/cattaneo2.dta

@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Cattaneo">
+<meta name="author" content="AHRQ">
 <meta name="dcterms.date" content="2026-05-20">
 
-<title>Low birthweight and smoking – NCSP methods class website</title>
+<title>MEPS Datat – NCSP methods class website</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -169,22 +169,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#source" id="toc-source" class="nav-link active" data-scroll-target="#source">Source</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
   <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset description</a>
   <ul>
   <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/low-bw/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/meps/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Low birthweight and smoking</h1>
+<h1 class="title">MEPS Datat</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Causal I</div>
+    <div class="quarto-category">Survey</div>
+    <div class="quarto-category">National</div>
   </div>
   </div>
 
@@ -195,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Cattaneo </p>
+             <p>AHRQ </p>
           </div>
   </div>
     
@@ -222,49 +224,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source">Source</h2>
-<p>Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata <a href="https://www.stata-press.com/data/r19/causal.html">Treaetment Effects</a> reference manuals starting in Stata 13 and in use through Stata 19</p>
+<p>AHRQ maintains a <a href="https://github.com/HHS-AHRQ/MEPS">github site with MEPS data</a> (Medical Expenditure Panel Survey) and instructions for how to download.</p>
+<p>The repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality’s Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Data from the Household Component of MEPS are <a href="https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp">available for download as public use files</a>. For data years 2017 and later (and also for the 2016 Medical Conditions file), .zip files for multiple file formats are available, including ASCII (.dat), SAS V9 (.sas7bdat), Stata (.dta), and Excel (.xlsx). Prior to 2017, ASCII (.dat) and SAS transport (.ssp) files are provided for all datasets. The following table summarizes the various file formats available by data year:</p>
+<p><strong>Example</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* 2018 Dental Visits */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cd <span class="st">"C:/MEPS"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>copy <span class="st">"https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip"</span> <span class="co">///</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">"C:/MEPS/h206bdta.zip"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>unzipfile <span class="st">"C:/MEPS/h206bdta.zip"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"C:/MEPS/h206b.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">/* View dataset */</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>browse</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">// For analysis use svy commands for example for dental expenditures in 2018</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> DUPERSID PERWT18F VARPSU VARSTR DVXP18X <span class="kw">using</span> <span class="st">"C:\MEPS\h206b.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">svyset</span> VARPSU [<span class="kw">pweight</span>=PERWT18F], str(VARSTR)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">svy</span>: <span class="kw">total</span> DVXP18X</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For other files switch out <code>h206b</code> for the correct code see <a href="https://github.com/HHS-AHRQ/MEPS/blob/master/Quick_Reference_Guides/meps_file_names.csv">list of filenames</a></p>
+<p>For example for 2018 ER visits you would substitute <code>h206e</code> You can check the download site for the file by then inserting the code in the following <a href="https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E">https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E</a></p>
 </section>
 <section id="dataset-description" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>
+<p><a href="https://github.com/HHS-AHRQ/MEPS/tree/master/Quick_Reference_Guides#programming-statements">Quick Reference Guides</a></p>
+<p><a href="use_expenditures_2019.do">Example do file</a> for estimating 2019 Total Expenditures by event type and source of payment</p>
 <section id="features" class="level3">
 <h3 class="anchored" data-anchor-id="features">Features</h3>
-<p>The data are a subset of that originally described by Almond 2005 (Quarterly Journal of Economics, 120 (2005), pp.&nbsp;1031-1083) as being from the 1989-1991 Linked National Natality-Mortality Detail Files used for a study focusing on smoking during pregnancy and birth weight for the 497,139 singleton births in Pennsylvania between 1989 and 1991. Pennsylvania was chosen since there was complete smoking information for over 95 percent of the mothers in 1989-1991. In the singleton sample, about 21 percent of Pennsylvanian women report smoking during pregnancy in this time period.</p>
-<p>use directly in code</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> https:<span class="co">//www.stata-press.com/data/r16/cattaneo2 , clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Published example of causal inference methods paper using this dataset. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8439424/#S21">Ghosh 2021 Stat Sin</a>)</p>
+<p><a href="https://meps.ahrq.gov/mepsweb/">AHRQ website with full descriptions of MEPS</a></p>
 </section>
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
-<pre><code>Contains data from https://www.stata-press.com/data/r16/cattaneo2.dta
-. codebook,compact
-
-Variable     Obs Unique      Mean  Min   Max  Label
--------------------------------------------------------------------------------------------------------------------------
-bweight     4642    732   3361.68  340  5500  infant birthweight (grams)
-mmarried    4642      2  .6996984    0     1  1 if mother married
-mhisp       4642      2  .0340371    0     1  1 if mother hispanic
-fhisp       4642      2   .037053    0     1  1 if father hispanic
-foreign     4642      2  .0534252    0     1  1 if mother born abroad
-alcohol     4642      2  .0323137    0     1  1 if alcohol consumed during pregnancy
-deadkids    4642      2   .259371    0     1  previous births where newborn died
-mage        4642     33  26.50452   13    45  mother's age
-medu        4642     18  12.68957    0    17  mother's education attainment
-fage        4642     46  27.26713    0    60  father's age
-fedu        4642     17   12.3072    0    17  father's education attainment
-nprenatal   4642     30  10.75808    0    40  number of prenatal care visits
-monthslb    4642    173  23.07497    0   272  months since last birth
-order       4642     12  1.892072    0    12  order of birth of the infant
-msmoke      4642      4  .3996122    0     3  cigarettes smoked during pregnancy
-mbsmoke     4642      2  .1861267    0     1  1 if mother smoked
-mrace       4642      2   .840586    0     1  1 if mother is white
-frace       4642      2  .8136579    0     1  1 if father is white
-prenatal    4642      4  1.201853    0     3  trimester of first prenatal care visit
-birthmonth  4642     12  6.540069    1    12  month of birth
-lbweight    4642      2  .0603188    0     1  1 if low birthweight baby
-fbaby       4642      2  .4379578    0     1  1 if first baby
-prenatal1   4642      2  .8013787    0     1  1 if first prenatal visit in 1 trimester
--------------------------------------------------------------------------------------------------------------------------
-</code></pre>
+<p>Vary by file</p>
 
 
 </section>
@@ -676,4 +668,4 @@ prenatal1   4642      2  .8013787    0     1  1 if first prenatal visit in 1 tri
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/low-bw/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/meps/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

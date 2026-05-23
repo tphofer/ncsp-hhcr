@@ -1,7 +1,8 @@
 ---
 title: "UK School Testing Data"
-author: "TPH"
-date: "2026-05-02"
+author: "Leckie, G."
+date: "5/20/2026"
+date-modified: "5/23/2026"
 categories: [Multilevel I]
 ---
 
@@ -24,7 +25,8 @@ and Social Class Inequality: A Comparison of Trends in England, Scotland and Wal
 Download: [5.1.dta](../../data/5.1.dta)
 
 or use directly in code
-```
+
+```stata
 use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/5.1.dta
 ```
 

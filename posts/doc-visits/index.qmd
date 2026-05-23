@@ -1,7 +1,8 @@
 ---
 title: "Doctor Visit Data"
 author: "Cameron & Trivedi"
-date: "2002-01-01"
+date: "5/20/2026"
+date-modified: "5/23/2026"
 categories: [Bootstrap-Simulation]
 ---
 
@@ -15,7 +16,8 @@ using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sec
 [mus10data.dta](../../data/mus10data.dta)
 
 or use directly in code
-```
+
+```stata
 use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/mus10data.dta
 ```
 

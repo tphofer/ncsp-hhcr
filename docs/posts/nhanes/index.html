@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="CDC">
+<meta name="dcterms.date" content="2026-05-20">
+
+<title>NHANES Dataset – NCSP methods class website</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-37a8cdd4984d236c9912f813eb5f4335.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      NCSP methods class website
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">NCSP methods class website</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datafiles</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#source" id="toc-source" class="nav-link active" data-scroll-target="#source">Source</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset description</a>
+  <ul>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#to-obtain-data-directly-yourself" id="toc-to-obtain-data-directly-yourself" class="nav-link" data-scroll-target="#to-obtain-data-directly-yourself">To obtain data directly yourself</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/nhanes/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">NHANES Dataset</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Survey</div>
+    <div class="quarto-category">National</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CDC </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 20, 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">May 23, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<p>This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class. After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>Download: <a href="../../data/nhanes_ncsp.dta">nhanes_ncsp.dta</a></p>
+<p>or use directly in code</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> https:<span class="co">//raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/nhanes_ncsp.dta</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The datset is real NHANES data of the full sample described above abstracted for a subset of variables using the R code below and a github repository that does some of the pre-processing for you.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nhanesdata)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pak::pak("kyleGrealis/nhanesdata") installed 5/22/2026 updated 5/4/26</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span> <span class="fu">read_nhanes</span>(<span class="st">"demo"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># glimpse(demo)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span> <span class="fu">read_nhanes</span>(<span class="st">"demo"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># get_url("DEMO_L") for documentation of variables in demo</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>bpx <span class="ot">&lt;-</span> <span class="fu">read_nhanes</span>(<span class="st">"bpx"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>bmx <span class="ot">&lt;-</span> <span class="fu">read_nhanes</span>(<span class="st">"bmx"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>bpq <span class="ot">&lt;-</span> <span class="fu">read_nhanes</span>(<span class="st">"bpq"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>analysis_data <span class="ot">&lt;-</span> demo <span class="sc">|&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(bpx, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"seqn"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(bmx, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"seqn"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(bpq, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"seqn"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">education =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">case_when</span>(</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      dmdeduc2 <span class="sc">==</span> <span class="st">"Less than 9th grade"</span> <span class="sc">~</span> <span class="st">"Less than high school"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">startsWith</span>(<span class="fu">as.character</span>(dmdeduc2), <span class="st">"9-11th grade"</span>) <span class="sc">~</span> <span class="st">"Some high school"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      dmdeduc2 <span class="sc">==</span> <span class="st">"High school graduate/GED or equivalent"</span> <span class="sc">~</span> <span class="st">"HS Graduate or GED"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      dmdeduc2 <span class="sc">==</span> <span class="st">"Some college or AA degree"</span> <span class="sc">~</span> <span class="st">"Some college or AA"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>      dmdeduc2 <span class="sc">==</span> <span class="st">"College graduate or above"</span> <span class="sc">~</span> <span class="st">"College graduate or above"</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Less than high school"</span>, <span class="st">"Some high school"</span>, <span class="st">"HS Graduate or GED"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Some college or AA"</span>, <span class="st">"College graduate or above"</span>)  </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">age_grp =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">case_when</span>(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        ridageyr <span class="sc">&lt;</span> <span class="dv">18</span>  <span class="sc">~</span> <span class="st">"&lt; 18"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        ridageyr <span class="sc">&lt;</span> <span class="dv">40</span>  <span class="sc">~</span> <span class="st">"18-39"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        ridageyr <span class="sc">&lt;</span> <span class="dv">60</span>  <span class="sc">~</span> <span class="st">"40-59"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        ridageyr <span class="sc">&gt;=</span> <span class="dv">60</span> <span class="sc">~</span> <span class="st">"&gt; 60"</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"&lt; 18"</span>, <span class="st">"18-39"</span>, <span class="st">"40-59"</span>, <span class="st">"&gt; 60"</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) <span class="sc">|&gt;</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2015</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">write_dta</span>(analysis_data, <span class="st">"data/nhanes_ncsp.dta"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>Example</strong></p>
+<p>Reproduce a <a href="https://www.cdc.gov/nchs/data/databriefs/db364-tables-508.pdf#page=1">table of hypertension prevalence</a> from <a href="https://www.cdc.gov/nchs/products/databriefs/db364.htm">Report - NCHS Data Brief No.&nbsp;364, April 2020</a></p>
+<p><img src="../../img/HTN_prev.png" class="img-fluid"></p>
+<p>Full <a href="https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB364_SAS.sas">SAS code</a> is available for all of the tables and figures in the report.</p>
+<p>Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp datset and the stata code folded below</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"../../data/nhanes_ncsp.dta"</span>,<span class="kw">clear</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>* Table excludes preganant women</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">encode</span> ridexprg , <span class="kw">gen</span>(pregnant) <span class="kw">label</span>(preg)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>* If (diastolic) BP <span class="ot">value</span> is 0 then change to <span class="fu">missing</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_mean=<span class="fu">rowmean</span>(bpxsy*)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_mean=<span class="fu">rowmean</span>(bpxdi*)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">foreach</span> <span class="kw">var</span> <span class="kw">of</span> <span class="kw">var</span> bpxdi*   {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">replace</span> <span class="ot">`var'</span>=. <span class="kw">if</span> <span class="ot">`var'</span>==0</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> new_htn=. </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>* elevated diastolic <span class="kw">or</span> systolic is counted <span class="kw">as</span> hypertensive <span class="kw">or</span> reporting <span class="kw">on</span> BP med</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=1 <span class="kw">if</span> sys_mean&gt;=130&amp;sys_mean&lt;. | dia_mean&gt;=80&amp;dia_mean&lt;. | bpq050a==<span class="st">"Yes"</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>* Include <span class="kw">as</span> non-hypertensive those with non-<span class="fu">missing</span> and non-high BPs</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> sys_no_miss=<span class="fu">rownonmiss</span>(bpxsy*)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">egen</span> dia_no_miss=<span class="fu">rownonmiss</span>(bpxdi*)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=0 <span class="kw">if</span> (sys_no_mis&gt;0 &amp; dia_no_mis&gt;0) &amp; new_htn==.</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>* Define subpop  non-pregant persons &gt;18, with one <span class="kw">or</span> <span class="kw">more</span> non-<span class="fu">missing</span> BPs <span class="kw">in</span> 2017-2019 cohort</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="kw">include</span>=(ridageyr&gt;=18 &amp; !<span class="fu">missing</span>(ridageyr)) &amp; pregnant!=3 &amp; (sys_no_miss!=0 | dia_no_miss!=0) &amp; <span class="fu">year</span>==2017</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">svyset</span> [<span class="fu">w</span>=wtmec2yr], psu(sdmvpsu) <span class="kw">strata</span>(sdmvstra) <span class="kw">vce</span>(<span class="kw">linearized</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">encode</span> riagendr , <span class="kw">gen</span>(gender) <span class="kw">label</span>(gender)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">replace</span> new_htn=100 <span class="kw">if</span> new_htn==1</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">clear</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>collect: <span class="kw">svy</span>: <span class="kw">mean</span> new_htn, <span class="bn">over</span>(age_grp gender) subpop(<span class="kw">include</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>collect layout (age_grp) (gender#result[_r_b _r_se])</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>collect style header result, <span class="dv">level</span>(<span class="kw">label</span>) <span class="bn">title</span>(hide)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">label</span> <span class="kw">levels</span> result _r_b <span class="st">"%"</span> _r_se <span class="st">"SE"</span>, modify</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_b],  nformat(%5.1f)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>collect style cell result[_r_se], nformat(%5.2f) sformat(<span class="st">"(%s)"</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>collect <span class="bn">title</span> <span class="st">"Hypertension prevalence (%), adults 18+, NHANES"</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>collect style autolevels gender 2 1</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>collect style header gender, <span class="bn">title</span>(hide) <span class="dv">level</span>(<span class="kw">label</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>collect <span class="kw">export</span> htn_table.html, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+
+
+
+
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<style>
+
+table {
+  border-collapse: collapse;
+}
+
+.default_title {
+}
+
+.default1_1_x {
+}
+
+.default1_2_x {
+}
+
+.default1_3_x {
+}
+
+.default1_4_x {
+}
+
+.default1_5_x {
+}
+
+.default1_x_1 {
+}
+
+.default1_x_2 {
+}
+
+.default1_x_3 {
+}
+
+.default1_x_4 {
+}
+
+.default1_x_5 {
+}
+
+.default1_1_1 {
+  border-right-style: solid;
+  border-top-style: solid;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.default1_1_1_span {
+}
+
+.default1_1_2 {
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_1_2_span {
+}
+
+.default1_1_3 {
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_1_3_span {
+}
+
+.default1_1_4 {
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_1_4_span {
+}
+
+.default1_1_5 {
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_1_5_span {
+}
+
+.default1_2_1 {
+  border-right-style: solid;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.default1_2_1_span {
+}
+
+.default1_2_2 {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_2_2_span {
+}
+
+.default1_2_3 {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_2_3_span {
+}
+
+.default1_2_4 {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_2_4_span {
+}
+
+.default1_2_5 {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_2_5_span {
+}
+
+.default1_3_1 {
+  border-right-style: solid;
+  border-top-style: solid;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.default1_3_1_span {
+}
+
+.default1_3_2 {
+  padding-left: 10pt;
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_3_2_span {
+}
+
+.default1_3_3 {
+  padding-left: 10pt;
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_3_3_span {
+}
+
+.default1_3_4 {
+  padding-left: 10pt;
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_3_4_span {
+}
+
+.default1_3_5 {
+  padding-left: 10pt;
+  border-top-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_3_5_span {
+}
+
+.default1_4_1 {
+  border-right-style: solid;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.default1_4_1_span {
+}
+
+.default1_4_2 {
+  padding-left: 10pt;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_4_2_span {
+}
+
+.default1_4_3 {
+  padding-left: 10pt;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_4_3_span {
+}
+
+.default1_4_4 {
+  padding-left: 10pt;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_4_4_span {
+}
+
+.default1_4_5 {
+  padding-left: 10pt;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_4_5_span {
+}
+
+.default1_5_1 {
+  border-right-style: solid;
+  border-bottom-style: solid;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.default1_5_1_span {
+}
+
+.default1_5_2 {
+  padding-left: 10pt;
+  border-bottom-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_5_2_span {
+}
+
+.default1_5_3 {
+  padding-left: 10pt;
+  border-bottom-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_5_3_span {
+}
+
+.default1_5_4 {
+  padding-left: 10pt;
+  border-bottom-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_5_4_span {
+}
+
+.default1_5_5 {
+  padding-left: 10pt;
+  border-bottom-style: solid;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.default1_5_5_span {
+}
+
+</style>
+
+
+
+
+
+<p class="default_title">
+Hypertension prevalence (%), adults 18+, NHANES
+</p>
+
+<table class="default1 caption-top table">
+<tbody>
+<tr class="default1_1_x odd">
+<td class="default1_x_1 default1_1_1"><span class="default1_1_1_span"> &nbsp; </span></td>
+<td class="default1_x_2 default1_1_2"><span class="default1_1_2_span"> Male </span></td>
+<td class="default1_x_3 default1_1_3"><span class="default1_1_3_span"> Male </span></td>
+<td class="default1_x_4 default1_1_4"><span class="default1_1_4_span"> Female </span></td>
+<td class="default1_x_5 default1_1_5"><span class="default1_1_5_span"> Female </span></td>
+</tr>
+<tr class="default1_2_x even">
+<td class="default1_x_1 default1_2_1"><span class="default1_2_1_span"> &nbsp; </span></td>
+<td class="default1_x_2 default1_2_2"><span class="default1_2_2_span"> % </span></td>
+<td class="default1_x_3 default1_2_3"><span class="default1_2_3_span"> SE </span></td>
+<td class="default1_x_4 default1_2_4"><span class="default1_2_4_span"> % </span></td>
+<td class="default1_x_5 default1_2_5"><span class="default1_2_5_span"> SE </span></td>
+</tr>
+<tr class="default1_3_x odd">
+<td class="default1_x_1 default1_3_1"><span class="default1_3_1_span"> 18-39 </span></td>
+<td class="default1_x_2 default1_3_2"><span class="default1_3_2_span"> 31.2 </span></td>
+<td class="default1_x_3 default1_3_3"><span class="default1_3_3_span"> (1.78) </span></td>
+<td class="default1_x_4 default1_3_4"><span class="default1_3_4_span"> 13.0 </span></td>
+<td class="default1_x_5 default1_3_5"><span class="default1_3_5_span"> (1.42) </span></td>
+</tr>
+<tr class="default1_4_x even">
+<td class="default1_x_1 default1_4_1"><span class="default1_4_1_span"> 40-59 </span></td>
+<td class="default1_x_2 default1_4_2"><span class="default1_4_2_span"> 59.4 </span></td>
+<td class="default1_x_3 default1_4_3"><span class="default1_4_3_span"> (3.43) </span></td>
+<td class="default1_x_4 default1_4_4"><span class="default1_4_4_span"> 49.9 </span></td>
+<td class="default1_x_5 default1_4_5"><span class="default1_4_5_span"> (2.39) </span></td>
+</tr>
+<tr class="default1_5_x odd">
+<td class="default1_x_1 default1_5_1"><span class="default1_5_1_span"> &gt; 60 </span></td>
+<td class="default1_x_2 default1_5_2"><span class="default1_5_2_span"> 75.2 </span></td>
+<td class="default1_x_3 default1_5_3"><span class="default1_5_3_span"> (3.01) </span></td>
+<td class="default1_x_4 default1_5_4"><span class="default1_5_4_span"> 73.9 </span></td>
+<td class="default1_x_5 default1_5_5"><span class="default1_5_5_span"> (2.04) </span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</section>
+<section id="dataset-description" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>
+<p>continuous, repeated measures, demographics</p>
+<section id="features" class="level3">
+<h3 class="anchored" data-anchor-id="features">Features</h3>
+</section>
+<section id="variables" class="level3">
+<h3 class="anchored" data-anchor-id="variables">Variables</h3>
+<p>You can look up variables on the <a href="https://wwwn.cdc.gov/nchs/nhanes/search/default.aspx">NCHS website variable lookup tool</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>. <span class="kw">codebook</span>,compact</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Variable       Obs Unique      Mean       Min       Max  Label</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>         11891      2   2015.98      2015      2017  </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>seqn         11891  11891  93393.81     83732    102956  </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ridageyr     11891     65  47.21882        16        80  </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>age_grp      11891      4   2.88218         1         4  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>sddsrvyr     11891      2         .         .         .  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>education    10724      5  3.476035         1         5  </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>dmdmartl     10739      7         .         .         .  </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>indfmpir     10495    487  2.446261         0         5  </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ridreth3     11891      6         .         .         .  </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>riagendr     11891      2         .         .         .  </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>bpxsy1       10876     74  124.7269        72       236  </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>bpxsy2       11255     75  124.7012        72       238  </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>bpxsy3       11214     78  124.2804        72       238  </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>bpxsy4         737     62  134.1493        76       234  </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>bpxdi1       10806     55  70.52841        14       136  </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>bpxdi2       11195     57  70.62439        20       144  </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>bpxdi3       11156     59  70.55199         2       140  </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>bpxdi4         727     44  76.67125        30       132  </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>bmxbmi       11713    449  29.31031      13.2      86.2  </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>bpq050a       3620      2         .         .         .  </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ridexprg      2297      3         .         .         .  </span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>sdmvstra     11891     30  133.4681       119       148  </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>sdmvpsu      11891      2  1.501219         1         2  </span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>wtmec2yr     11891   5411  21529.58         0  419762.8  </span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>pregnant      2297      3  2.019155         1         3  </span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>sys_no_miss  11891      4  2.866201         0         3  </span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>dia_no_miss  11891      4  2.866201         0         3  </span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>sys_mean     11421    237  124.8151  72.66666       238  </span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>dia_mean     11421    190  70.30456         0  138.6667  </span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>new_htn      11527      2  49.86553         0       100  </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">include</span>      11891      2  .9000925         0         1  </span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>gender       11891      2  1.482213         1         2  </span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="to-obtain-data-directly-yourself" class="level3">
+<h3 class="anchored" data-anchor-id="to-obtain-data-directly-yourself">To obtain data directly yourself</h3>
+<p>Main <a href="https://www.ddshub.nih.gov/data-sources/nhanes-national-health-nutrition-examination-survey">CDC NHANES site documentation and download site</a></p>
+<p><a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/SampleCode.aspx">Examples of reproducing NHANES CDC tables</a> in several languages including Stata, R, SAS and Sudaan</p>
+<ul>
+<li><a href="https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB303_STATA16.do">Depression prevalence 2013-2016-Stata do-file</a> <!-- can use in measurement sum dpq010-dpq100 if !missing(Depression_Indicator) --></li>
+</ul>
+<p>Note: Stata has a <a href="https://www.stata.com/manuals/mimiimportnhanes1.pdf">NHANES format MI impport command</a> for some of the MI file versions NHANES has presumably.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/tphofer\.github\.io\/ncsp-hhcr\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/nhanes/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

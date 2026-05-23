@@ -1,0 +1,202 @@
+---
+title: "NHANES Dataset"
+author: "CDC"
+date: "5/20/2026"
+date-modified: "5/23/2026"
+categories: [Survey, National]
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(Statamarkdown)
+stataexe <- "/Applications/StataNow/StataSE.app/Contents/MacOS/stata-se"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+## Source 
+
+This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class.  After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021.
+
+## Dataset
+
+
+Download: [nhanes_ncsp.dta](../../data/nhanes_ncsp.dta)
+
+or use directly in code
+
+```stata
+use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/nhanes_ncsp.dta
+```
+
+The datset is real NHANES data of the full sample described above abstracted for a subset of variables using the R code below and a github repository that does some of the pre-processing for you.
+```{r}
+#| eval: false
+#| code-fold: true
+library(nhanesdata)
+library(dplyr)
+library(ggplot2)
+# pak::pak("kyleGrealis/nhanesdata") installed 5/22/2026 updated 5/4/26
+demo <- read_nhanes("demo")
+# glimpse(demo)
+demo <- read_nhanes("demo")
+# get_url("DEMO_L") for documentation of variables in demo
+bpx <- read_nhanes("bpx")
+bmx <- read_nhanes("bmx")
+bpq <- read_nhanes("bpq")
+
+analysis_data <- demo |>
+  inner_join(bpx, by = c("seqn", "year")) |>
+  inner_join(bmx, by = c("seqn", "year")) |>
+  inner_join(bpq, by = c("seqn", "year")) |>
+  mutate(education = factor(
+    case_when(
+      dmdeduc2 == "Less than 9th grade" ~ "Less than high school",
+      startsWith(as.character(dmdeduc2), "9-11th grade") ~ "Some high school",
+      dmdeduc2 == "High school graduate/GED or equivalent" ~ "HS Graduate or GED",
+      dmdeduc2 == "Some college or AA degree" ~ "Some college or AA",
+      dmdeduc2 == "College graduate or above" ~ "College graduate or above"
+    ),
+    levels = c("Less than high school", "Some high school", "HS Graduate or GED",
+               "Some college or AA", "College graduate or above")  
+    )) |>
+    mutate(age_grp = factor(
+    case_when(
+        ridageyr < 18  ~ "< 18",
+        ridageyr < 40  ~ "18-39",
+        ridageyr < 60  ~ "40-59",
+        ridageyr >= 60 ~ "> 60"
+    ),
+    levels = c("< 18", "18-39", "40-59", "> 60")
+    )) |>
+  select(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) |>
+  filter(year >= 2015)
+
+haven::write_dta(analysis_data, "data/nhanes_ncsp.dta")
+```
+
+
+__Example__
+
+Reproduce a [table of hypertension prevalence](https://www.cdc.gov/nchs/data/databriefs/db364-tables-508.pdf#page=1)
+from [Report - NCHS Data Brief No. 364, April 2020 ](https://www.cdc.gov/nchs/products/databriefs/db364.htm)
+
+![](../../img/HTN_prev.png)
+
+Full [SAS code](https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB364_SAS.sas) is available for all of the tables and figures in the report.
+
+Below I reproduced age category by gender prevalence estimates using the nhanes-ncsp datset and the stata code folded below
+```{stata, results="hide"}
+use "../../data/nhanes_ncsp.dta",clear
+* Table excludes preganant women
+encode ridexprg , gen(pregnant) label(preg)
+
+* If (diastolic) BP value is 0 then change to missing
+egen sys_mean=rowmean(bpxsy*)
+egen dia_mean=rowmean(bpxdi*)
+
+foreach var of var bpxdi*	{
+	replace `var'=. if `var'==0
+}
+
+
+gen new_htn=. 
+* elevated diastolic or systolic is counted as hypertensive or reporting on BP med
+replace new_htn=1 if sys_mean>=130&sys_mean<. | dia_mean>=80&dia_mean<. | bpq050a=="Yes"
+* Include as non-hypertensive those with non-missing and non-high BPs
+egen sys_no_miss=rownonmiss(bpxsy*)
+egen dia_no_miss=rownonmiss(bpxdi*)
+replace new_htn=0 if (sys_no_mis>0 & dia_no_mis>0) & new_htn==.
+
+* Define subpop  non-pregant persons >18, with one or more non-missing BPs in 2017-2019 cohort
+gen include=(ridageyr>=18 & !missing(ridageyr)) & pregnant!=3 & (sys_no_miss!=0 | dia_no_miss!=0) & year==2017
+
+svyset [w=wtmec2yr], psu(sdmvpsu) strata(sdmvstra) vce(linearized)
+encode riagendr , gen(gender) label(gender)
+replace new_htn=100 if new_htn==1
+
+collect clear
+
+collect: svy: mean new_htn, over(age_grp gender) subpop(include)
+
+collect layout (age_grp) (gender#result[_r_b _r_se])
+collect style header result, level(label) title(hide)
+collect label levels result _r_b "%" _r_se "SE", modify
+collect style cell result[_r_b],  nformat(%5.1f)
+collect style cell result[_r_se], nformat(%5.2f) sformat("(%s)")
+collect title "Hypertension prevalence (%), adults 18+, NHANES"
+collect style autolevels gender 2 1
+collect style header gender, title(hide) level(label)
+collect export htn_table.html, replace
+```
+
+```{=html}
+{{< include htn_table.html >}}
+```
+
+## Dataset description
+
+continuous, repeated measures, demographics
+
+### Features
+
+
+
+### Variables
+
+You can look up variables on the [NCHS website variable lookup tool](https://wwwn.cdc.gov/nchs/nhanes/search/default.aspx)
+
+```stata
+. codebook,compact
+
+Variable       Obs Unique      Mean       Min       Max  Label
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+year         11891      2   2015.98      2015      2017  
+seqn         11891  11891  93393.81     83732    102956  
+ridageyr     11891     65  47.21882        16        80  
+age_grp      11891      4   2.88218         1         4  
+sddsrvyr     11891      2         .         .         .  
+education    10724      5  3.476035         1         5  
+dmdmartl     10739      7         .         .         .  
+indfmpir     10495    487  2.446261         0         5  
+ridreth3     11891      6         .         .         .  
+riagendr     11891      2         .         .         .  
+bpxsy1       10876     74  124.7269        72       236  
+bpxsy2       11255     75  124.7012        72       238  
+bpxsy3       11214     78  124.2804        72       238  
+bpxsy4         737     62  134.1493        76       234  
+bpxdi1       10806     55  70.52841        14       136  
+bpxdi2       11195     57  70.62439        20       144  
+bpxdi3       11156     59  70.55199         2       140  
+bpxdi4         727     44  76.67125        30       132  
+bmxbmi       11713    449  29.31031      13.2      86.2  
+bpq050a       3620      2         .         .         .  
+ridexprg      2297      3         .         .         .  
+sdmvstra     11891     30  133.4681       119       148  
+sdmvpsu      11891      2  1.501219         1         2  
+wtmec2yr     11891   5411  21529.58         0  419762.8  
+pregnant      2297      3  2.019155         1         3  
+sys_no_miss  11891      4  2.866201         0         3  
+dia_no_miss  11891      4  2.866201         0         3  
+sys_mean     11421    237  124.8151  72.66666       238  
+dia_mean     11421    190  70.30456         0  138.6667  
+new_htn      11527      2  49.86553         0       100  
+include      11891      2  .9000925         0         1  
+gender       11891      2  1.482213         1         2  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+```
+
+
+### To obtain data directly yourself
+
+Main [CDC NHANES site documentation and download site](https://www.ddshub.nih.gov/data-sources/nhanes-national-health-nutrition-examination-survey)
+
+
+[Examples of reproducing NHANES CDC tables](https://wwwn.cdc.gov/nchs/nhanes/tutorials/SampleCode.aspx) in several languages including Stata, R, SAS and Sudaan
+
+* [Depression prevalence 2013-2016-Stata do-file](https://wwwn.cdc.gov/nchs/data/Tutorials/Code/DB303_STATA16.do)
+<!-- can use in measurement sum dpq010-dpq100 if !missing(Depression_Indicator) -->
+
+Note: Stata has a [NHANES format MI impport command](https://www.stata.com/manuals/mimiimportnhanes1.pdf) for some of the MI file versions NHANES has presumably.

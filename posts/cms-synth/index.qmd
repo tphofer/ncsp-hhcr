@@ -2,7 +2,7 @@
 title: "CMS Synthetic datasets"
 author: "CMS"
 date: "2008-01-01"
-categories: [Data Management]
+categories: [Data Management, Synthetic, National]
 ---
 
 ## Source 
