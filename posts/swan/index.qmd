@@ -13,7 +13,7 @@ As modified by TPH
 
 ## Dataset
 
-[rhc_class_tph.dta](../../rhc_class_tph.dta)
+[rhc_class_tph.dta](../../data/rhc_class_tph.dta)
 
 or use directly in code
 
