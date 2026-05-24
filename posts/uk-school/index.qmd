@@ -27,7 +27,7 @@ Download: [5.1.dta](../../data/5.1.dta)
 or use directly in code
 
 ```stata
-use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/5.1.dta
+use https://tphofer.github.io/ncsp-hhcr/data/5.1.dta
 ```
 
 ## Dataset description

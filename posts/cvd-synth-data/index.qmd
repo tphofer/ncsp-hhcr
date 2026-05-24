@@ -17,7 +17,7 @@ This is a simple synthetic datset of CV events by age, sex and smoking exposure.
 or use directly in code
 
 ```stata
-use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/cvd_data.dta
+use https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta
 ```
 
 ## Dataset description 

@@ -18,7 +18,7 @@ using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sec
 or use directly in code
 
 ```stata
-use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/mus10data.dta
+use https://tphofer.github.io/ncsp-hhcr/data/mus10data.dta
 ```
 
 ## Dataset description 

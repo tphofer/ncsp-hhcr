@@ -13,12 +13,12 @@ As modified by TPH
 
 ## Dataset
 
-[rhc_class_tph.dta](data/rhc_class_tph.dta)
+[rhc_class_tph.dta](../../rhc_class_tph.dta)
 
 or use directly in code
 
 ```stata
-use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/rhc_class_tph.dta
+use https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta
 ```
 
 ## Dataset description

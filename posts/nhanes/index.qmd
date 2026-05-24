@@ -26,7 +26,7 @@ Download: [nhanes_ncsp.dta](../../data/nhanes_ncsp.dta)
 or use directly in code
 
 ```stata
-use https://raw.githubusercontent.com/tphofer/ncsp-hhcr/refs/heads/main/data/nhanes_ncsp.dta
+use https://tphofer.github.io/ncsp-hhcr/data/nhanes_ncsp.dta
 ```
 
 The datset is real NHANES data of the full sample described above abstracted for a subset of variables using the R code below and a github repository that does some of the pre-processing for you.
