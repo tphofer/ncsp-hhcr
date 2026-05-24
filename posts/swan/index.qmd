@@ -18,7 +18,7 @@ As modified by TPH
 or use directly in code
 
 ```stata
-use https://github.com/tphofer/ncsp-hhcr/raw/refs/heads/main/data/rhc_class_tph.dta
+use https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta
 ```
 
 ## Dataset description

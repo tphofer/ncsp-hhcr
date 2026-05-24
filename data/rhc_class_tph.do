@@ -1,4 +1,4 @@
-use https://public.websites.umich.edu/~thofer/data/rhc_class_tph.dta,clear
+use https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta,clear
 noi notes
 noi di "Type the command {stata data_desc} for a organized list of the variables"
 noi di "Type {stata data_desc,short} for a short organized list"
