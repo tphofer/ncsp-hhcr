@@ -20,7 +20,7 @@ The data are a subset of that originally described by Almond 2005 (Quarterly Jou
 use directly in code
 
 ```stata
-use https://tphofer.github.io/ncsp-hhcr/data/cattaneo2.dta , clear
+use https://www.stata-press.com/data/r16/cattaneo2 , clear
 ```
 
 Published example of causal inference methods paper using this dataset. ([Ghosh 2021 Stat Sin](https://pmc.ncbi.nlm.nih.gov/articles/PMC8439424/#S21))
