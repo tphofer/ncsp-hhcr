@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -139,6 +174,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#sec-example" id="toc-sec-example" class="nav-link" data-scroll-target="#sec-example">Example</a>
+  <ul>
+  <li><a href="#variables-1" id="toc-variables-1" class="nav-link" data-scroll-target="#variables-1">variables</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/tphofer/ncsp-hhcr/edit/main/posts/cms-synth/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
@@ -182,11 +221,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><a href="#sec-example" class="quarto-xref">Section&nbsp;3.3</a> proves an example dataset for download.</p>
 <section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source">Source</h2>
-<p>CMS started to provide sythetic datasets so that people can familiarize themselves working with CMS data.</p>
-<p>On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF) to be used by data entrepreneurs for writing programs and developing applications or research protocols that can be applied to CMS claims data. This public release will aid entrepreneurs and researchers in understanding the complexity and abundance of information in these data. The DE- SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland- based research, evaluation and technical assistance.</p>
-<p>All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.</p>
+<p>CMS has started to provide sythetic datasets so that people can familiarize themselves working with CMS data.</p>
+<p>On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF). The file contains synthesized data taken from a 5% random sample of Medicare beneficiaries in 2008 and their claims from 2008 to 2010 and preserve the detailed data structure and metadata of key variables at both the beneficiary and claim levels.</p>
+<p>The DE-SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-based research, evaluation and technical assistance. All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.</p>
 <p>To date, this is still the only release available</p>
 </section>
 <section id="dataset" class="level2">
@@ -195,9 +235,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-description" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-description">Dataset description</h2>
+<p>Contains multiple separate files.</p>
 <p><a href="https://www.cms.gov/research-statistics-data-and-systems/downloadable-public-use-files/synpufs/downloads/synpuf_dug.pdf">Data documentation</a></p>
-<p>The DE-SynPUF is based from a 5% sample of enrolled Medicare beneficiaries in 2008. It includes three years of claims (2008, 2009, and 2010) for the beneficiaries and four types of claims (Inpatient, Outpatient, Carrier, PDE – Prescription Drug Event) in addition to a beneficiary summary file for each year.</p>
-<p>Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample). All claims for a particular beneficiary are in samples with the same number (i.e.&nbsp;all beneficiaries in sample 1 have all their claims in the sample 1 files). This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.</p>
+<p>Represents a 5% sample of Medicare beneficiaries.</p>
+<ul>
+<li>Three years of claims (<strong>2008</strong>, <strong>2009</strong>, and <strong>2010</strong>) for the beneficiaries</li>
+<li>Four types of claims (<strong>Inpatient</strong>, <strong>Outpatient</strong>, <strong>Carrier</strong>, <strong>PDE</strong> – Prescription Drug Event)</li>
+<li>A <strong>beneficiary summary file</strong> for each year.</li>
+</ul>
+<p>Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample of all Medicare enrollees). All claims for a particular beneficiary are in samples with the same number (i.e.&nbsp;all beneficiaries in sample 1 have all their claims in the sample 1 files). This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.</p>
 <p><strong>Sample 1 files</strong> (.csv files)</p>
 <p>DE1.0 Sample 1 2008 Beneficiary Summary File (ZIP)<br>
 DE1.0 Sample 1 2008-2010 Carrier Claims 1<br>
@@ -269,8 +315,172 @@ DE1.0 Sample 1 2010 Beneficiary Summary File (ZIP)</p>
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
 <p>Vary by file</p>
+</section>
+<section id="sec-example" class="level3">
+<h3 class="anchored" data-anchor-id="sec-example">Example</h3>
+<p>Dataset with the entire population of benficiaries in the sample (2,326,705) and several variables.</p>
+<p>Download: <a href="../../data/cms_oop_costs.dta">cms_oop_costs.dta</a> (large 34MB)</p>
+<p>or use directly in code</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> https:<span class="co">//tphofer.github.io/ncsp-hhcr/data/cms_oop_costs.dta</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Code creating the dataset from the 20 separate files of the beneficiary summary file for 2008 (each with about 116,000 records) is below. The files were hosted as csv files (rather than zipped files as on the CMS webstie) on a GitHub user’s site.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span> <span class="ot">all</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  frames <span class="kw">reset</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  frame create master</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> base <span class="st">"https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">forvalues</span> i = 1/20 {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      import delimited <span class="st">"`base'_`i'.csv"</span>, varnames(1) <span class="kw">clear</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">keep</span> bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">rename</span> bene_sex_ident_cd sex</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">rename</span> sp_chf heart_failure</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">rename</span> sp_cncr cancer</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    cwf master</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    fframeappend, <span class="kw">using</span>(<span class="kw">default</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    cwf <span class="kw">default</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  frame change master</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">egen</span> <span class="kw">total</span>=<span class="fu">rowtotal</span>(benres_ip benres_op benres_car)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<section id="variables-1" class="level4">
+<h4 class="anchored" data-anchor-id="variables-1">variables</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>. <span class="kw">codebook</span>, compact</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Variable          Obs Unique      Mean  Min    Max  Label</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>---------------------------------------------------------------------------------------------------------------</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>sex           2326705      2  1.555653    1      2  BENE_SEX_IDENT_CD</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>heart_fail~<span class="fu">e</span>  2326705      2   1.71546    1      2  SP_CHF</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>cancer        2326705      2  1.936386    1      2  SP_CNCR</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>benres_ip     2326705    423  247.2868    0  53096  BENRES_IP</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>benres_op     2326705   1174  197.5022    0  18700  BENRES_OP</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>benres_car    2326705    506  328.8734    0   5900  BENRES_CAR</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">total</span>         2326705   6709  773.6624    0  54146  Total out <span class="kw">of</span> pocket costs (excl. Part D)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>---------------------------------------------------------------------------------------------------------------</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note:<br>
+<strong>benres_ip</strong>: Captures all inpatient hospitalizations, but it also includes Skilled Nursing Facility (SNF) and Hospice cost-sharing.<br>
+<strong>benres_op</strong>: Captures hospital outpatient departments, ER visits, and Home Health Agency (HHA) institutional outpatient claims.<br>
+<strong>benres_car</strong>: Captures non-institutional professional services, such as doctor office visits, lab tests, and Durable Medical Equipment (DME).</p>
+<!--  extra code
+* codebook https://www.cms.gov/files/document/de-10-codebook.pdf-0
+* https://github.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/tree/master
+* ADD in Part D
+
+clear all
+frames reset
+frame create master
+frame create pde // New frame specifically to hold aggregated Part D data
+
+* --- PART 1: Loop for Beneficiary Summary Files (Your Original Structure) ---
+local base_bsf "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"
+
+forvalues i = 1/20 {
+    import delimited "`base_bsf'_`i'.csv", varnames(1) clear
+    keep desynpuf_id bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car
+    rename bene_sex_ident_cd sex
+    rename sp_chf heart_failure
+    rename sp_cncr cancer
+    cwf master
+    fframeappend, using(default)
+    cwf default
+}
+
+* --- PART 2: Loop for Prescription Drug Event (PDE) Files ---
+* NOT HOSTED ON Gauri's site, so this is a placeholder URL. You will need to replace it with the actual location of the PDE sample files.
+* BUT PART D IS MUCH LARGER, and costs are at the event level not the claim level, so we will sum up costs for each beneficiary in a separate frame before merging to master
+* Note: Replace this URL with the exact repository path to Gauri's Part D/PDE sample files if different
+local base_pde "https://githubusercontent.com"
+
+cwf pde
+forvalues i = 1/20 {
+    * Note: capture confirms execution if certain samples are missing drug records
+    capture import delimited "`base_pde'_`i'.csv", varnames(1) clear
+    if _rc == 0 {
+        keep desynpuf_id ptnt_pay_amt
+        cwf pde
+        fframeappend, using(default)
+        cwf default
+    }
+}
+
+* --- PART 3: Aggregate and Merge the Datasets ---
+cwf pde
+* Sum up every transaction a single person made into an annual drug total
+collapse (sum) benres_ptext=ptnt_pay_amt, by(desynpuf_id)
+
+* Switch to master frame to link the aggregated data
+cwf master
+frlink 1:1 desynpuf_id, frame(pde)
+frget benres_rx = benres_ptext, from(pde)
+
+* Clean up missing values to 0 for beneficiaries who didn't fill prescriptions 
+recode benres_rx (. = 0)
+
+* --- PART 4: Calculate True Covered Out-of-Pocket Expenses ---
+egen total = rowtotal(benres_ip benres_op benres_car benres_rx)
 
 
+* SIMPLE
+clear all
+  tempfile master
+  save `master', emptyok
+
+  local base "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"
+
+  forvalues i = 1/20 {
+      import delimited "`base'_`i'.csv", varnames(1) clear
+      keep bene_sex_ident_cd sp_chf
+      rename bene_sex_ident_cd sex
+      rename sp_chf heart_failure
+      append using `master'
+      save `master', replace
+  }
+
+  use `master', clear
+  
+* Bulk download, only  if needed (missing from directory) using curl xargs.
+
+clear all
+
+  local base "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Su
+  mmary_File_Sample"
+  local dir "medicare_csvs"
+
+  capture mkdir "`dir'"
+
+  // Parallel download — skip if all 20 files are already cached locally
+  local need_download 0
+  forvalues i = 1/20 {
+      capture confirm file "`dir'/sample_`i'.csv"
+      if _rc local need_download 1
+  }
+  if `need_download' {
+      shell seq 1 20 | xargs -I{} -P 8 curl -fsSL -o "`dir'/sample_{}.csv" "`base'_{}.csv"
+  }
+
+  // Sequential import + append from local files
+  tempfile master
+  save `master', emptyok
+
+  forvalues i = 1/20 {
+      import delimited "`dir'/sample_`i'.csv", varnames(1) clear
+      keep bene_sex_ident_cd sp_chf
+      rename bene_sex_ident_cd sex
+      rename sp_chf heart_failure
+      append using `master'
+      save `master', replace
+  }
+
+  use `master', clear
+
+-->
+
+
+</section>
 </section>
 </section>
 

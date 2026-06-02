@@ -5,18 +5,23 @@ date: "2008-01-01"
 categories: [Data Management, Synthetic, National]
 ---
 
+```{r}
+#| label: setup
+#| include: false
+library(Statamarkdown)
+stataexe <- "/Applications/StataNow/StataSE.app/Contents/MacOS/stata-se"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+@sec-example proves an example dataset for download.
+
 ## Source 
 
-CMS started to provide sythetic datasets so that people can familiarize themselves working with CMS data.
+CMS has started to provide sythetic datasets so that people can familiarize themselves working with CMS data.  
 
-On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File
-(DE-SynPUF) to be used by data entrepreneurs for writing programs and developing applications or
-research protocols that can be applied to CMS claims data. This public release will aid entrepreneurs
-and researchers in understanding the complexity and abundance of information in these data. The DE-
-SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-
-based research, evaluation and technical assistance.  
+On 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF). The file contains synthesized data taken from a 5% random sample of Medicare beneficiaries in 2008 and their claims from 2008 to 2010 and preserve the detailed data structure and metadata of key variables at both the beneficiary and claim levels.
 
-All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.
+The DE-SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-based research, evaluation and technical assistance.  All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.
 
 To date, this is still the only release available
 
@@ -27,14 +32,18 @@ Available at [this CMS website](https://www.cms.gov/data-research/statistics-tre
 
 ## Dataset description
 
+Contains multiple separate files.
+
 [Data documentation](https://www.cms.gov/research-statistics-data-and-systems/downloadable-public-use-files/synpufs/downloads/synpuf_dug.pdf)
 
-The DE-SynPUF is based from a 5% sample of enrolled Medicare beneficiaries in 2008. It includes three
-years of claims (2008, 2009, and 2010) for the beneficiaries and four types of claims (Inpatient,
-Outpatient, Carrier, PDE – Prescription Drug Event) in addition to a beneficiary summary file for each
-year.
+Represents a 5% sample of Medicare beneficiaries.
 
-Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample).  All claims for a particular beneficiary are in samples with the same number (i.e. all beneficiaries in sample 1 have all their claims in the sample 1 files).  This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.  
+* Three years of claims (__2008__, __2009__, and __2010__) for the beneficiaries 
+* Four types of claims (__Inpatient__, __Outpatient__, __Carrier__, __PDE__ – Prescription Drug Event) 
+* A __beneficiary summary file__ for each year.
+
+
+Due to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample of all Medicare enrollees).  All claims for a particular beneficiary are in samples with the same number (i.e. all beneficiaries in sample 1 have all their claims in the sample 1 files).  This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.  
 
 __Sample 1 files__  (.csv files)
 
@@ -62,3 +71,181 @@ Note: Claim counts for 2010 are lower due to attrition from death, and some effe
 ### Variables
 
 Vary by file
+
+### Example {#sec-example}
+
+Dataset with the entire population of benficiaries in the sample (2,326,705) and several variables.
+
+Download: [cms_oop_costs.dta](../../data/cms_oop_costs.dta)  (large 34MB)
+
+or use directly in code
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/cms_oop_costs.dta
+```
+
+Code creating the dataset from the 20 separate files of the beneficiary summary file for 2008 (each with about 116,000 records) is below. The files were hosted as csv files (rather than zipped files as on the CMS webstie) on a GitHub user's site.
+```{stata,echo=1:18}
+*| eval: false
+  clear all
+  frames reset
+  frame create master
+  local base "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"
+
+  forvalues i = 1/20 {
+      import delimited "`base'_`i'.csv", varnames(1) clear
+      keep bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car
+      rename bene_sex_ident_cd sex
+      rename sp_chf heart_failure
+	  rename sp_cncr cancer
+    cwf master
+    fframeappend, using(default)
+    cwf default
+  }
+
+  frame change master
+  egen total=rowtotal(benres_ip benres_op benres_car)
+  label var total "Total out of pocket costs (excl. Part D)"
+  save ../data/cms_oop_costs.dta, replace
+```
+
+
+#### variables
+
+```stata
+. codebook, compact
+
+Variable          Obs Unique      Mean  Min    Max  Label
+---------------------------------------------------------------------------------------------------------------
+sex           2326705      2  1.555653    1      2  BENE_SEX_IDENT_CD
+heart_fail~e  2326705      2   1.71546    1      2  SP_CHF
+cancer        2326705      2  1.936386    1      2  SP_CNCR
+benres_ip     2326705    423  247.2868    0  53096  BENRES_IP
+benres_op     2326705   1174  197.5022    0  18700  BENRES_OP
+benres_car    2326705    506  328.8734    0   5900  BENRES_CAR
+total         2326705   6709  773.6624    0  54146  Total out of pocket costs (excl. Part D)
+---------------------------------------------------------------------------------------------------------------
+
+
+```
+
+Note:  
+__benres_ip__: Captures all inpatient hospitalizations, but it also includes Skilled Nursing Facility (SNF) and Hospice cost-sharing.  
+__benres_op__: Captures hospital outpatient departments, ER visits, and Home Health Agency (HHA) institutional outpatient claims.  
+__benres_car__: Captures non-institutional professional services, such as doctor office visits, lab tests, and Durable Medical Equipment (DME).
+
+
+
+<!--  extra code
+* codebook https://www.cms.gov/files/document/de-10-codebook.pdf-0
+* https://github.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/tree/master
+* ADD in Part D
+
+clear all
+frames reset
+frame create master
+frame create pde // New frame specifically to hold aggregated Part D data
+
+* --- PART 1: Loop for Beneficiary Summary Files (Your Original Structure) ---
+local base_bsf "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"
+
+forvalues i = 1/20 {
+    import delimited "`base_bsf'_`i'.csv", varnames(1) clear
+    keep desynpuf_id bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car
+    rename bene_sex_ident_cd sex
+    rename sp_chf heart_failure
+    rename sp_cncr cancer
+    cwf master
+    fframeappend, using(default)
+    cwf default
+}
+
+* --- PART 2: Loop for Prescription Drug Event (PDE) Files ---
+* NOT HOSTED ON Gauri's site, so this is a placeholder URL. You will need to replace it with the actual location of the PDE sample files.
+* BUT PART D IS MUCH LARGER, and costs are at the event level not the claim level, so we will sum up costs for each beneficiary in a separate frame before merging to master
+* Note: Replace this URL with the exact repository path to Gauri's Part D/PDE sample files if different
+local base_pde "https://githubusercontent.com"
+
+cwf pde
+forvalues i = 1/20 {
+    * Note: capture confirms execution if certain samples are missing drug records
+    capture import delimited "`base_pde'_`i'.csv", varnames(1) clear
+    if _rc == 0 {
+        keep desynpuf_id ptnt_pay_amt
+        cwf pde
+        fframeappend, using(default)
+        cwf default
+    }
+}
+
+* --- PART 3: Aggregate and Merge the Datasets ---
+cwf pde
+* Sum up every transaction a single person made into an annual drug total
+collapse (sum) benres_ptext=ptnt_pay_amt, by(desynpuf_id)
+
+* Switch to master frame to link the aggregated data
+cwf master
+frlink 1:1 desynpuf_id, frame(pde)
+frget benres_rx = benres_ptext, from(pde)
+
+* Clean up missing values to 0 for beneficiaries who didn't fill prescriptions 
+recode benres_rx (. = 0)
+
+* --- PART 4: Calculate True Covered Out-of-Pocket Expenses ---
+egen total = rowtotal(benres_ip benres_op benres_car benres_rx)
+
+
+* SIMPLE
+clear all
+  tempfile master
+  save `master', emptyok
+
+  local base "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample"
+
+  forvalues i = 1/20 {
+      import delimited "`base'_`i'.csv", varnames(1) clear
+      keep bene_sex_ident_cd sp_chf
+      rename bene_sex_ident_cd sex
+      rename sp_chf heart_failure
+      append using `master'
+      save `master', replace
+  }
+
+  use `master', clear
+  
+* Bulk download, only  if needed (missing from directory) using curl xargs.
+
+clear all
+
+  local base "https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Su
+  mmary_File_Sample"
+  local dir "medicare_csvs"
+
+  capture mkdir "`dir'"
+
+  // Parallel download — skip if all 20 files are already cached locally
+  local need_download 0
+  forvalues i = 1/20 {
+      capture confirm file "`dir'/sample_`i'.csv"
+      if _rc local need_download 1
+  }
+  if `need_download' {
+      shell seq 1 20 | xargs -I{} -P 8 curl -fsSL -o "`dir'/sample_{}.csv" "`base'_{}.csv"
+  }
+
+  // Sequential import + append from local files
+  tempfile master
+  save `master', emptyok
+
+  forvalues i = 1/20 {
+      import delimited "`dir'/sample_`i'.csv", varnames(1) clear
+      keep bene_sex_ident_cd sp_chf
+      rename bene_sex_ident_cd sex
+      rename sp_chf heart_failure
+      append using `master'
+      save `master', replace
+  }
+
+  use `master', clear
+
+-->

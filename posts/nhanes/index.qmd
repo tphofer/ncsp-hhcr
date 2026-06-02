@@ -225,3 +225,60 @@ Main [CDC NHANES site documentation and download site](https://www.ddshub.nih.go
 <!-- can use in measurement sum dpq010-dpq100 if !missing(Depression_Indicator) -->
 
 Note: Stata has a [NHANES format MI impport command](https://www.stata.com/manuals/mimiimportnhanes1.pdf) for some of the MI file versions NHANES has presumably.
+
+
+<!-- extra code works well
+********NHANES direct from CDC
+
+https://blog.uvm.edu/tbplante/2021/11/15/using-statas-frames-feature-to-build-an-analytical-dataset/
+
+clear
+frames reset
+global url "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/"
+global F "2009/DataFiles/"
+global G "2011/DataFiles/"  
+* then change to foreach x in F G below
+global files DEMO BPQ KIQ_U
+
+foreach x in F G {
+	foreach y in $files {
+		mkf `y'_`x'
+		frame `y'_`x': import sasxport5 "${url}${`x'}`y'_`x'.xpt"
+	}
+frame DEMO_`x': frame put seqn, into(analytical_`x')
+cwf analytical_`x'
+	foreach y in $files {
+		frlink 1:1 seqn, frame(`y'_`x') 
+	}
+	frget wtint2yr wtmec2yr sdmvpsu sdmvstra, from(DEMO_`x')
+	frget bpq020, from(BPQ_`x')
+	frget kiq022, from(KIQ_U_`x')
+}
+frames dir 
+pwf 
+fframeappend,using(analytical_F)
+de
+
+
+
+One year
+clear
+frames reset
+global dir "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/"
+global files DEMO_F BPQ_F KIQ_U_F
+
+foreach y in $files {
+	mkf `y'
+	frame `y': import sasxport5 "${dir}`y'.xpt"
+}
+frame DEMO_F: frame put seqn, into(analytical)
+cwf analytical
+foreach y in $files {
+	frlink 1:1 seqn, frame(`y') 
+}
+frget wtint2yr wtmec2yr sdmvpsu sdmvstra, from(DEMO_F)
+frget bpq020, from(BPQ_F)
+frget kiq022, from(KIQ_U_F)
+frames dir 
+pwf 
+-->
