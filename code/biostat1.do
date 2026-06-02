@@ -1,3 +1,5 @@
+di "Welcome to the Stata environment for Chapter 1 - Bistatistics 1 _n  You are now ready to run all the examples and problems in this chapter"
+
 cap prog drop ex_sample
 prog define ex_sample
 clear
