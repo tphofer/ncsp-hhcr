@@ -11,6 +11,7 @@ prob3 - takes to measurment problem 1.2.3
 prob4 - setus up reliability problem 1.2.4
 rpt_sbp - answer to problem 1.2.4
 prob5 - three heads with 3 flips of a coin - no problem 
+make_deck - used in test your knowledge 1.4
 */
 
 
@@ -451,5 +452,29 @@ di as text "{txt} or in one step"
 end
 
 
+*-------------------------------------------------------------------------------
+* Build a standard 52-card deck
+*-------------------------------------------------------------------------------
+cap prog drop make_deck
+program make_deck
+	qui {
+		clear all
+		set obs 52
+		gen order=_n
+		gen value=string(mod(_n-1,13)+2)
+		replace value="jack" if value=="11"
+		replace value="queen" if value=="12"
+		replace value="king" if value=="13"
+		replace value="ace" if value=="14"
+		sort value order
+		gen suit=string(mod(_n,4)+1)
+		replace suit="club" if suit=="1"
+		replace suit="diamond" if suit=="2"
+		replace suit="heart" if suit=="3"
+		replace suit="spade" if suit=="4"
+		sort order
+		drop order
+	}
+end
 
 
