@@ -258,7 +258,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "This website is for resources and materials related to HHCR 710 and 711\n\n\n\n\n\n\n\n\nFigure 1: Learning statistics may require pushing yourself to try things you have previously chosen to avoid.\n\n\n\n\n\n\n\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\n(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\n\n\n\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do",
+    "text": "This website is for resources and materials related to HHCR 710 and 711\n\n\n\n\n\n\n\n\nFigure 1: Learning statistics may require pushing yourself to try things you have previously chosen to avoid.\n\n\n\n\n\n\n\nhttps://join.iclicker.com/LVQX\n\n\n\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\n(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\n\n\n\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do",
     "crumbs": [
       "Home"
     ]
@@ -268,7 +268,7 @@
     "href": "index.html#in-class-resources",
     "title": "Home",
     "section": "",
-    "text": "The examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\n(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\n\n\n\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do",
+    "text": "https://join.iclicker.com/LVQX\n\n\n\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\n(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\n\n\n\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do",
     "crumbs": [
       "Home"
     ]
