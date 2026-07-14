@@ -8,4 +8,21 @@ This website is for resources and materials related to HHCR 710 and 711
 
 
 
+## In-class resources
+
+### Biostatistics Foundations I
+
+The examples and problems for this chapter can be loaded into Stata by running the following command:
+
+```stata
+run https://tphofer.github.io/ncsp-hhcr/code/biostat1.do
+```
+
+(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)
+
+### Biostatistics Foundations II
+
+```stata
+run https://tphofer.github.io/ncsp-hhcr/code/biostat2.do
+```
 

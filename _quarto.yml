@@ -17,6 +17,7 @@ website:
     contents:
       - index.qmd
       - data.qmd
+      - biostat1.qmd
 author: "TPH"
 date: "today"
 code-fold: true

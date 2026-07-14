@@ -1,0 +1,49 @@
+---
+title: Biostatistics I
+---
+
+## Setup
+
+Read the textbook chapter - [Foundations - Biostatistics I](https://websites.umich.edu/~thofer/teach/hhcr-book/biostat_1.html)
+
+The examples and problems for this chapter can be loaded into Stata by running the following command:
+
+```stata
+run https://tphofer.github.io/ncsp-hhcr/code/biostat1.do
+```
+
+This command installs a number of programs which will facilitate the in-class work.
+
+We will also be using iclicker for answering questions in class.  
+
+[iclicker class link](https://join.iclicker.com/VUBQ)  (first time it will ask you to create an account - __NOTE__: be sure to use your `<uniqname>@umich.edu` address.
+
+```{r}
+#| echo: false
+knitr::knit_exit()
+```
+
+<!--DECIDE ABOUT THIS-->
+
+## gdoc command (installed by above command)
+
+The gdoc command allows you to use a google cloud document as your do-file editor.  The advantage is that your instructor can monitor what you are coding and edit on the same document.  You can run the cloud file directly in Stata.
+
+There are do-files for each enrolled student and three group project do-files for you to use and the instructors to monitor.
+
+To find the list of available named do files simply type:
+```stata
+gdoc
+```
+
+To open a file for editing in your browser do the following
+
+```stata
+gdoc , open(<name>)
+```
+
+To run your do file in Stata type:
+```stata
+gdoc <name>
+```
+
