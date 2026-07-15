@@ -6,15 +6,7 @@ This website is for resources and materials related to HHCR 710 and 711
 ![Learning statistics may require pushing yourself to try things you have previously chosen to avoid.](img/lkh_flying.png){#fig-leap fig-align="right" .lightbox}
 :::
 
-
-
-## In-class resources
-
-### iclicker 
-
-```html
-https://join.iclicker.com/LVQX
-```
+## Resources for specific classes
 
 ### Biostatistics Foundations I
 
@@ -31,4 +23,30 @@ run https://tphofer.github.io/ncsp-hhcr/code/biostat1.do
 ```stata
 run https://tphofer.github.io/ncsp-hhcr/code/biostat2.do
 ```
+
+## Course resources
+
+The textbook is [located here](https://websites.umich.edu/~thofer/teach/hhcr-book/).
+
+### hypothes.is
+
+This is a "social annotation web-based tool" recommended by the University called (somewhat un-intuitively) "Hypothes.is" that I am trying out.
+
+1. For sharing knowledge between yourselves before class to help understand the matieral.
+2. To allow me to identify sections that need to be changed. (Identification of omissions, mistakes and typos are also welcome)
+
+You can set up the tool here:  https://web.hypothes.is/web-app-start/
+by setting up an account and installing the extension or bookmarklet depending on your default browser.
+
+Then you can join the group for the textbook by clicking on this link:  https://hypothes.is/groups/p2deDxvP/ncsp-textbook
+
+Once installed you can go to the website of the textbook ( https://websites.umich.edu/~thofer/teach/hhcr-book/ ) , click the bookmarklet or turn on the extension and you will be able to select the NCSP-textbook group and annotate , ask questions and reply to other students questions.  All the comments or questions can be seen by everyone in the group and provide a way to discuss the material before class.
+
+### iclicker 
+
+```html
+https://join.iclicker.com/LVQX
+```
+
+(when you are asked to create an account just make sure to use your <uniqname@umich.edu> address **not** your med.umich.edu address)
 
