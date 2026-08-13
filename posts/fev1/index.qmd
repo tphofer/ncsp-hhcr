@@ -24,7 +24,7 @@ Download: [fev.csv](../../data/fev.csv)
 or use directly in code
 
 ```stata
-use https://tphofer.github.io/ncsp-hhcr/data/fev.csv
+import delimited https://tphofer.github.io/ncsp-hhcr/data/fev.csv
 ```
 
 (multiple sources available)
