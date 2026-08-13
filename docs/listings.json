@@ -2,8 +2,10 @@
   {
     "listing": "/data.html",
     "items": [
+      "/posts/fev1/index.html",
       "/posts/meps/index.html",
       "/posts/nhanes/index.html",
+      "/posts/rand-hie/index.html",
       "/posts/cvd-synth-data/index.html",
       "/posts/swan/index.html",
       "/posts/low-bw/index.html",

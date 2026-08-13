@@ -1,15 +1,15 @@
 ---
-title: Biostatistics II
+title: Linear regression II
 ---
 
 ## Setup
 
-Read the textbook chapter - [Foundations - Biostatistics II](https://websites.umich.edu/~thofer/teach/hhcr-book/biostat_2.html)
+Read the textbook chapter - [Lineaer regression II](https://websites.umich.edu/~thofer/teach/hhcr-book/linear_reg_2.html)
 
 The examples and problems for this chapter can be loaded into Stata by running the following command:
 
 ```stata
-run https://tphofer.github.io/ncsp-hhcr/code/biostat2.do
+run https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do
 ```
 
 This command installs a number of programs which will facilitate the in-class work.

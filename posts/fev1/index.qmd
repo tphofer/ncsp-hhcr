@@ -1,0 +1,117 @@
+---
+title: "FEV increase with age"
+author: "Tager"
+date: "8/13/2026"
+date-modified: "8/13/2026"
+categories: [Clinical measurements]
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(Statamarkdown)
+stataexe <- "/Applications/StataNow/StataSE.app/Contents/MacOS/stata-se"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+## Source 
+
+
+## Dataset
+
+Download: [fev.csv](../../data/fev.csv)
+
+or use directly in code
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/fev.csv
+```
+
+(multiple sources available)
+Obtained from Vanderbilt dataset website  https://hbiostat.org/data/
+
+Direct import
+
+```stata
+import delimited https://hbiostat.org/data/repo/FEV.csv
+```
+
+
+## Dataset description 
+
+The data set consists of 654 observations on youths aged 3 to 19 from East Boston recorded duing the middle to late 1970's. Forced expiratory volume (FEV), a measure of lung capacity, is the variable of interest. Age and height are two continuous predictors. Sex and smoke are two categorical predictors.
+
+```
+Contains data
+ Observations:           654                  
+    Variables:             6                  
+------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+------------------------------------------------------------------------------------------------
+id              long    %12.0g                
+age             byte    %8.0g                 
+fev             float   %9.0g                 
+height          float   %9.0g                 
+sex             str6    %9s                   
+smoke           str18   %18s                  
+------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+```
+
+References
+Tager, I. B., Weiss, S. T., Rosner, B., and Speizer, F. E. (1979). Effect of parental cigarette smoking on pulmonary function in children. American Journal of Epidemiology, 110, 15-26.
+
+Rosner, B. (1999). Fundamentals of Biostatistics, 5th Ed., Pacific Grove, CA: Duxbury.
+
+
+<!-- other sources and documentation
+
+mplot package
+https://garthtarr.github.io/mplot/reference/fev.html
+Copies of this data set can also be found in the coneproj and tmle packages
+
+
+
+
+Kahn, M.J. (2005). An Exhalent Problem for Teaching Statistics. Journal of Statistics Education, 13(2). http://www.amstat.org/publications/jse/v13n2/datasets.kahn.html
+https://jse.amstat.org/v13n2/datasets.kahn.html#Kahn2003
+https://jse.amstat.org/datasets/fev.dat.txt
+-->
+
+<!-- some code examples
+(from linear regression II in the textbook)
+
+```{stata}
+*| code-fold: true
+*| label: reg2-app-fev2
+clear
+qui import delimited https://hbiostat.org/data/repo/FEV.csv
+// Generate the conditional variables
+qui gen fev8  = fev if age==8
+qui gen fev12 = fev if age==12
+qui gen fev16 = fev if age==16
+
+// Run the regression
+reg fev c.age c.height##c.height, robust
+
+// Calculate the margins
+qui margins, at(height=(45(1)74) age=(8(4)16))
+
+// Plot with matching colors
+qui marginsplot, recast(line) noci ///
+    addplot( ///
+        scatter fev8 height, mcolor("#619CFF%50") msize(small) || ///
+        scatter fev12 height, mcolor("#F8766D%70") msize(small) || ///
+        scatter fev16 height, mcolor("#00BA38") msize(small) ///
+    ) ///
+    plot1opts(lcolor("#619CFF")) ///
+    plot2opts(lcolor("#F8766D")) ///
+    plot3opts(lcolor("#00BA38")) ///
+    legend( ///
+        order(4 "Age 8" 1 5 "Age 12" 2 6 "Age 16" 3 ) ///
+    )
+qui graph export "img/linear_reg2/fev1.png",replace
+```
+-->

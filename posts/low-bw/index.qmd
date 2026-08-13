@@ -8,7 +8,7 @@ categories: [Causal I]
 
 ## Source
 
-Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata [Treaetment Effects](https://www.stata-press.com/data/r19/causal.html) reference manuals starting in Stata 13 and in use through Stata 19
+Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata [Treatment Effects](https://www.stata-press.com/data/r19/causal.html) reference manuals starting in Stata 13 and in use through Stata 19
 
 
 ## Dataset description 

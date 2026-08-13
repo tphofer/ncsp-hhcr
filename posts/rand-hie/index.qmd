@@ -1,0 +1,82 @@
+---
+title: "RAND HIE"
+author: "CDC"
+date: "5/20/2026"
+date-modified: "8/13/2026"
+categories: [Utilization ]
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(Statamarkdown)
+stataexe <- "/Applications/StataNow/StataSE.app/Contents/MacOS/stata-se"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+## Source 
+
+This is a the dataset of main results for individuals in the fee-for-service plans only from the RAND Health Insurance Experiment.  This dataset was provided by Willard Manning (a health economist on the HIE) to Deb & Trivedi for use in their 2002 article _The structure of demand for health care: latent class versus two-part models.  A data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.
+
+It was then made available in their 2005 book at https://cameron.econ.ucdavis.edu/mmabook/mmadata.html
+
+use https://cameron.econ.ucdavis.edu/mmabook/randdata.dta,clear  has 4 additional observations 20190
+latest version from C&T 2022
+https://www.stata-press.com/data/mus2.html  file mus218rhie.dta  has obs 20186 as published in 
+
+## Dataset
+
+Download: [rhie.dta](../../data/rhie.dta)
+
+or use directly in code
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/rhie.dta
+```
+
+
+## Dataset description 
+
+Description:  [Deb & Trivedi (2002)](https://www-sciencedirect-com.proxy.lib.umich.edu/science/article/pii/S0167629602000085)
+
+> We use data from the RHIE for this study. The experiment, conducted by the RAND Corporation from 1974 to 1982, is the longest and largest controlled social experiment in medical care research. The main goal of the experiment was to assess how a patient’s use of health services is affected by types of health insurance, including both fee-for-service and health maintenance organizations (HMOs). In the RHIE, data were collected from about 8000 enrollees in 2823 families, from six sites across the country. Each family was enrolled in one of fourteen different HIS insurance plans for either 3 or 5 years. The plans ranged from free care to 95% coinsurance below a maximum dollar expenditure (MDE), to assignment in a prepaid group practice. Data were collected on the enrollee’s use of medical care services and health status throughout the term of enrollment, randomly assigned for 3 or 5 years. Certain categories of individuals were excluded, e.g. the medicare eligibles and members of the military. Detailed information on the experimental design and data collection methods are reported in Morris (1979), Taylor et al. (1987), and Newhouse et al. (1993).
+> The sample used in this study consists of individuals in the fee-for-service plans only. Will Manning kindly provided us with a data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.
+
+<!--
+```stata
+label var disea "relative amount of chronic diseases (0-100)"
+xtset id year
+xtdescribe 
+* few obs off relaative to C&T w. Stata 2nd 22.5.2
+xtset id
+xttobit med logc disea  female xage lfam child,ll(0) nolog
+* close but not exact to C&T w. Stata 2nd 22.5.3
+```
+
+
+in text
+```
+qui {
+reg med disea  female xage lfam child , nopvalue noh
+est store naive
+reg med disea  female xage lfam child , robust nopvalue noh
+est store robust
+reg med disea  female xage lfam child ,vce(cluster zper) nopvalue noh
+est store cluster
+}
+qui etable, estimates(naive robust cluster) ///
+		cstat(_r_se,nformat(%9.1f) label("s.e.")) cstat(_r_ci, nformat(%9.1f))   ///
+		column(estimates) keep(disea female lfam)  ///
+		nofvlab center ///
+		title(Confidence-intervals comparison)
+collect style header _r_b _r_ci _r_se, level(label)
+collect preview
+```
+-->
+
+
+<!-- Also Oregon HIE
+Contains data from /Users/thofer/Downloads/mus2/mus224ohiesmallrecode.dta  oregeon HIE from 2022 C&T datasets
+
+/Users/thofer/Downloads/mus2/mus218rhie.dta  has correct total as in textbook
+-->
