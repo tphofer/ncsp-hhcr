@@ -13,6 +13,7 @@ run https://tphofer.github.io/ncsp-hhcr/code/biostat1.do
 ```
 
 This command installs a number of programs which will facilitate the in-class work.
+(nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)
 
 We will also be using iclicker for answering questions in class.  
 

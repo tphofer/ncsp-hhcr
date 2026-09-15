@@ -4,7 +4,7 @@ title: Linear regression II
 
 ## Setup
 
-Read the textbook chapter - [Lineaer regression II](https://websites.umich.edu/~thofer/teach/hhcr-book/linear_reg_2.html)
+Read the textbook chapter - [Linear regression II](https://websites.umich.edu/~thofer/teach/hhcr-book/linear_reg_2.html)
 
 The examples and problems for this chapter can be loaded into Stata by running the following command:
 
