@@ -19,6 +19,7 @@ website:
       - data.qmd
       - biostat1.qmd
       - biostat2.qmd
+      - linear_reg2.qmd
 author: "TPH"
 date: "today"
 code-fold: true

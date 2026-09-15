@@ -14,14 +14,20 @@
     "href": "linear_reg2.html",
     "title": "Linear regression II",
     "section": "",
-    "text": "Read the textbook chapter - Lineaer regression II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do\nThis command installs a number of programs which will facilitate the in-class work."
+    "text": "Read the textbook chapter - Lineaer regression II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Linear regression II"
+    ]
   },
   {
     "objectID": "linear_reg2.html#setup",
     "href": "linear_reg2.html#setup",
     "title": "Linear regression II",
     "section": "",
-    "text": "Read the textbook chapter - Lineaer regression II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do\nThis command installs a number of programs which will facilitate the in-class work."
+    "text": "Read the textbook chapter - Lineaer regression II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Linear regression II"
+    ]
   },
   {
     "objectID": "posts/doc-visits/index.html",
