@@ -14,6 +14,16 @@ Source
 
 Data were obtained originally from the survey sampling help pages of UCLA Academic Technology Services; these pages are no longer on line.  This information comes from the still available [CRAN documentation at rdrr.io](https://rdrr.io/cran/survey/man/api.html) for the R Survey package which also contains this data.
 
+Dataset
+
+[apipop.dta](../../data/apipop.dta)
+
+or use directly in code
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/apipop.dta
+```
+
 References
 
 The API program has been discontinued at the end of 2018, and the archive page at the California Department of Education is now gone. The Wikipedia article has links to past material at the Internet Archive. https://en.wikipedia.org/wiki/Academic_Performance_Index_(California_public_schools)
