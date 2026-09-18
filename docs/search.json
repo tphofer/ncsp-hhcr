@@ -4,7 +4,7 @@
     "href": "data.html",
     "title": "Datafiles",
     "section": "",
-    "text": "FEV increase with age\n\n\n\nClinical measurements\n\n\n\n\n\n\n\n\n\nAug 13, 2026\n\n\nTager\n\n\n\n\n\n\n\n\n\n\n\n\nMEPS Datat\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nAHRQ\n\n\n\n\n\n\n\n\n\n\n\n\nNHANES Dataset\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nRAND HIE\n\n\n\nUtilization\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nSynthetic CVD dataset\n\n\n\nLogistic regression\n\nSynthetic\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nTPH\n\n\n\n\n\n\n\n\n\n\n\n\nLeft Heart Catheterization data\n\n\n\nCausal I\n\nSUPPORT Study\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nSUPPORT trial\n\n\n\n\n\n\n\n\n\n\n\n\nLow birthweight and smoking\n\n\n\nCausal I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCattaneo\n\n\n\n\n\n\n\n\n\n\n\n\nUK School Testing Data\n\n\n\nMultilevel I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nLeckie, G.\n\n\n\n\n\n\n\n\n\n\n\n\nDoctor Visit Data\n\n\n\nBootstrap-Simulation\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCameron & Trivedi\n\n\n\n\n\n\n\n\n\n\n\n\nCMS Synthetic datasets\n\n\n\nData Management\n\nSynthetic\n\nNational\n\n\n\n\n\n\n\n\n\nJan 1, 2008\n\n\nCMS\n\n\n\n\n\nNo matching items",
+    "text": "FEV increase with age\n\n\n\nClinical measurements\n\n\n\n\n\n\n\n\n\nAug 13, 2026\n\n\nTager\n\n\n\n\n\n\n\n\n\n\n\n\nMEPS Datat\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nAHRQ\n\n\n\n\n\n\n\n\n\n\n\n\nNHANES Dataset\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nRAND HIE\n\n\n\nUtilization\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nSynthetic CVD dataset\n\n\n\nLogistic regression\n\nSynthetic\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nTPH\n\n\n\n\n\n\n\n\n\n\n\n\nLeft Heart Catheterization data\n\n\n\nCausal I\n\nSUPPORT Study\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nSUPPORT trial\n\n\n\n\n\n\n\n\n\n\n\n\nLow birthweight and smoking\n\n\n\nCausal I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCattaneo\n\n\n\n\n\n\n\n\n\n\n\n\nUK School Testing Data\n\n\n\nMultilevel I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nLeckie, G.\n\n\n\n\n\n\n\n\n\n\n\n\nDoctor Visit Data\n\n\n\nBootstrap-Simulation\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCameron & Trivedi\n\n\n\n\n\n\n\n\n\n\n\n\nCalifornia School API data\n\n\n\nSurvey\n\nSampling\n\n\n\n\n\n\n\n\n\nSep 20, 2018\n\n\nUCLA ATS site\n\n\n\n\n\n\n\n\n\n\n\n\nCMS Synthetic datasets\n\n\n\nData Management\n\nSynthetic\n\nNational\n\n\n\n\n\n\n\n\n\nJan 1, 2008\n\n\nCMS\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Datafiles"
     ]
@@ -30,268 +30,18 @@
     ]
   },
   {
-    "objectID": "posts/doc-visits/index.html",
-    "href": "posts/doc-visits/index.html",
-    "title": "Doctor Visit Data",
-    "section": "",
-    "text": "This is Doctor visit data from Cameron & Trivedi Microeconometrics Using Stata, Second Edition using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sector not self-employed, excludes public insurance Medicare/Medicaid"
-  },
-  {
-    "objectID": "posts/doc-visits/index.html#source",
-    "href": "posts/doc-visits/index.html#source",
-    "title": "Doctor Visit Data",
-    "section": "",
-    "text": "This is Doctor visit data from Cameron & Trivedi Microeconometrics Using Stata, Second Edition using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sector not self-employed, excludes public insurance Medicare/Medicaid"
-  },
-  {
-    "objectID": "posts/doc-visits/index.html#dataset",
-    "href": "posts/doc-visits/index.html#dataset",
-    "title": "Doctor Visit Data",
+    "objectID": "posts/fev1/index.html#dataset",
+    "href": "posts/fev1/index.html#dataset",
+    "title": "FEV increase with age",
     "section": "Dataset",
-    "text": "Dataset\nmus10data.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/mus10data.dta"
+    "text": "Dataset\nDownload: fev.csv\nor use directly in code\nimport delimited https://tphofer.github.io/ncsp-hhcr/data/fev.csv\n(multiple sources available) Obtained from Vanderbilt dataset website https://hbiostat.org/data/\nDirect import\nimport delimited https://hbiostat.org/data/repo/FEV.csv"
   },
   {
-    "objectID": "posts/doc-visits/index.html#dataset-description",
-    "href": "posts/doc-visits/index.html#dataset-description",
-    "title": "Doctor Visit Data",
+    "objectID": "posts/fev1/index.html#dataset-description",
+    "href": "posts/fev1/index.html#dataset-description",
+    "title": "FEV increase with age",
     "section": "Dataset description",
-    "text": "Dataset description\n\nFeatures\ncount, healthcare utilization, longitudinal\n\n\nVariables\n. codebook,compact\n\nVariable     Obs Unique      Mean      Min      Max  Label\n-------------------------------------------------------------------------------------------------------------------------\neduc       30124     18  12.72431        0       17  Years of schooling\ndocvis     30124    106  3.818251        0      160  number of doctor visits\nage        30124     40  4.074266      2.5      6.4  Age in years / 10\nincome     30124  15739  31.89734  -49.999  280.777  Income in $ / 1000\nfemale     30124      2  .4722148        0        1  = 1 if female\nblack      30124      2  .1134643        0        1  = 1 if black\nhispanic   30124      2  .2142146        0        1  = 1 if hispanic\nmarried    30124      2  .6580135        0        1  = 1 if married\nnoreast    30124      2  .1686695        0        1  = 1 if Northeast\nmidwest    30124      2  .2203227        0        1  = 1 if Midwest\nsouth      30124      2  .3694065        0        1  = 1 if South\nmsa        30124      2  .8105165        0        1  = 1 if metropolitan statistical area\nfirmsize   30124    236  14.61772        0       50  Size of firm/100\nvegood     30124      2  .3470987        0        1  = 1 if very good health\ngood       30124      2  .2824658        0        1  = 1 if good health\nphyslim    30124      2  .1548931        0        1  = 1 if physical limitation\nfairpoor   30124      2  .0890984        0        1  = 1 if fair or poor health\nage2       30124     40  17.61898     6.25    40.96  = age x age\nyear97     30124      2   .110875        0        1  = 1 if year 1997\nyear98     30124      2  .1040698        0        1  = 1 if year 1998\nyear99     30124      2  .1307595        0        1  = 1 if year 1999\nyear00     30124      2  .1035055        0        1  = 1 if year 2000\nyear01     30124      2  .2052848        0        1  = 1 if year 2001\nyear02     30124      2  .1464613        0        1  = 1 if year 2003\nfamsize    30124     15  3.157881        1       17  Family size\ninjury     30124      2  .2018988        0        1  = 1 if an injury\nprivate    30124      2  .8197119        0        1  = 1 if private insurance\nchronic    30124      2  .3364427        0        1  = 1 if a chronic condition\n-------------------------------------------------------------------------------------------------------------------------"
-  },
-  {
-    "objectID": "posts/low-bw/index.html",
-    "href": "posts/low-bw/index.html",
-    "title": "Low birthweight and smoking",
-    "section": "",
-    "text": "Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata Treatment Effects reference manuals starting in Stata 13 and in use through Stata 19"
-  },
-  {
-    "objectID": "posts/low-bw/index.html#source",
-    "href": "posts/low-bw/index.html#source",
-    "title": "Low birthweight and smoking",
-    "section": "",
-    "text": "Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata Treatment Effects reference manuals starting in Stata 13 and in use through Stata 19"
-  },
-  {
-    "objectID": "posts/low-bw/index.html#dataset-description",
-    "href": "posts/low-bw/index.html#dataset-description",
-    "title": "Low birthweight and smoking",
-    "section": "Dataset description",
-    "text": "Dataset description\n\nFeatures\nThe data are a subset of that originally described by Almond 2005 (Quarterly Journal of Economics, 120 (2005), pp. 1031-1083) as being from the 1989-1991 Linked National Natality-Mortality Detail Files used for a study focusing on smoking during pregnancy and birth weight for the 497,139 singleton births in Pennsylvania between 1989 and 1991. Pennsylvania was chosen since there was complete smoking information for over 95 percent of the mothers in 1989-1991. In the singleton sample, about 21 percent of Pennsylvanian women report smoking during pregnancy in this time period.\nuse directly in code\nuse https://www.stata-press.com/data/r16/cattaneo2 , clear\nPublished example of causal inference methods paper using this dataset. (Ghosh 2021 Stat Sin)\n\n\nVariables\n. codebook,compact\n\nVariable     Obs Unique      Mean  Min   Max  Label\n-------------------------------------------------------------------------------------------------------------------------\nbweight     4642    732   3361.68  340  5500  infant birthweight (grams)\nmmarried    4642      2  .6996984    0     1  1 if mother married\nmhisp       4642      2  .0340371    0     1  1 if mother hispanic\nfhisp       4642      2   .037053    0     1  1 if father hispanic\nforeign     4642      2  .0534252    0     1  1 if mother born abroad\nalcohol     4642      2  .0323137    0     1  1 if alcohol consumed during pregnancy\ndeadkids    4642      2   .259371    0     1  previous births where newborn died\nmage        4642     33  26.50452   13    45  mother's age\nmedu        4642     18  12.68957    0    17  mother's education attainment\nfage        4642     46  27.26713    0    60  father's age\nfedu        4642     17   12.3072    0    17  father's education attainment\nnprenatal   4642     30  10.75808    0    40  number of prenatal care visits\nmonthslb    4642    173  23.07497    0   272  months since last birth\norder       4642     12  1.892072    0    12  order of birth of the infant\nmsmoke      4642      4  .3996122    0     3  cigarettes smoked during pregnancy\nmbsmoke     4642      2  .1861267    0     1  1 if mother smoked\nmrace       4642      2   .840586    0     1  1 if mother is white\nfrace       4642      2  .8136579    0     1  1 if father is white\nprenatal    4642      4  1.201853    0     3  trimester of first prenatal care visit\nbirthmonth  4642     12  6.540069    1    12  month of birth\nlbweight    4642      2  .0603188    0     1  1 if low birthweight baby\nfbaby       4642      2  .4379578    0     1  1 if first baby\nprenatal1   4642      2  .8013787    0     1  1 if first prenatal visit in 1 trimester\n-------------------------------------------------------------------------------------------------------------------------"
-  },
-  {
-    "objectID": "posts/cms-synth/index.html",
-    "href": "posts/cms-synth/index.html",
-    "title": "CMS Synthetic datasets",
-    "section": "",
-    "text": "Section 3.3 proves an example dataset for download."
-  },
-  {
-    "objectID": "posts/cms-synth/index.html#source",
-    "href": "posts/cms-synth/index.html#source",
-    "title": "CMS Synthetic datasets",
-    "section": "Source",
-    "text": "Source\nCMS has started to provide sythetic datasets so that people can familiarize themselves working with CMS data.\nOn 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF). The file contains synthesized data taken from a 5% random sample of Medicare beneficiaries in 2008 and their claims from 2008 to 2010 and preserve the detailed data structure and metadata of key variables at both the beneficiary and claim levels.\nThe DE-SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-based research, evaluation and technical assistance. All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.\nTo date, this is still the only release available"
-  },
-  {
-    "objectID": "posts/cms-synth/index.html#dataset",
-    "href": "posts/cms-synth/index.html#dataset",
-    "title": "CMS Synthetic datasets",
-    "section": "Dataset",
-    "text": "Dataset\nAvailable at this CMS website"
-  },
-  {
-    "objectID": "posts/cms-synth/index.html#dataset-description",
-    "href": "posts/cms-synth/index.html#dataset-description",
-    "title": "CMS Synthetic datasets",
-    "section": "Dataset description",
-    "text": "Dataset description\nContains multiple separate files.\nData documentation\nRepresents a 5% sample of Medicare beneficiaries.\n\nThree years of claims (2008, 2009, and 2010) for the beneficiaries\nFour types of claims (Inpatient, Outpatient, Carrier, PDE – Prescription Drug Event)\nA beneficiary summary file for each year.\n\nDue to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample of all Medicare enrollees). All claims for a particular beneficiary are in samples with the same number (i.e. all beneficiaries in sample 1 have all their claims in the sample 1 files). This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.\nSample 1 files (.csv files)\nDE1.0 Sample 1 2008 Beneficiary Summary File (ZIP)\nDE1.0 Sample 1 2008-2010 Carrier Claims 1\nDE1.0 Sample 1 2008-2010 Carrier Claims 2\nDE1.0 Sample 1 2008-2010 Inpatient Claims (ZIP)\nDE1.0 Sample 1 2008-2010 Outpatient Claims (ZIP)\nDE1.0 Sample 1 2008-2010 Prescription Drug Events\nDE1.0 Sample 1 2009 Beneficiary Summary File (ZIP)\nDE1.0 Sample 1 2010 Beneficiary Summary File (ZIP)\n\nFeatures\n\n\n\n\n\n\n\n\n\n\nDE-SynPUF\nUnit of record\nNumber of Records 2008\nNumber of Records 2009\nNumber of Records 2010\n\n\n\n\nBeneficiary Summary\nBeneficiary\n2,326,856\n2,291,320\n2,255,098\n\n\nInpatient Claims\nclaim\n547,800\n504,941\n280,081\n\n\nOutpatient Claims\nclaim\n5,673,808\n6,519,340\n3,633,839\n\n\nCarrier Claims\nclaim\n34,276,324\n37,304,993\n23,282,135\n\n\nPrescription Drug Events (PDE)\nevent\n39,927,827\n43,379,293\n27,778,849\n\n\n\nNote: Claim counts for 2010 are lower due to attrition from death, and some effects of disclosure treatment.\n\n\nVariables\nVary by file\n\n\nExample\nDataset with the entire population of benficiaries in the sample (2,326,705) and several variables.\nDownload: cms_oop_costs.dta (large 34MB)\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/cms_oop_costs.dta\nCode creating the dataset from the 20 separate files of the beneficiary summary file for 2008 (each with about 116,000 records) is below. The files were hosted as csv files (rather than zipped files as on the CMS webstie) on a GitHub user’s site.\n\n\nCode\n  clear all\n  frames reset\n  frame create master\n  local base \"https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample\"\n\n  forvalues i = 1/20 {\n      import delimited \"`base'_`i'.csv\", varnames(1) clear\n      keep bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car\n      rename bene_sex_ident_cd sex\n      rename sp_chf heart_failure\n      rename sp_cncr cancer\n    cwf master\n    fframeappend, using(default)\n    cwf default\n  }\n\n  frame change master\n  egen total=rowtotal(benres_ip benres_op benres_car)\n\n\n\nvariables\n. codebook, compact\n\nVariable          Obs Unique      Mean  Min    Max  Label\n---------------------------------------------------------------------------------------------------------------\nsex           2326705      2  1.555653    1      2  BENE_SEX_IDENT_CD\nheart_fail~e  2326705      2   1.71546    1      2  SP_CHF\ncancer        2326705      2  1.936386    1      2  SP_CNCR\nbenres_ip     2326705    423  247.2868    0  53096  BENRES_IP\nbenres_op     2326705   1174  197.5022    0  18700  BENRES_OP\nbenres_car    2326705    506  328.8734    0   5900  BENRES_CAR\ntotal         2326705   6709  773.6624    0  54146  Total out of pocket costs (excl. Part D)\n---------------------------------------------------------------------------------------------------------------\n\nNote:\nbenres_ip: Captures all inpatient hospitalizations, but it also includes Skilled Nursing Facility (SNF) and Hospice cost-sharing.\nbenres_op: Captures hospital outpatient departments, ER visits, and Home Health Agency (HHA) institutional outpatient claims.\nbenres_car: Captures non-institutional professional services, such as doctor office visits, lab tests, and Durable Medical Equipment (DME)."
-  },
-  {
-    "objectID": "posts/rand-hie/index.html",
-    "href": "posts/rand-hie/index.html",
-    "title": "RAND HIE",
-    "section": "",
-    "text": "This is a the dataset of main results for individuals in the fee-for-service plans only from the RAND Health Insurance Experiment. This dataset was provided by Willard Manning (a health economist on the HIE) to Deb & Trivedi for use in their 2002 article _The structure of demand for health care: latent class versus two-part models. A data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.\nIt was then made available in their 2005 book at https://cameron.econ.ucdavis.edu/mmabook/mmadata.html\nuse https://cameron.econ.ucdavis.edu/mmabook/randdata.dta,clear has 4 additional observations 20190 latest version from C&T 2022 https://www.stata-press.com/data/mus2.html file mus218rhie.dta has obs 20186 as published in"
-  },
-  {
-    "objectID": "posts/rand-hie/index.html#source",
-    "href": "posts/rand-hie/index.html#source",
-    "title": "RAND HIE",
-    "section": "",
-    "text": "This is a the dataset of main results for individuals in the fee-for-service plans only from the RAND Health Insurance Experiment. This dataset was provided by Willard Manning (a health economist on the HIE) to Deb & Trivedi for use in their 2002 article _The structure of demand for health care: latent class versus two-part models. A data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.\nIt was then made available in their 2005 book at https://cameron.econ.ucdavis.edu/mmabook/mmadata.html\nuse https://cameron.econ.ucdavis.edu/mmabook/randdata.dta,clear has 4 additional observations 20190 latest version from C&T 2022 https://www.stata-press.com/data/mus2.html file mus218rhie.dta has obs 20186 as published in"
-  },
-  {
-    "objectID": "posts/rand-hie/index.html#dataset",
-    "href": "posts/rand-hie/index.html#dataset",
-    "title": "RAND HIE",
-    "section": "Dataset",
-    "text": "Dataset\nDownload: rhie.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/rhie.dta"
-  },
-  {
-    "objectID": "posts/rand-hie/index.html#dataset-description",
-    "href": "posts/rand-hie/index.html#dataset-description",
-    "title": "RAND HIE",
-    "section": "Dataset description",
-    "text": "Dataset description\nDescription: Deb & Trivedi (2002)\n\nWe use data from the RHIE for this study. The experiment, conducted by the RAND Corporation from 1974 to 1982, is the longest and largest controlled social experiment in medical care research. The main goal of the experiment was to assess how a patient’s use of health services is affected by types of health insurance, including both fee-for-service and health maintenance organizations (HMOs). In the RHIE, data were collected from about 8000 enrollees in 2823 families, from six sites across the country. Each family was enrolled in one of fourteen different HIS insurance plans for either 3 or 5 years. The plans ranged from free care to 95% coinsurance below a maximum dollar expenditure (MDE), to assignment in a prepaid group practice. Data were collected on the enrollee’s use of medical care services and health status throughout the term of enrollment, randomly assigned for 3 or 5 years. Certain categories of individuals were excluded, e.g. the medicare eligibles and members of the military. Detailed information on the experimental design and data collection methods are reported in Morris (1979), Taylor et al. (1987), and Newhouse et al. (1993). The sample used in this study consists of individuals in the fee-for-service plans only. Will Manning kindly provided us with a data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year."
-  },
-  {
-    "objectID": "posts/meps/index.html",
-    "href": "posts/meps/index.html",
-    "title": "MEPS Datat",
-    "section": "",
-    "text": "AHRQ maintains a github site with MEPS data (Medical Expenditure Panel Survey) and instructions for how to download.\nThe repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality’s Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience."
-  },
-  {
-    "objectID": "posts/meps/index.html#source",
-    "href": "posts/meps/index.html#source",
-    "title": "MEPS Datat",
-    "section": "",
-    "text": "AHRQ maintains a github site with MEPS data (Medical Expenditure Panel Survey) and instructions for how to download.\nThe repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality’s Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience."
-  },
-  {
-    "objectID": "posts/meps/index.html#dataset",
-    "href": "posts/meps/index.html#dataset",
-    "title": "MEPS Datat",
-    "section": "Dataset",
-    "text": "Dataset\nData from the Household Component of MEPS are available for download as public use files. For data years 2017 and later (and also for the 2016 Medical Conditions file), .zip files for multiple file formats are available, including ASCII (.dat), SAS V9 (.sas7bdat), Stata (.dta), and Excel (.xlsx). Prior to 2017, ASCII (.dat) and SAS transport (.ssp) files are provided for all datasets. The following table summarizes the various file formats available by data year:\nExample\n/* 2018 Dental Visits */\n* Change to project directory\ncopy \"https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip\" ///\n    \"h206bdta.zip\"\nunzipfile \"h206bdta.zip\"\nuse \"h206b.dta\", clear\n/* View dataset */\nbrowse\n// For analysis use svy commands for example for dental expenditures in 2018\nuse DUPERSID PERWT18F VARPSU VARSTR DVXP18X using \"h206b.dta\", clear\nsvyset VARPSU [pweight=PERWT18F], str(VARSTR)\nsvy: total DVXP18X\nFor other files switch out h206b for the correct code see list of filenames\nFor example for 2018 ER visits you would substitute h206e You can check the documentation site for the file by then inserting the code in the following https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E"
-  },
-  {
-    "objectID": "posts/meps/index.html#dataset-description",
-    "href": "posts/meps/index.html#dataset-description",
-    "title": "MEPS Datat",
-    "section": "Dataset description",
-    "text": "Dataset description\nQuick Reference Guides\nExample do file for estimating 2019 Total Expenditures by event type and source of payment\n\nFeatures\nAHRQ website with full descriptions of MEPS\n\n\nVariables\nVary by file"
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "NCSP methods class website",
-    "section": "",
-    "text": "MIT"
-  },
-  {
-    "objectID": "biostat1.html",
-    "href": "biostat1.html",
-    "title": "Biostatistics I",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
-    "crumbs": [
-      "Biostatistics I"
-    ]
-  },
-  {
-    "objectID": "biostat1.html#setup",
-    "href": "biostat1.html#setup",
-    "title": "Biostatistics I",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
-    "crumbs": [
-      "Biostatistics I"
-    ]
-  },
-  {
-    "objectID": "biostat2.html",
-    "href": "biostat2.html",
-    "title": "Biostatistics II",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
-    "crumbs": [
-      "Biostatistics II"
-    ]
-  },
-  {
-    "objectID": "biostat2.html#setup",
-    "href": "biostat2.html#setup",
-    "title": "Biostatistics II",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
-    "crumbs": [
-      "Biostatistics II"
-    ]
-  },
-  {
-    "objectID": "posts/nhanes/index.html",
-    "href": "posts/nhanes/index.html",
-    "title": "NHANES Dataset",
-    "section": "",
-    "text": "This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class. After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021."
-  },
-  {
-    "objectID": "posts/nhanes/index.html#source",
-    "href": "posts/nhanes/index.html#source",
-    "title": "NHANES Dataset",
-    "section": "",
-    "text": "This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class. After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021."
-  },
-  {
-    "objectID": "posts/nhanes/index.html#dataset",
-    "href": "posts/nhanes/index.html#dataset",
-    "title": "NHANES Dataset",
-    "section": "Dataset",
-    "text": "Dataset\nDownload: nhanes_ncsp.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/nhanes_ncsp.dta\nThe datset is real NHANES data of the full sample described above abstracted for a subset of variables using the R code below and a github repository that does some of the pre-processing for you.\n\n\nCode\nlibrary(nhanesdata)\nlibrary(dplyr)\nlibrary(ggplot2)\n# pak::pak(\"kyleGrealis/nhanesdata\") installed 5/22/2026 updated 5/4/26\ndemo &lt;- read_nhanes(\"demo\")\n# glimpse(demo)\ndemo &lt;- read_nhanes(\"demo\")\n# get_url(\"DEMO_L\") for documentation of variables in demo\nbpx &lt;- read_nhanes(\"bpx\")\nbmx &lt;- read_nhanes(\"bmx\")\nbpq &lt;- read_nhanes(\"bpq\")\n\nanalysis_data &lt;- demo |&gt;\n  inner_join(bpx, by = c(\"seqn\", \"year\")) |&gt;\n  inner_join(bmx, by = c(\"seqn\", \"year\")) |&gt;\n  inner_join(bpq, by = c(\"seqn\", \"year\")) |&gt;\n  mutate(education = factor(\n    case_when(\n      dmdeduc2 == \"Less than 9th grade\" ~ \"Less than high school\",\n      startsWith(as.character(dmdeduc2), \"9-11th grade\") ~ \"Some high school\",\n      dmdeduc2 == \"High school graduate/GED or equivalent\" ~ \"HS Graduate or GED\",\n      dmdeduc2 == \"Some college or AA degree\" ~ \"Some college or AA\",\n      dmdeduc2 == \"College graduate or above\" ~ \"College graduate or above\"\n    ),\n    levels = c(\"Less than high school\", \"Some high school\", \"HS Graduate or GED\",\n               \"Some college or AA\", \"College graduate or above\")  \n    )) |&gt;\n    mutate(age_grp = factor(\n    case_when(\n        ridageyr &lt; 18  ~ \"&lt; 18\",\n        ridageyr &lt; 40  ~ \"18-39\",\n        ridageyr &lt; 60  ~ \"40-59\",\n        ridageyr &gt;= 60 ~ \"&gt; 60\"\n    ),\n    levels = c(\"&lt; 18\", \"18-39\", \"40-59\", \"&gt; 60\")\n    )) |&gt;\n  select(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) |&gt;\n  filter(year &gt;= 2015)\nvar_labels &lt;- c(\n  year     = \"Survey year\",\n  seqn     = \"Respondent sequence number\",\n  ridageyr = \"Age in years\",\n  age_grp  = \"Age group\",\n  sddsrvyr = \"Data release cycle\",\n  education = \"Education level (recoded)\",\n  dmdmartl = \"Marital status\",\n  indfmpir = \"Family poverty income ratio\",\n  ridreth3 = \"Race/Hispanic origin (incl. NH Asian)\",\n  riagendr = \"Sex\",\n  bpxsy1   = \"Systolic BP, reading 1 (mm Hg)\",\n  bpxsy2   = \"Systolic BP, reading 2 (mm Hg)\",\n  bpxsy3   = \"Systolic BP, reading 3 (mm Hg)\",\n  bpxsy4   = \"Systolic BP, reading 4 (mm Hg)\",\n  bpxdi1   = \"Diastolic BP, reading 1 (mm Hg)\",\n  bpxdi2   = \"Diastolic BP, reading 2 (mm Hg)\",\n  bpxdi3   = \"Diastolic BP, reading 3 (mm Hg)\",\n  bpxdi4   = \"Diastolic BP, reading 4 (mm Hg)\",\n  bmxbmi   = \"Body mass index (kg/m^2)\",\n  bpq050a  = \"Now taking prescribed medicine for HBP\",\n  ridexprg = \"Pregnancy status at exam\",\n  sdmvstra = \"Masked variance pseudo-stratum\",\n  sdmvpsu  = \"Masked variance pseudo-PSU\",\n  wtmec2yr = \"MEC 2-year exam weight\"\n)\n\nfor (v in names(var_labels)) {\n  attr(analysis_data[[v]], \"label\") &lt;- var_labels[[v]]\n}\nhaven::write_dta(analysis_data, \"data/nhanes_ncsp.dta\")\n\n\nExample\nReproduce a table of hypertension prevalence from Report - NCHS Data Brief No. 364, April 2020\n\nFull SAS code is available for all of the tables and figures in the report.\nBelow I reproduced age category by gender prevalence estimates using the nhanes-ncsp dataset and the stata code folded below\n\n\nCode\nuse \"../../data/nhanes_ncsp.dta\",clear\n* Table excludes preganant women\nencode ridexprg , gen(pregnant) label(preg)\nencode riagendr , gen(gender) label(gender)\n* If (diastolic) BP value is 0 then change to missing\nforeach var of var bpxdi*   {\n    replace `var'=. if `var'==0\n}\negen sys_mean=rowmean(bpxsy*)\negen dia_mean=rowmean(bpxdi*)\n\n* Define hyperternsive variable using new AHA/ACC guidelines 130/80\ngen new_htn=. \n* elevated diastolic or systolic is counted as hypertensive or reporting on BP med\nreplace new_htn=1 if sys_mean&gt;=130&sys_mean&lt;. | dia_mean&gt;=80&dia_mean&lt;. | bpq050a==\"Yes\"\n* Include as non-hypertensive those with non-missing and non-high BPs\negen sys_no_miss=rownonmiss(bpxsy*)\negen dia_no_miss=rownonmiss(bpxdi*)\nreplace new_htn=0 if (sys_no_mis&gt;0 & dia_no_mis&gt;0) & new_htn==.\n\n* Define subpop  non-pregant persons &gt;18, with one or more \n*      non-missing BPs in 2017-2019 cohort\ngen include=(ridageyr&gt;=18 & !missing(ridageyr)) & pregnant!=3 & ///\n    (sys_no_miss!=0 | dia_no_miss!=0) & year==2017\n\n* Calculate HTN prevalence\nreplace new_htn=100 if new_htn==1   // prevalence as %\nsvyset [w=wtmec2yr], psu(sdmvpsu) strata(sdmvstra) vce(linearized)\ncollect: svy: mean new_htn, over(age_grp gender) subpop(include)\n\n* Produce Table\ncollect layout (age_grp) (gender#result[_r_b _r_se])\ncollect style header result, level(label) title(hide)\ncollect label levels result _r_b \"%\" _r_se \"SE\", modify\ncollect style cell result[_r_b],  nformat(%5.1f)\ncollect style cell result[_r_se], nformat(%5.1f) sformat(\"(%s)\")\ncollect title \"Hypertension prevalence (%), adults 18+, NHANES\"\ncollect style autolevels gender 2 1\ncollect style header gender, title(hide) level(label)\ncollect preview\ncollect export htn_table.html, replace\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHypertension prevalence (%), adults 18+, NHANES\n\n\n\n\n\n   \n Male \n Male \n Female \n Female \n\n\n   \n % \n SE \n % \n SE \n\n\n 18-39 \n 31.2 \n (1.8) \n 13.0 \n (1.4) \n\n\n 40-59 \n 59.4 \n (3.4) \n 49.9 \n (2.4) \n\n\n &gt; 60 \n 75.2 \n (3.0) \n 73.9 \n (2.0)"
-  },
-  {
-    "objectID": "posts/nhanes/index.html#dataset-description",
-    "href": "posts/nhanes/index.html#dataset-description",
-    "title": "NHANES Dataset",
-    "section": "Dataset description",
-    "text": "Dataset description\ncontinuous, repeated measures, demographics\n\nFeatures\n\n\nVariables\nYou can look up variables on the NCHS website variable lookup tool\n. codebook, compact\n\nVariable     Obs Unique      Mean       Min       Max  Label\n----------------------------------------------------------------------------------------------\nyear       11891      2   2015.98      2015      2017  Survey year\nseqn       11891  11891  93393.81     83732    102956  Respondent sequence number\nridageyr   11891     65  47.21882        16        80  Age in years\nage_grp    11891      4   2.88218         1         4  Age group\nsddsrvyr   11891      2         .         .         .  Data release cycle\neducation  10724      5  3.476035         1         5  Education level (recoded)\ndmdmartl   10739      7         .         .         .  Marital status\nindfmpir   10495    487  2.446261         0         5  Family poverty income ratio\nridreth3   11891      6         .         .         .  Race/Hispanic origin (incl. NH Asian)\nriagendr   11891      2         .         .         .  Sex\nbpxsy1     10876     74  124.7269        72       236  Systolic BP, reading 1 (mm Hg)\nbpxsy2     11255     75  124.7012        72       238  Systolic BP, reading 2 (mm Hg)\nbpxsy3     11214     78  124.2804        72       238  Systolic BP, reading 3 (mm Hg)\nbpxsy4       737     62  134.1493        76       234  Systolic BP, reading 4 (mm Hg)\nbpxdi1     10876     56  70.07448         0       136  Diastolic BP, reading 1 (mm Hg)\nbpxdi2     11255     58  70.24789         0       144  Diastolic BP, reading 2 (mm Hg)\nbpxdi3     11214     60  70.18709         0       140  Diastolic BP, reading 3 (mm Hg)\nbpxdi4       737     45  75.63094         0       132  Diastolic BP, reading 4 (mm Hg)\nbmxbmi     11713    449  29.31031      13.2      86.2  Body mass index (kg/m^2)\nbpq050a     3620      2         .         .         .  Now taking prescribed medicine for HBP\nridexprg    2297      3         .         .         .  Pregnancy status at exam\nsdmvstra   11891     30  133.4681       119       148  Masked variance pseudo-stratum\nsdmvpsu    11891      2  1.501219         1         2  Masked variance pseudo-PSU\nwtmec2yr   11891  10512  42517.69  4579.581  419762.8  MEC 2-year exam weight\n------------------------------------------------------------------------------------------------\n\n\nTo obtain data directly yourself\nMain CDC NHANES site documentation and download site\nExamples of reproducing NHANES CDC tables in several languages including Stata, R, SAS and Sudaan\n\nDepression prevalence 2013-2016-Stata do-file \n\nNote: Stata has a NHANES format MI impport command for some of the MI file versions NHANES has presumably."
-  },
-  {
-    "objectID": "posts/cvd-synth-data/index.html",
-    "href": "posts/cvd-synth-data/index.html",
-    "title": "Synthetic CVD dataset",
-    "section": "",
-    "text": "This is a simple synthetic datset of CV events by age, sex and smoking exposure. It attempts to recreate historical data from the early days of smoking at the beginning of the 20th century when it was a new and trendy activity largely adopted by younger people. Cigarettes were rapidly adopted by the young and by 1920 over half of young men smoked."
-  },
-  {
-    "objectID": "posts/cvd-synth-data/index.html#source",
-    "href": "posts/cvd-synth-data/index.html#source",
-    "title": "Synthetic CVD dataset",
-    "section": "",
-    "text": "This is a simple synthetic datset of CV events by age, sex and smoking exposure. It attempts to recreate historical data from the early days of smoking at the beginning of the 20th century when it was a new and trendy activity largely adopted by younger people. Cigarettes were rapidly adopted by the young and by 1920 over half of young men smoked."
-  },
-  {
-    "objectID": "posts/cvd-synth-data/index.html#dataset",
-    "href": "posts/cvd-synth-data/index.html#dataset",
-    "title": "Synthetic CVD dataset",
-    "section": "Dataset",
-    "text": "Dataset\ncvd_data.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta"
-  },
-  {
-    "objectID": "posts/cvd-synth-data/index.html#dataset-description",
-    "href": "posts/cvd-synth-data/index.html#dataset-description",
-    "title": "Synthetic CVD dataset",
-    "section": "Dataset description",
-    "text": "Dataset description\n\nFeatures\ndichotomous, cardiology, historical, confounding\n\n\nVariables\n. codebook,compact\n\nVariable    Obs Unique    Mean  Min  Max  Label\n-------------------------------------------------------------------------------------------------------------------------\nage        1000     61  47.438   25   86  age\nmale       1000      2      .6    0    1  male\nsmoke      1000      2    .327    0    1  smoke\ncvd_event  1000      2    .217    0    1  cvd_event\n-------------------------------------------------------------------------------------------------------------------------"
-  },
-  {
-    "objectID": "posts/swan/index.html",
-    "href": "posts/swan/index.html",
-    "title": "Left Heart Catheterization data",
-    "section": "",
-    "text": "ICU data from SUPPORT trial.\nAs modified by TPH"
-  },
-  {
-    "objectID": "posts/swan/index.html#source",
-    "href": "posts/swan/index.html#source",
-    "title": "Left Heart Catheterization data",
-    "section": "",
-    "text": "ICU data from SUPPORT trial.\nAs modified by TPH"
-  },
-  {
-    "objectID": "posts/swan/index.html#dataset",
-    "href": "posts/swan/index.html#dataset",
-    "title": "Left Heart Catheterization data",
-    "section": "Dataset",
-    "text": "Dataset\nrhc_class_tph.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta"
-  },
-  {
-    "objectID": "posts/swan/index.html#dataset-description",
-    "href": "posts/swan/index.html#dataset-description",
-    "title": "Left Heart Catheterization data",
-    "section": "Dataset description",
-    "text": "Dataset description\n\nFeatures\nmortality, hospitalized patients, extensive sociodemographic and comorbidity data\n\n\nVariables\n. codebook,compact\n\nVariable    Obs Unique      Mean       Min       Max  Label\n---------------------------------------------------------------------------------------------------------\nid         5735   5735      2868         1      5735  \nptid       5735   5735         .         .         .  Patient ID\nage        5735   5036  61.37591    18.042   101.848  Age\nagecat     5735      5  2.809416         1         5  Age (5 categories)\nsex        5735      2  1.556582         1         2  \nedu        5735     42  11.67846         0        30  Years of Education\nmale       5735      2  .5565824         0         1  \nrace       5735      3   1.34612         1         4  Race (3 categories)\nincome     5735      4   1.75048         1         4  Income (4 categories)\nninsclas   5735      6  3.331125         1         6  Insurance type (6 category)\nsadmdte    5735   1401  11638.69     10754     12441  study admission date\nlstctdte   5735    932  11781.26     10756     12644  date of last contact\ndschdte    5734   1486  11660.05     10757     12560  hospital discharge date\ndthdte     3722   1592  11753.87     10757     12783  date of death\nt3d30      5735     29  23.61221         2        30  min{dthdte - sadmdte, 30}\ndth30      5735      2  .3344377         0         1  Outcome:Death within 30d\ndth60      5735      2  .4034874         0         1  Death within 60d\ndeath      5735      2  .6489974         0         1  death in followup (anytime)\nswang1     5735      2  .3808195         0         1  Treatement:RHC at &lt;= 24 hours\ncat1       5735      9  3.905493         1         9  Primary disease category\ncat2       5735      7  9.648649         4        10  Secondary disease category\nresp       5735      2  .3684394         0         1  Admit dx resp (up to 4 total)\nseps       5735      2  .1797733         0         1  Admit dx sepsis (up to 4 total)\ncard       5735      2  .3367044         0         1  Admit dx card (up to 4 total)\nmeta       5735      2  .0462075         0         1  Admit dx metabolic (up to 4 total)\nrenal      5735      2  .0514385         0         1  Admit dx renal (up to 4 total)\ngastr      5735      2  .1642546         0         1  Admit dx gastr (up to 4 total)\nhema       5735      2  .0617262         0         1  Admit dx hema (up to 4 total)\nneuro      5735      2   .120837         0         1  Admit dx neuro (up to 4 total)\northo      5735      2  .0012206         0         1  Admit dx ortho (up to 4 total)\ntrauma     5735      2  .0090671         0         1  Admit dx trauma (up to 4 total)\ndnr1       5735      2  .1140366         0         1  DNR status day 1\ndas2d3pc   5735   1023  20.49689        11        33  DASI ( Duke Activity Status Index)\nadld3pc    5735   1139  1.571261         0         7  ADLs lost @  2 wks prior\nsurv2md1   5735   1522  .5924501         0  .9619999  2M model survival prediction at day 1\nscoma1     5735     11  21.00418         0       100  SUPPORT Coma Score based on Glasgow D1\ntranshx    5735      2  .1154316         0         1  Transfer (&gt; 24 Hours) from Another Hospital\nca         5735      3    1.3034         1         3  Cancer (3 catgory)\nresp1      5735     72  28.09212         0       100  respiration rate Day 1\nmeanbp1    5735    178  78.52005         0       259  Mean Blood Pressure Day 1\nhrt1       5735    189  115.1789         0       250  heart rate Day 1\ntemp1      5735    118  37.61836        27        43  temperature (celcius) Day 1\nwtkilo1    5735    922  67.82782         0       244  weight in kilograms\nurin1      2707   1440  2192.454         0      9000  Urine Output Day 1\npafi1      5735   1342  222.2737  11.59961     937.5  PaO2/(.01*FiO2) Day 1\naps1       5735    123  54.66765         3       147  Apache III score (w.o. Coma) Day 1\nwblc1      5735    520  15.64516         0       192  white blood cell count Day 1\nhema1      5735    450  31.86548         2   66.1875  hematocrit Day 1\nsod1       5735     73   136.769       101       178  serum sodium Day 1\npot1       5735     81  4.066693  1.099854  11.89844  serum potassium Day 1\ncrea1      5735    148  2.133017  .0999908  25.09766  serum creatinine Day 1\nalb1       5735     57  3.092743  .2999878        29  albumin Day 1\nbili1      5735    266  2.267067  .0999908  58.19531  bilirubin Day 1\nph1        5735     96  7.388413  6.579102  7.769531  serum ph (arterial) Day 1\npaco21     5735    266  38.74897         1       156  paco2 Day 1\ncardiohx   5735      2  .1766347         0         1  cardio comorbidity\nchfhx      5735      2  .1780296         0         1  chf comorbidity\namihx      5735      2  .0348736         0         1  ami comorbidity\nchrpulhx   5735      2  .1898867         0         1  chrpul comorbidity\nrenalhx    5735      2  .0444638         0         1  renal comorbidity\nliverhx    5735      2  .0699215         0         1  liver comorbidity\ngibledhx   5735      2  .0322581         0         1  gibled comorbidity\ndementhx   5735      2  .0983435         0         1  dement comorbidity\npsychhx    5735      2   .067306         0         1  psych comorbidity\nmalighx    5735      2  .2294682         0         1  malig comorbidity\nimmunhx    5735      2  .2690497         0         1  immun comorbidity\n----------------------------------------------------------------------------------------------------"
+    "text": "Dataset description\nThe data set consists of 654 observations on youths aged 3 to 19 from East Boston recorded duing the middle to late 1970’s. Forced expiratory volume (FEV), a measure of lung capacity, is the variable of interest. Age and height are two continuous predictors. Sex and smoke are two categorical predictors.\nContains data\n Observations:           654                  \n    Variables:             6                  \n------------------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n------------------------------------------------------------------------------------------------\nid              long    %12.0g                \nage             byte    %8.0g                 \nfev             float   %9.0g                 \nheight          float   %9.0g                 \nsex             str6    %9s                   \nsmoke           str18   %18s                  \n------------------------------------------------------------------------------------------------\nSorted by: \n     Note: Dataset has changed since last saved.\nReferences Tager, I. B., Weiss, S. T., Rosner, B., and Speizer, F. E. (1979). Effect of parental cigarette smoking on pulmonary function in children. American Journal of Epidemiology, 110, 15-26.\nRosner, B. (1999). Fundamentals of Biostatistics, 5th Ed., Pacific Grove, CA: Duxbury."
   },
   {
     "objectID": "posts/uk-school/index.html",
@@ -322,18 +72,275 @@
     "text": "Dataset description\n\nFeatures\nThere are 33,988 students in 508 schools.\nhierarchical data, continuous outcome, education\nScores are based on GSCE subject-based examinations, typically taken in up to ten subjects in England and Wales and up to eight subjects in Scotland. Each subject is separately certificated, and graded on a scale from A* to G (GCSEs) or 1 to 7 (Standard grades). For the analyses below we have calculated an attainment score by allocating 7 points for an A or 1, 6 points for B or 2, 5 points for C or 3, and so on.\n\n\nVariables\n\n\n\n\n\n\n\nVariable name\nDescription and codes\n\n\n\n\ncaseid\nAnonymised student identifier\n\n\nschoolid\nAnonymised school identifier\n\n\nscore\nPoint score calculated from awards in Standard grades taken at  age 16. Scores range from 0 to 75, with a higher score indicating  a higher attainment\n\n\ncohort90\nThe sample includes the following cohorts: 1984, 1986, 1988, 1990, 1996 and 1998. The cohort90 variable is calculated by subtracting 1990 from each value. Thus values range from - 6 (corresponding to 1984) to \\(8(1998)\\), with 1990 coded as zero\n\n\nfemale\nSex of student (1 = female, \\(0=\\) male)\n\n\nsclass\nSocial class, defined as the higher class of mother or father (1 = managerial and professional, \\(2=\\) intermediate, \\(3=\\) working, \\(4=\\) unclassified)\n\n\nschtype\nSchool type, distinguishing independent schools from statefunded schools ( \\(1=\\) independent, \\(0=\\) state-funded)\n\n\nschurban\nUrban-rural classification of school (1 = urban, 0 = town or rural)\n\n\nschdenom\nSchool denomination (1 = Roman Catholic, \\(0=\\) nondenominational)\n\n\n\n. codebook,compact\n\nVariable     Obs Unique      Mean  Min    Max  Label\n-------------------------------------------------------------------------------------------------------------------------\ncaseid     33988  33988  18465.74    1  38192  Case ID\nschoolid   33988    508  254.3612    1    511  School ID\nscore      33988     73  31.09462    0     75  Score\ncohort90   33988      6  .2767447   -6      8  Cohort\nfemale     33988      2  .5276274    0      1  Female\nsclass     33988      4  2.146611    1      4  Social class\nschtype    33988      2  .0453101    0      1  School type\nschurban   33988      2  .7095445    0      1  School urban-rural classification\nschdenom   33988      2  .1576439    0      1  School denomination\n-------------------------------------------------------------------------------------------------------------------------"
   },
   {
-    "objectID": "posts/fev1/index.html#dataset",
-    "href": "posts/fev1/index.html#dataset",
-    "title": "FEV increase with age",
-    "section": "Dataset",
-    "text": "Dataset\nDownload: fev.csv\nor use directly in code\nimport delimited https://tphofer.github.io/ncsp-hhcr/data/fev.csv\n(multiple sources available) Obtained from Vanderbilt dataset website https://hbiostat.org/data/\nDirect import\nimport delimited https://hbiostat.org/data/repo/FEV.csv"
+    "objectID": "posts/swan/index.html",
+    "href": "posts/swan/index.html",
+    "title": "Left Heart Catheterization data",
+    "section": "",
+    "text": "ICU data from SUPPORT trial.\nAs modified by TPH"
   },
   {
-    "objectID": "posts/fev1/index.html#dataset-description",
-    "href": "posts/fev1/index.html#dataset-description",
-    "title": "FEV increase with age",
+    "objectID": "posts/swan/index.html#source",
+    "href": "posts/swan/index.html#source",
+    "title": "Left Heart Catheterization data",
+    "section": "",
+    "text": "ICU data from SUPPORT trial.\nAs modified by TPH"
+  },
+  {
+    "objectID": "posts/swan/index.html#dataset",
+    "href": "posts/swan/index.html#dataset",
+    "title": "Left Heart Catheterization data",
+    "section": "Dataset",
+    "text": "Dataset\nrhc_class_tph.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta"
+  },
+  {
+    "objectID": "posts/swan/index.html#dataset-description",
+    "href": "posts/swan/index.html#dataset-description",
+    "title": "Left Heart Catheterization data",
     "section": "Dataset description",
-    "text": "Dataset description\nThe data set consists of 654 observations on youths aged 3 to 19 from East Boston recorded duing the middle to late 1970’s. Forced expiratory volume (FEV), a measure of lung capacity, is the variable of interest. Age and height are two continuous predictors. Sex and smoke are two categorical predictors.\nContains data\n Observations:           654                  \n    Variables:             6                  \n------------------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n------------------------------------------------------------------------------------------------\nid              long    %12.0g                \nage             byte    %8.0g                 \nfev             float   %9.0g                 \nheight          float   %9.0g                 \nsex             str6    %9s                   \nsmoke           str18   %18s                  \n------------------------------------------------------------------------------------------------\nSorted by: \n     Note: Dataset has changed since last saved.\nReferences Tager, I. B., Weiss, S. T., Rosner, B., and Speizer, F. E. (1979). Effect of parental cigarette smoking on pulmonary function in children. American Journal of Epidemiology, 110, 15-26.\nRosner, B. (1999). Fundamentals of Biostatistics, 5th Ed., Pacific Grove, CA: Duxbury."
+    "text": "Dataset description\n\nFeatures\nmortality, hospitalized patients, extensive sociodemographic and comorbidity data\n\n\nVariables\n. codebook,compact\n\nVariable    Obs Unique      Mean       Min       Max  Label\n---------------------------------------------------------------------------------------------------------\nid         5735   5735      2868         1      5735  \nptid       5735   5735         .         .         .  Patient ID\nage        5735   5036  61.37591    18.042   101.848  Age\nagecat     5735      5  2.809416         1         5  Age (5 categories)\nsex        5735      2  1.556582         1         2  \nedu        5735     42  11.67846         0        30  Years of Education\nmale       5735      2  .5565824         0         1  \nrace       5735      3   1.34612         1         4  Race (3 categories)\nincome     5735      4   1.75048         1         4  Income (4 categories)\nninsclas   5735      6  3.331125         1         6  Insurance type (6 category)\nsadmdte    5735   1401  11638.69     10754     12441  study admission date\nlstctdte   5735    932  11781.26     10756     12644  date of last contact\ndschdte    5734   1486  11660.05     10757     12560  hospital discharge date\ndthdte     3722   1592  11753.87     10757     12783  date of death\nt3d30      5735     29  23.61221         2        30  min{dthdte - sadmdte, 30}\ndth30      5735      2  .3344377         0         1  Outcome:Death within 30d\ndth60      5735      2  .4034874         0         1  Death within 60d\ndeath      5735      2  .6489974         0         1  death in followup (anytime)\nswang1     5735      2  .3808195         0         1  Treatement:RHC at &lt;= 24 hours\ncat1       5735      9  3.905493         1         9  Primary disease category\ncat2       5735      7  9.648649         4        10  Secondary disease category\nresp       5735      2  .3684394         0         1  Admit dx resp (up to 4 total)\nseps       5735      2  .1797733         0         1  Admit dx sepsis (up to 4 total)\ncard       5735      2  .3367044         0         1  Admit dx card (up to 4 total)\nmeta       5735      2  .0462075         0         1  Admit dx metabolic (up to 4 total)\nrenal      5735      2  .0514385         0         1  Admit dx renal (up to 4 total)\ngastr      5735      2  .1642546         0         1  Admit dx gastr (up to 4 total)\nhema       5735      2  .0617262         0         1  Admit dx hema (up to 4 total)\nneuro      5735      2   .120837         0         1  Admit dx neuro (up to 4 total)\northo      5735      2  .0012206         0         1  Admit dx ortho (up to 4 total)\ntrauma     5735      2  .0090671         0         1  Admit dx trauma (up to 4 total)\ndnr1       5735      2  .1140366         0         1  DNR status day 1\ndas2d3pc   5735   1023  20.49689        11        33  DASI ( Duke Activity Status Index)\nadld3pc    5735   1139  1.571261         0         7  ADLs lost @  2 wks prior\nsurv2md1   5735   1522  .5924501         0  .9619999  2M model survival prediction at day 1\nscoma1     5735     11  21.00418         0       100  SUPPORT Coma Score based on Glasgow D1\ntranshx    5735      2  .1154316         0         1  Transfer (&gt; 24 Hours) from Another Hospital\nca         5735      3    1.3034         1         3  Cancer (3 catgory)\nresp1      5735     72  28.09212         0       100  respiration rate Day 1\nmeanbp1    5735    178  78.52005         0       259  Mean Blood Pressure Day 1\nhrt1       5735    189  115.1789         0       250  heart rate Day 1\ntemp1      5735    118  37.61836        27        43  temperature (celcius) Day 1\nwtkilo1    5735    922  67.82782         0       244  weight in kilograms\nurin1      2707   1440  2192.454         0      9000  Urine Output Day 1\npafi1      5735   1342  222.2737  11.59961     937.5  PaO2/(.01*FiO2) Day 1\naps1       5735    123  54.66765         3       147  Apache III score (w.o. Coma) Day 1\nwblc1      5735    520  15.64516         0       192  white blood cell count Day 1\nhema1      5735    450  31.86548         2   66.1875  hematocrit Day 1\nsod1       5735     73   136.769       101       178  serum sodium Day 1\npot1       5735     81  4.066693  1.099854  11.89844  serum potassium Day 1\ncrea1      5735    148  2.133017  .0999908  25.09766  serum creatinine Day 1\nalb1       5735     57  3.092743  .2999878        29  albumin Day 1\nbili1      5735    266  2.267067  .0999908  58.19531  bilirubin Day 1\nph1        5735     96  7.388413  6.579102  7.769531  serum ph (arterial) Day 1\npaco21     5735    266  38.74897         1       156  paco2 Day 1\ncardiohx   5735      2  .1766347         0         1  cardio comorbidity\nchfhx      5735      2  .1780296         0         1  chf comorbidity\namihx      5735      2  .0348736         0         1  ami comorbidity\nchrpulhx   5735      2  .1898867         0         1  chrpul comorbidity\nrenalhx    5735      2  .0444638         0         1  renal comorbidity\nliverhx    5735      2  .0699215         0         1  liver comorbidity\ngibledhx   5735      2  .0322581         0         1  gibled comorbidity\ndementhx   5735      2  .0983435         0         1  dement comorbidity\npsychhx    5735      2   .067306         0         1  psych comorbidity\nmalighx    5735      2  .2294682         0         1  malig comorbidity\nimmunhx    5735      2  .2690497         0         1  immun comorbidity\n----------------------------------------------------------------------------------------------------"
+  },
+  {
+    "objectID": "posts/cvd-synth-data/index.html",
+    "href": "posts/cvd-synth-data/index.html",
+    "title": "Synthetic CVD dataset",
+    "section": "",
+    "text": "This is a simple synthetic datset of CV events by age, sex and smoking exposure. It attempts to recreate historical data from the early days of smoking at the beginning of the 20th century when it was a new and trendy activity largely adopted by younger people. Cigarettes were rapidly adopted by the young and by 1920 over half of young men smoked."
+  },
+  {
+    "objectID": "posts/cvd-synth-data/index.html#source",
+    "href": "posts/cvd-synth-data/index.html#source",
+    "title": "Synthetic CVD dataset",
+    "section": "",
+    "text": "This is a simple synthetic datset of CV events by age, sex and smoking exposure. It attempts to recreate historical data from the early days of smoking at the beginning of the 20th century when it was a new and trendy activity largely adopted by younger people. Cigarettes were rapidly adopted by the young and by 1920 over half of young men smoked."
+  },
+  {
+    "objectID": "posts/cvd-synth-data/index.html#dataset",
+    "href": "posts/cvd-synth-data/index.html#dataset",
+    "title": "Synthetic CVD dataset",
+    "section": "Dataset",
+    "text": "Dataset\ncvd_data.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta"
+  },
+  {
+    "objectID": "posts/cvd-synth-data/index.html#dataset-description",
+    "href": "posts/cvd-synth-data/index.html#dataset-description",
+    "title": "Synthetic CVD dataset",
+    "section": "Dataset description",
+    "text": "Dataset description\n\nFeatures\ndichotomous, cardiology, historical, confounding\n\n\nVariables\n. codebook,compact\n\nVariable    Obs Unique    Mean  Min  Max  Label\n-------------------------------------------------------------------------------------------------------------------------\nage        1000     61  47.438   25   86  age\nmale       1000      2      .6    0    1  male\nsmoke      1000      2    .327    0    1  smoke\ncvd_event  1000      2    .217    0    1  cvd_event\n-------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "objectID": "posts/nhanes/index.html",
+    "href": "posts/nhanes/index.html",
+    "title": "NHANES Dataset",
+    "section": "",
+    "text": "This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class. After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021."
+  },
+  {
+    "objectID": "posts/nhanes/index.html#source",
+    "href": "posts/nhanes/index.html#source",
+    "title": "NHANES Dataset",
+    "section": "",
+    "text": "This is a subset of NHANES data from 2015-16 and 2017-19 cohorts created for use in the NCSP methods class. After that time NHANES missed one cohort during Covid and then substantially changed when in resumed in 2021."
+  },
+  {
+    "objectID": "posts/nhanes/index.html#dataset",
+    "href": "posts/nhanes/index.html#dataset",
+    "title": "NHANES Dataset",
+    "section": "Dataset",
+    "text": "Dataset\nDownload: nhanes_ncsp.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/nhanes_ncsp.dta\nThe datset is real NHANES data of the full sample described above abstracted for a subset of variables using the R code below and a github repository that does some of the pre-processing for you.\n\n\nCode\nlibrary(nhanesdata)\nlibrary(dplyr)\nlibrary(ggplot2)\n# pak::pak(\"kyleGrealis/nhanesdata\") installed 5/22/2026 updated 5/4/26\ndemo &lt;- read_nhanes(\"demo\")\n# glimpse(demo)\ndemo &lt;- read_nhanes(\"demo\")\n# get_url(\"DEMO_L\") for documentation of variables in demo\nbpx &lt;- read_nhanes(\"bpx\")\nbmx &lt;- read_nhanes(\"bmx\")\nbpq &lt;- read_nhanes(\"bpq\")\n\nanalysis_data &lt;- demo |&gt;\n  inner_join(bpx, by = c(\"seqn\", \"year\")) |&gt;\n  inner_join(bmx, by = c(\"seqn\", \"year\")) |&gt;\n  inner_join(bpq, by = c(\"seqn\", \"year\")) |&gt;\n  mutate(education = factor(\n    case_when(\n      dmdeduc2 == \"Less than 9th grade\" ~ \"Less than high school\",\n      startsWith(as.character(dmdeduc2), \"9-11th grade\") ~ \"Some high school\",\n      dmdeduc2 == \"High school graduate/GED or equivalent\" ~ \"HS Graduate or GED\",\n      dmdeduc2 == \"Some college or AA degree\" ~ \"Some college or AA\",\n      dmdeduc2 == \"College graduate or above\" ~ \"College graduate or above\"\n    ),\n    levels = c(\"Less than high school\", \"Some high school\", \"HS Graduate or GED\",\n               \"Some college or AA\", \"College graduate or above\")  \n    )) |&gt;\n    mutate(age_grp = factor(\n    case_when(\n        ridageyr &lt; 18  ~ \"&lt; 18\",\n        ridageyr &lt; 40  ~ \"18-39\",\n        ridageyr &lt; 60  ~ \"40-59\",\n        ridageyr &gt;= 60 ~ \"&gt; 60\"\n    ),\n    levels = c(\"&lt; 18\", \"18-39\", \"40-59\", \"&gt; 60\")\n    )) |&gt;\n  select(year, seqn, ridageyr, age_grp, sddsrvyr, education, dmdmartl, indfmpir, ridreth3, riagendr, bpxsy1,bpxsy2,bpxsy3,bpxsy4,bpxdi1,bpxdi2,bpxdi3,bpxdi4, bmxbmi,bpq050a, ridexprg, sdmvstra, sdmvpsu, wtmec2yr) |&gt;\n  filter(year &gt;= 2015)\nvar_labels &lt;- c(\n  year     = \"Survey year\",\n  seqn     = \"Respondent sequence number\",\n  ridageyr = \"Age in years\",\n  age_grp  = \"Age group\",\n  sddsrvyr = \"Data release cycle\",\n  education = \"Education level (recoded)\",\n  dmdmartl = \"Marital status\",\n  indfmpir = \"Family poverty income ratio\",\n  ridreth3 = \"Race/Hispanic origin (incl. NH Asian)\",\n  riagendr = \"Sex\",\n  bpxsy1   = \"Systolic BP, reading 1 (mm Hg)\",\n  bpxsy2   = \"Systolic BP, reading 2 (mm Hg)\",\n  bpxsy3   = \"Systolic BP, reading 3 (mm Hg)\",\n  bpxsy4   = \"Systolic BP, reading 4 (mm Hg)\",\n  bpxdi1   = \"Diastolic BP, reading 1 (mm Hg)\",\n  bpxdi2   = \"Diastolic BP, reading 2 (mm Hg)\",\n  bpxdi3   = \"Diastolic BP, reading 3 (mm Hg)\",\n  bpxdi4   = \"Diastolic BP, reading 4 (mm Hg)\",\n  bmxbmi   = \"Body mass index (kg/m^2)\",\n  bpq050a  = \"Now taking prescribed medicine for HBP\",\n  ridexprg = \"Pregnancy status at exam\",\n  sdmvstra = \"Masked variance pseudo-stratum\",\n  sdmvpsu  = \"Masked variance pseudo-PSU\",\n  wtmec2yr = \"MEC 2-year exam weight\"\n)\n\nfor (v in names(var_labels)) {\n  attr(analysis_data[[v]], \"label\") &lt;- var_labels[[v]]\n}\nhaven::write_dta(analysis_data, \"data/nhanes_ncsp.dta\")\n\n\nExample\nReproduce a table of hypertension prevalence from Report - NCHS Data Brief No. 364, April 2020\n\nFull SAS code is available for all of the tables and figures in the report.\nBelow I reproduced age category by gender prevalence estimates using the nhanes-ncsp dataset and the stata code folded below\n\n\nCode\nuse \"../../data/nhanes_ncsp.dta\",clear\n* Table excludes preganant women\nencode ridexprg , gen(pregnant) label(preg)\nencode riagendr , gen(gender) label(gender)\n* If (diastolic) BP value is 0 then change to missing\nforeach var of var bpxdi*   {\n    replace `var'=. if `var'==0\n}\negen sys_mean=rowmean(bpxsy*)\negen dia_mean=rowmean(bpxdi*)\n\n* Define hyperternsive variable using new AHA/ACC guidelines 130/80\ngen new_htn=. \n* elevated diastolic or systolic is counted as hypertensive or reporting on BP med\nreplace new_htn=1 if sys_mean&gt;=130&sys_mean&lt;. | dia_mean&gt;=80&dia_mean&lt;. | bpq050a==\"Yes\"\n* Include as non-hypertensive those with non-missing and non-high BPs\negen sys_no_miss=rownonmiss(bpxsy*)\negen dia_no_miss=rownonmiss(bpxdi*)\nreplace new_htn=0 if (sys_no_mis&gt;0 & dia_no_mis&gt;0) & new_htn==.\n\n* Define subpop  non-pregant persons &gt;18, with one or more \n*      non-missing BPs in 2017-2019 cohort\ngen include=(ridageyr&gt;=18 & !missing(ridageyr)) & pregnant!=3 & ///\n    (sys_no_miss!=0 | dia_no_miss!=0) & year==2017\n\n* Calculate HTN prevalence\nreplace new_htn=100 if new_htn==1   // prevalence as %\nsvyset [w=wtmec2yr], psu(sdmvpsu) strata(sdmvstra) vce(linearized)\ncollect: svy: mean new_htn, over(age_grp gender) subpop(include)\n\n* Produce Table\ncollect layout (age_grp) (gender#result[_r_b _r_se])\ncollect style header result, level(label) title(hide)\ncollect label levels result _r_b \"%\" _r_se \"SE\", modify\ncollect style cell result[_r_b],  nformat(%5.1f)\ncollect style cell result[_r_se], nformat(%5.1f) sformat(\"(%s)\")\ncollect title \"Hypertension prevalence (%), adults 18+, NHANES\"\ncollect style autolevels gender 2 1\ncollect style header gender, title(hide) level(label)\ncollect preview\ncollect export htn_table.html, replace\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHypertension prevalence (%), adults 18+, NHANES\n\n\n\n\n\n   \n Male \n Male \n Female \n Female \n\n\n   \n % \n SE \n % \n SE \n\n\n 18-39 \n 31.2 \n (1.8) \n 13.0 \n (1.4) \n\n\n 40-59 \n 59.4 \n (3.4) \n 49.9 \n (2.4) \n\n\n &gt; 60 \n 75.2 \n (3.0) \n 73.9 \n (2.0)"
+  },
+  {
+    "objectID": "posts/nhanes/index.html#dataset-description",
+    "href": "posts/nhanes/index.html#dataset-description",
+    "title": "NHANES Dataset",
+    "section": "Dataset description",
+    "text": "Dataset description\ncontinuous, repeated measures, demographics\n\nFeatures\n\n\nVariables\nYou can look up variables on the NCHS website variable lookup tool\n. codebook, compact\n\nVariable     Obs Unique      Mean       Min       Max  Label\n----------------------------------------------------------------------------------------------\nyear       11891      2   2015.98      2015      2017  Survey year\nseqn       11891  11891  93393.81     83732    102956  Respondent sequence number\nridageyr   11891     65  47.21882        16        80  Age in years\nage_grp    11891      4   2.88218         1         4  Age group\nsddsrvyr   11891      2         .         .         .  Data release cycle\neducation  10724      5  3.476035         1         5  Education level (recoded)\ndmdmartl   10739      7         .         .         .  Marital status\nindfmpir   10495    487  2.446261         0         5  Family poverty income ratio\nridreth3   11891      6         .         .         .  Race/Hispanic origin (incl. NH Asian)\nriagendr   11891      2         .         .         .  Sex\nbpxsy1     10876     74  124.7269        72       236  Systolic BP, reading 1 (mm Hg)\nbpxsy2     11255     75  124.7012        72       238  Systolic BP, reading 2 (mm Hg)\nbpxsy3     11214     78  124.2804        72       238  Systolic BP, reading 3 (mm Hg)\nbpxsy4       737     62  134.1493        76       234  Systolic BP, reading 4 (mm Hg)\nbpxdi1     10876     56  70.07448         0       136  Diastolic BP, reading 1 (mm Hg)\nbpxdi2     11255     58  70.24789         0       144  Diastolic BP, reading 2 (mm Hg)\nbpxdi3     11214     60  70.18709         0       140  Diastolic BP, reading 3 (mm Hg)\nbpxdi4       737     45  75.63094         0       132  Diastolic BP, reading 4 (mm Hg)\nbmxbmi     11713    449  29.31031      13.2      86.2  Body mass index (kg/m^2)\nbpq050a     3620      2         .         .         .  Now taking prescribed medicine for HBP\nridexprg    2297      3         .         .         .  Pregnancy status at exam\nsdmvstra   11891     30  133.4681       119       148  Masked variance pseudo-stratum\nsdmvpsu    11891      2  1.501219         1         2  Masked variance pseudo-PSU\nwtmec2yr   11891  10512  42517.69  4579.581  419762.8  MEC 2-year exam weight\n------------------------------------------------------------------------------------------------\n\n\nTo obtain data directly yourself\nMain CDC NHANES site documentation and download site\nExamples of reproducing NHANES CDC tables in several languages including Stata, R, SAS and Sudaan\n\nDepression prevalence 2013-2016-Stata do-file \n\nNote: Stata has a NHANES format MI impport command for some of the MI file versions NHANES has presumably."
+  },
+  {
+    "objectID": "biostat2.html",
+    "href": "biostat2.html",
+    "title": "Biostatistics II",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Biostatistics II"
+    ]
+  },
+  {
+    "objectID": "biostat2.html#setup",
+    "href": "biostat2.html#setup",
+    "title": "Biostatistics II",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Biostatistics II"
+    ]
+  },
+  {
+    "objectID": "biostat1.html",
+    "href": "biostat1.html",
+    "title": "Biostatistics I",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
+    "crumbs": [
+      "Biostatistics I"
+    ]
+  },
+  {
+    "objectID": "biostat1.html#setup",
+    "href": "biostat1.html#setup",
+    "title": "Biostatistics I",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
+    "crumbs": [
+      "Biostatistics I"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "NCSP methods class website",
+    "section": "",
+    "text": "MIT"
+  },
+  {
+    "objectID": "posts/meps/index.html",
+    "href": "posts/meps/index.html",
+    "title": "MEPS Datat",
+    "section": "",
+    "text": "AHRQ maintains a github site with MEPS data (Medical Expenditure Panel Survey) and instructions for how to download.\nThe repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality’s Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience."
+  },
+  {
+    "objectID": "posts/meps/index.html#source",
+    "href": "posts/meps/index.html#source",
+    "title": "MEPS Datat",
+    "section": "",
+    "text": "AHRQ maintains a github site with MEPS data (Medical Expenditure Panel Survey) and instructions for how to download.\nThe repository contains instructions and example code for loading and analyzing data from the Agency for Healthcare Research and Quality’s Medical Expenditure Panel Survey (MEPS) Household Component (HC). Quick reference guides are also provided for convenience."
+  },
+  {
+    "objectID": "posts/meps/index.html#dataset",
+    "href": "posts/meps/index.html#dataset",
+    "title": "MEPS Datat",
+    "section": "Dataset",
+    "text": "Dataset\nData from the Household Component of MEPS are available for download as public use files. For data years 2017 and later (and also for the 2016 Medical Conditions file), .zip files for multiple file formats are available, including ASCII (.dat), SAS V9 (.sas7bdat), Stata (.dta), and Excel (.xlsx). Prior to 2017, ASCII (.dat) and SAS transport (.ssp) files are provided for all datasets. The following table summarizes the various file formats available by data year:\nExample\n/* 2018 Dental Visits */\n* Change to project directory\ncopy \"https://meps.ahrq.gov/mepsweb/data_files/pufs/h206b/h206bdta.zip\" ///\n    \"h206bdta.zip\"\nunzipfile \"h206bdta.zip\"\nuse \"h206b.dta\", clear\n/* View dataset */\nbrowse\n// For analysis use svy commands for example for dental expenditures in 2018\nuse DUPERSID PERWT18F VARPSU VARSTR DVXP18X using \"h206b.dta\", clear\nsvyset VARPSU [pweight=PERWT18F], str(VARSTR)\nsvy: total DVXP18X\nFor other files switch out h206b for the correct code see list of filenames\nFor example for 2018 ER visits you would substitute h206e You can check the documentation site for the file by then inserting the code in the following https://meps.ahrq.gov/mepsweb/data_stats/download_data_files_detail.jsp?cboPufNumber=HC-206E"
+  },
+  {
+    "objectID": "posts/meps/index.html#dataset-description",
+    "href": "posts/meps/index.html#dataset-description",
+    "title": "MEPS Datat",
+    "section": "Dataset description",
+    "text": "Dataset description\nQuick Reference Guides\nExample do file for estimating 2019 Total Expenditures by event type and source of payment\n\nFeatures\nAHRQ website with full descriptions of MEPS\n\n\nVariables\nVary by file"
+  },
+  {
+    "objectID": "posts/rand-hie/index.html",
+    "href": "posts/rand-hie/index.html",
+    "title": "RAND HIE",
+    "section": "",
+    "text": "This is a the dataset of main results for individuals in the fee-for-service plans only from the RAND Health Insurance Experiment. This dataset was provided by Willard Manning (a health economist on the HIE) to Deb & Trivedi for use in their 2002 article _The structure of demand for health care: latent class versus two-part models. A data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.\nIt was then made available in their 2005 book at https://cameron.econ.ucdavis.edu/mmabook/mmadata.html\nuse https://cameron.econ.ucdavis.edu/mmabook/randdata.dta,clear has 4 additional observations 20190 latest version from C&T 2022 https://www.stata-press.com/data/mus2.html file mus218rhie.dta has obs 20186 as published in"
+  },
+  {
+    "objectID": "posts/rand-hie/index.html#source",
+    "href": "posts/rand-hie/index.html#source",
+    "title": "RAND HIE",
+    "section": "",
+    "text": "This is a the dataset of main results for individuals in the fee-for-service plans only from the RAND Health Insurance Experiment. This dataset was provided by Willard Manning (a health economist on the HIE) to Deb & Trivedi for use in their 2002 article _The structure of demand for health care: latent class versus two-part models. A data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year.\nIt was then made available in their 2005 book at https://cameron.econ.ucdavis.edu/mmabook/mmadata.html\nuse https://cameron.econ.ucdavis.edu/mmabook/randdata.dta,clear has 4 additional observations 20190 latest version from C&T 2022 https://www.stata-press.com/data/mus2.html file mus218rhie.dta has obs 20186 as published in"
+  },
+  {
+    "objectID": "posts/rand-hie/index.html#dataset",
+    "href": "posts/rand-hie/index.html#dataset",
+    "title": "RAND HIE",
+    "section": "Dataset",
+    "text": "Dataset\nDownload: rhie.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/rhie.dta"
+  },
+  {
+    "objectID": "posts/rand-hie/index.html#dataset-description",
+    "href": "posts/rand-hie/index.html#dataset-description",
+    "title": "RAND HIE",
+    "section": "Dataset description",
+    "text": "Dataset description\nDescription: Deb & Trivedi (2002)\n\nWe use data from the RHIE for this study. The experiment, conducted by the RAND Corporation from 1974 to 1982, is the longest and largest controlled social experiment in medical care research. The main goal of the experiment was to assess how a patient’s use of health services is affected by types of health insurance, including both fee-for-service and health maintenance organizations (HMOs). In the RHIE, data were collected from about 8000 enrollees in 2823 families, from six sites across the country. Each family was enrolled in one of fourteen different HIS insurance plans for either 3 or 5 years. The plans ranged from free care to 95% coinsurance below a maximum dollar expenditure (MDE), to assignment in a prepaid group practice. Data were collected on the enrollee’s use of medical care services and health status throughout the term of enrollment, randomly assigned for 3 or 5 years. Certain categories of individuals were excluded, e.g. the medicare eligibles and members of the military. Detailed information on the experimental design and data collection methods are reported in Morris (1979), Taylor et al. (1987), and Newhouse et al. (1993). The sample used in this study consists of individuals in the fee-for-service plans only. Will Manning kindly provided us with a data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year."
+  },
+  {
+    "objectID": "posts/cms-synth/index.html",
+    "href": "posts/cms-synth/index.html",
+    "title": "CMS Synthetic datasets",
+    "section": "",
+    "text": "Section 3.3 proves an example dataset for download."
+  },
+  {
+    "objectID": "posts/cms-synth/index.html#source",
+    "href": "posts/cms-synth/index.html#source",
+    "title": "CMS Synthetic datasets",
+    "section": "Source",
+    "text": "Source\nCMS has started to provide sythetic datasets so that people can familiarize themselves working with CMS data.\nOn 2/12/2013 CMS released the Data Entrepreneurs’ Synthetic Public Use File (DE-SynPUF). The file contains synthesized data taken from a 5% random sample of Medicare beneficiaries in 2008 and their claims from 2008 to 2010 and preserve the detailed data structure and metadata of key variables at both the beneficiary and claim levels.\nThe DE-SynPUF was a joint project of NORC at the University of Chicago and IMPAQ International, a Maryland-based research, evaluation and technical assistance. All variables in the DE-SynPUF are imputed, suppressed, and coarsened as part of disclosure treatment.\nTo date, this is still the only release available"
+  },
+  {
+    "objectID": "posts/cms-synth/index.html#dataset",
+    "href": "posts/cms-synth/index.html#dataset",
+    "title": "CMS Synthetic datasets",
+    "section": "Dataset",
+    "text": "Dataset\nAvailable at this CMS website"
+  },
+  {
+    "objectID": "posts/cms-synth/index.html#dataset-description",
+    "href": "posts/cms-synth/index.html#dataset-description",
+    "title": "CMS Synthetic datasets",
+    "section": "Dataset description",
+    "text": "Dataset description\nContains multiple separate files.\nData documentation\nRepresents a 5% sample of Medicare beneficiaries.\n\nThree years of claims (2008, 2009, and 2010) for the beneficiaries\nFour types of claims (Inpatient, Outpatient, Carrier, PDE – Prescription Drug Event)\nA beneficiary summary file for each year.\n\nDue to file size limitations, each data type in the CMS Linkable 2008-2010 Medicare DE-SynPUF is released in 20 separate samples (essentially each is a .25% sample of all Medicare enrollees). All claims for a particular beneficiary are in samples with the same number (i.e. all beneficiaries in sample 1 have all their claims in the sample 1 files). This design allows DE-SynPUF users who do not need the entire synthetic population of the DE-SynPUF to read in only as many samples as they desire.\nSample 1 files (.csv files)\nDE1.0 Sample 1 2008 Beneficiary Summary File (ZIP)\nDE1.0 Sample 1 2008-2010 Carrier Claims 1\nDE1.0 Sample 1 2008-2010 Carrier Claims 2\nDE1.0 Sample 1 2008-2010 Inpatient Claims (ZIP)\nDE1.0 Sample 1 2008-2010 Outpatient Claims (ZIP)\nDE1.0 Sample 1 2008-2010 Prescription Drug Events\nDE1.0 Sample 1 2009 Beneficiary Summary File (ZIP)\nDE1.0 Sample 1 2010 Beneficiary Summary File (ZIP)\n\nFeatures\n\n\n\n\n\n\n\n\n\n\nDE-SynPUF\nUnit of record\nNumber of Records 2008\nNumber of Records 2009\nNumber of Records 2010\n\n\n\n\nBeneficiary Summary\nBeneficiary\n2,326,856\n2,291,320\n2,255,098\n\n\nInpatient Claims\nclaim\n547,800\n504,941\n280,081\n\n\nOutpatient Claims\nclaim\n5,673,808\n6,519,340\n3,633,839\n\n\nCarrier Claims\nclaim\n34,276,324\n37,304,993\n23,282,135\n\n\nPrescription Drug Events (PDE)\nevent\n39,927,827\n43,379,293\n27,778,849\n\n\n\nNote: Claim counts for 2010 are lower due to attrition from death, and some effects of disclosure treatment.\n\n\nVariables\nVary by file\n\n\nExample\nDataset with the entire population of benficiaries in the sample (2,326,705) and several variables.\nDownload: cms_oop_costs.dta (large 34MB)\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/cms_oop_costs.dta\nCode creating the dataset from the 20 separate files of the beneficiary summary file for 2008 (each with about 116,000 records) is below. The files were hosted as csv files (rather than zipped files as on the CMS webstie) on a GitHub user’s site.\n\n\nCode\n  clear all\n  frames reset\n  frame create master\n  local base \"https://raw.githubusercontent.com/GauriSaran/Inferential-Statistics-Project-Medicare-Claims/refs/heads/master/DE1_0_2008_Beneficiary_Summary_File_Sample\"\n\n  forvalues i = 1/20 {\n      import delimited \"`base'_`i'.csv\", varnames(1) clear\n      keep bene_sex_ident_cd sp_chf sp_cncr benres_ip benres_op benres_car\n      rename bene_sex_ident_cd sex\n      rename sp_chf heart_failure\n      rename sp_cncr cancer\n    cwf master\n    fframeappend, using(default)\n    cwf default\n  }\n\n  frame change master\n  egen total=rowtotal(benres_ip benres_op benres_car)\n\n\n\nvariables\n. codebook, compact\n\nVariable          Obs Unique      Mean  Min    Max  Label\n---------------------------------------------------------------------------------------------------------------\nsex           2326705      2  1.555653    1      2  BENE_SEX_IDENT_CD\nheart_fail~e  2326705      2   1.71546    1      2  SP_CHF\ncancer        2326705      2  1.936386    1      2  SP_CNCR\nbenres_ip     2326705    423  247.2868    0  53096  BENRES_IP\nbenres_op     2326705   1174  197.5022    0  18700  BENRES_OP\nbenres_car    2326705    506  328.8734    0   5900  BENRES_CAR\ntotal         2326705   6709  773.6624    0  54146  Total out of pocket costs (excl. Part D)\n---------------------------------------------------------------------------------------------------------------\n\nNote:\nbenres_ip: Captures all inpatient hospitalizations, but it also includes Skilled Nursing Facility (SNF) and Hospice cost-sharing.\nbenres_op: Captures hospital outpatient departments, ER visits, and Home Health Agency (HHA) institutional outpatient claims.\nbenres_car: Captures non-institutional professional services, such as doctor office visits, lab tests, and Durable Medical Equipment (DME)."
+  },
+  {
+    "objectID": "posts/low-bw/index.html",
+    "href": "posts/low-bw/index.html",
+    "title": "Low birthweight and smoking",
+    "section": "",
+    "text": "Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata Treatment Effects reference manuals starting in Stata 13 and in use through Stata 19"
+  },
+  {
+    "objectID": "posts/low-bw/index.html#source",
+    "href": "posts/low-bw/index.html#source",
+    "title": "Low birthweight and smoking",
+    "section": "",
+    "text": "Excerpt of data from Cattaneo (2010) Journal of Econometrics 155: 138-154 used in the Stata Treatment Effects reference manuals starting in Stata 13 and in use through Stata 19"
+  },
+  {
+    "objectID": "posts/low-bw/index.html#dataset-description",
+    "href": "posts/low-bw/index.html#dataset-description",
+    "title": "Low birthweight and smoking",
+    "section": "Dataset description",
+    "text": "Dataset description\n\nFeatures\nThe data are a subset of that originally described by Almond 2005 (Quarterly Journal of Economics, 120 (2005), pp. 1031-1083) as being from the 1989-1991 Linked National Natality-Mortality Detail Files used for a study focusing on smoking during pregnancy and birth weight for the 497,139 singleton births in Pennsylvania between 1989 and 1991. Pennsylvania was chosen since there was complete smoking information for over 95 percent of the mothers in 1989-1991. In the singleton sample, about 21 percent of Pennsylvanian women report smoking during pregnancy in this time period.\nuse directly in code\nuse https://www.stata-press.com/data/r16/cattaneo2 , clear\nPublished example of causal inference methods paper using this dataset. (Ghosh 2021 Stat Sin)\n\n\nVariables\n. codebook,compact\n\nVariable     Obs Unique      Mean  Min   Max  Label\n-------------------------------------------------------------------------------------------------------------------------\nbweight     4642    732   3361.68  340  5500  infant birthweight (grams)\nmmarried    4642      2  .6996984    0     1  1 if mother married\nmhisp       4642      2  .0340371    0     1  1 if mother hispanic\nfhisp       4642      2   .037053    0     1  1 if father hispanic\nforeign     4642      2  .0534252    0     1  1 if mother born abroad\nalcohol     4642      2  .0323137    0     1  1 if alcohol consumed during pregnancy\ndeadkids    4642      2   .259371    0     1  previous births where newborn died\nmage        4642     33  26.50452   13    45  mother's age\nmedu        4642     18  12.68957    0    17  mother's education attainment\nfage        4642     46  27.26713    0    60  father's age\nfedu        4642     17   12.3072    0    17  father's education attainment\nnprenatal   4642     30  10.75808    0    40  number of prenatal care visits\nmonthslb    4642    173  23.07497    0   272  months since last birth\norder       4642     12  1.892072    0    12  order of birth of the infant\nmsmoke      4642      4  .3996122    0     3  cigarettes smoked during pregnancy\nmbsmoke     4642      2  .1861267    0     1  1 if mother smoked\nmrace       4642      2   .840586    0     1  1 if mother is white\nfrace       4642      2  .8136579    0     1  1 if father is white\nprenatal    4642      4  1.201853    0     3  trimester of first prenatal care visit\nbirthmonth  4642     12  6.540069    1    12  month of birth\nlbweight    4642      2  .0603188    0     1  1 if low birthweight baby\nfbaby       4642      2  .4379578    0     1  1 if first baby\nprenatal1   4642      2  .8013787    0     1  1 if first prenatal visit in 1 trimester\n-------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "objectID": "posts/doc-visits/index.html",
+    "href": "posts/doc-visits/index.html",
+    "title": "Doctor Visit Data",
+    "section": "",
+    "text": "This is Doctor visit data from Cameron & Trivedi Microeconometrics Using Stata, Second Edition using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sector not self-employed, excludes public insurance Medicare/Medicaid"
+  },
+  {
+    "objectID": "posts/doc-visits/index.html#source",
+    "href": "posts/doc-visits/index.html#source",
+    "title": "Doctor Visit Data",
+    "section": "",
+    "text": "This is Doctor visit data from Cameron & Trivedi Microeconometrics Using Stata, Second Edition using data from the 2002 Medical Expenditure Panel Survey age 24-65, private sector not self-employed, excludes public insurance Medicare/Medicaid"
+  },
+  {
+    "objectID": "posts/doc-visits/index.html#dataset",
+    "href": "posts/doc-visits/index.html#dataset",
+    "title": "Doctor Visit Data",
+    "section": "Dataset",
+    "text": "Dataset\nmus10data.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/mus10data.dta"
+  },
+  {
+    "objectID": "posts/doc-visits/index.html#dataset-description",
+    "href": "posts/doc-visits/index.html#dataset-description",
+    "title": "Doctor Visit Data",
+    "section": "Dataset description",
+    "text": "Dataset description\n\nFeatures\ncount, healthcare utilization, longitudinal\n\n\nVariables\n. codebook,compact\n\nVariable     Obs Unique      Mean      Min      Max  Label\n-------------------------------------------------------------------------------------------------------------------------\neduc       30124     18  12.72431        0       17  Years of schooling\ndocvis     30124    106  3.818251        0      160  number of doctor visits\nage        30124     40  4.074266      2.5      6.4  Age in years / 10\nincome     30124  15739  31.89734  -49.999  280.777  Income in $ / 1000\nfemale     30124      2  .4722148        0        1  = 1 if female\nblack      30124      2  .1134643        0        1  = 1 if black\nhispanic   30124      2  .2142146        0        1  = 1 if hispanic\nmarried    30124      2  .6580135        0        1  = 1 if married\nnoreast    30124      2  .1686695        0        1  = 1 if Northeast\nmidwest    30124      2  .2203227        0        1  = 1 if Midwest\nsouth      30124      2  .3694065        0        1  = 1 if South\nmsa        30124      2  .8105165        0        1  = 1 if metropolitan statistical area\nfirmsize   30124    236  14.61772        0       50  Size of firm/100\nvegood     30124      2  .3470987        0        1  = 1 if very good health\ngood       30124      2  .2824658        0        1  = 1 if good health\nphyslim    30124      2  .1548931        0        1  = 1 if physical limitation\nfairpoor   30124      2  .0890984        0        1  = 1 if fair or poor health\nage2       30124     40  17.61898     6.25    40.96  = age x age\nyear97     30124      2   .110875        0        1  = 1 if year 1997\nyear98     30124      2  .1040698        0        1  = 1 if year 1998\nyear99     30124      2  .1307595        0        1  = 1 if year 1999\nyear00     30124      2  .1035055        0        1  = 1 if year 2000\nyear01     30124      2  .2052848        0        1  = 1 if year 2001\nyear02     30124      2  .1464613        0        1  = 1 if year 2003\nfamsize    30124     15  3.157881        1       17  Family size\ninjury     30124      2  .2018988        0        1  = 1 if an injury\nprivate    30124      2  .8197119        0        1  = 1 if private insurance\nchronic    30124      2  .3364427        0        1  = 1 if a chronic condition\n-------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "objectID": "posts/apipop/index.html",
+    "href": "posts/apipop/index.html",
+    "title": "California School API data",
+    "section": "",
+    "text": "Description apipop dataset\nThe Academic Performance Index was computed for all California schools based on standardised testing of students. The data sets contain information for all schools in California with at least 100 students.\nSource\nData were obtained originally from the survey sampling help pages of UCLA Academic Technology Services; these pages are no longer on line. This information comes from the still available CRAN documentation at rdrr.io for the R Survey package which also contains this data.\nReferences\nThe API program has been discontinued at the end of 2018, and the archive page at the California Department of Education is now gone. The Wikipedia article has links to past material at the Internet Archive. https://en.wikipedia.org/wiki/Academic_Performance_Index_(California_public_schools)\nFormat\nThe full population data in apipop are a data frame with 6194 observations on the following 37 variables.\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\ncds\nUnique identifier\n\n\nstype\nElementary/Middle/High School\n\n\nname\nSchool name (15 characters)\n\n\nsname\nSchool name (40 characters)\n\n\nsnum\nSchool number\n\n\ndname\nDistrict name\n\n\ndnum\nDistrict number\n\n\ncname\nCounty name\n\n\ncnum\nCounty number\n\n\nflag\nreason for missing data\n\n\npcttest\npercentage of students tested\n\n\napi00\nAPI in 2000\n\n\napi99\nAPI in 1999\n\n\ntarget\ntarget for change in API\n\n\ngrowth\nChange in API\n\n\nsch.wide\nMet school-wide growth target?\n\n\ncomp.imp\nMet Comparable Improvement target\n\n\nboth\nMet both targets\n\n\nawards\nEligible for awards program\n\n\nmeals\nPercentage of students eligible for subsidized meals\n\n\nell\n‘English Language Learners’ (percent)\n\n\nyr.rnd\nYear-round school\n\n\nmobility\npercentage of students for whom this is the first year at the school\n\n\nacs.k3\naverage class size years K-3\n\n\nacs.46\naverage class size years 4-6\n\n\nacs.core\nNumber of core academic courses\n\n\npct.resp\npercent where parental education level is known\n\n\nnot.hsg\npercent parents not high-school graduates\n\n\nhsg\npercent parents who are high-school graduates\n\n\nsome.col\npercent parents with some college\n\n\ncol.grad\npercent parents with college degree\n\n\ngrad.sch\npercent parents with postgraduate education\n\n\navg.ed\naverage parental education level\n\n\nfull\npercent fully qualified teachers\n\n\nemer\npercent teachers with emergency qualifications\n\n\nenroll\nnumber of students enrolled\n\n\napi.stu\nnumber of students tested."
   },
   {
     "objectID": "index.html",

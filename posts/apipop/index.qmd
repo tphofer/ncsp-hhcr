@@ -1,0 +1,63 @@
+---
+title: "California School API data"
+author: "UCLA ATS site"
+date: "9/20/2018"
+date-modified: "9/18/2026"
+categories: [Survey, Sampling]
+---
+
+Description apipop dataset
+
+The Academic Performance Index was computed for all California schools based on standardised testing of students. The data sets contain information for all schools in California with at least 100 students.
+
+Source
+
+Data were obtained originally from the survey sampling help pages of UCLA Academic Technology Services; these pages are no longer on line.  This information comes from the still available [CRAN documentation at rdrr.io](https://rdrr.io/cran/survey/man/api.html) for the R Survey package which also contains this data.
+
+References
+
+The API program has been discontinued at the end of 2018, and the archive page at the California Department of Education is now gone. The Wikipedia article has links to past material at the Internet Archive. https://en.wikipedia.org/wiki/Academic_Performance_Index_(California_public_schools)
+
+Format
+
+The full population data in apipop are a data frame with 6194 observations on the following 37 variables.
+
+| Variable | Description |
+|---|---|
+| cds | Unique identifier |
+| stype | Elementary/Middle/High School |
+| name | School name (15 characters) |
+| sname | School name (40 characters) |
+| snum | School number |
+| dname | District name |
+| dnum | District number |
+| cname | County name |
+| cnum | County number |
+| flag | reason for missing data |
+| pcttest | percentage of students tested |
+| api00 | API in 2000 |
+| api99 | API in 1999 |
+| target | target for change in API |
+| growth | Change in API |
+| sch.wide | Met school-wide growth target? |
+| comp.imp | Met Comparable Improvement target |
+| both | Met both targets |
+| awards | Eligible for awards program |
+| meals | Percentage of students eligible for subsidized meals |
+| ell | 'English Language Learners' (percent) |
+| yr.rnd | Year-round school |
+| mobility | percentage of students for whom this is the first year at the school |
+| acs.k3 | average class size years K-3 |
+| acs.46 | average class size years 4-6 |
+| acs.core | Number of core academic courses |
+| pct.resp | percent where parental education level is known |
+| not.hsg | percent parents not high-school graduates |
+| hsg | percent parents who are high-school graduates |
+| some.col | percent parents with some college |
+| col.grad | percent parents with college degree |
+| grad.sch | percent parents with postgraduate education |
+| avg.ed | average parental education level |
+| full | percent fully qualified teachers |
+| emer | percent teachers with emergency qualifications |
+| enroll | number of students enrolled |
+| api.stu | number of students tested. |
