@@ -13,3 +13,13 @@ run https://tphofer.github.io/ncsp-hhcr/code/lin_reg2.do
 ```
 
 This command installs a number of programs which will facilitate the in-class work.
+
+
+## Slides
+
+[In-class slides - Model checking](web-pages/LinReg_II.html)
+
+## Example model checking
+
+[Right heart cath data LOS model checking](web-pages/linreg2_rhc_model_checking.html)
+
