@@ -397,13 +397,13 @@
     "href": "glm1.html",
     "title": "GLM and Logistic regression",
     "section": "",
-    "text": "Read the textbook chapter - GLM 1 and Logistic regression\nThe data for the problems in the Application section of this chapter can be loaded by running the following command:\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta\nThis command loads the data for the problems so you can follow along with the code presented in class."
+    "text": "Read the textbook chapter - GLM 1 and Logistic regression\nThe data for the problems in the Application section of this chapter can be loaded by running the following commands:\nProblem 1-3\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta\nProblem 5\nimport delimited using \"https://raw.githubusercontent.com/avehtari/ROS-Examples/master/Arsenic/data/wells.csv\", clear\nsum educ4,meanonly\ngen c_educ4=educ4-r(mean)\nsum dist100,meanonly\ngen c_dist100=dist100-r(mean)\nsum arsenic,meanonly\ngen c_arsenic=arsenic-r(mean)\nqui logit switch educ4 c_dist10 c_arsenic c.c_arsenic#c.c_educ4  c.c_dist100#c.c_educ4\nThese commands load the data for the problems so you can follow along with the code presented in class."
   },
   {
     "objectID": "glm1.html#setup",
     "href": "glm1.html#setup",
     "title": "GLM and Logistic regression",
     "section": "",
-    "text": "Read the textbook chapter - GLM 1 and Logistic regression\nThe data for the problems in the Application section of this chapter can be loaded by running the following command:\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta\nThis command loads the data for the problems so you can follow along with the code presented in class."
+    "text": "Read the textbook chapter - GLM 1 and Logistic regression\nThe data for the problems in the Application section of this chapter can be loaded by running the following commands:\nProblem 1-3\nuse https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta\nProblem 5\nimport delimited using \"https://raw.githubusercontent.com/avehtari/ROS-Examples/master/Arsenic/data/wells.csv\", clear\nsum educ4,meanonly\ngen c_educ4=educ4-r(mean)\nsum dist100,meanonly\ngen c_dist100=dist100-r(mean)\nsum arsenic,meanonly\ngen c_arsenic=arsenic-r(mean)\nqui logit switch educ4 c_dist10 c_arsenic c.c_arsenic#c.c_educ4  c.c_dist100#c.c_educ4\nThese commands load the data for the problems so you can follow along with the code presented in class."
   }
 ]
