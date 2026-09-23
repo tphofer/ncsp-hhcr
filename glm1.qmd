@@ -28,3 +28,13 @@ qui logit switch educ4 c_dist10 c_arsenic c.c_arsenic#c.c_educ4  c.c_dist100#c.c
 ```
 
 These commands load the data for the problems so you can follow along with the code presented in class.
+
+
+## Slides
+
+[In-class slides - GLM overview](web-pages/glm.html)
+[In-class slides - logistic regression](web-pages/logistic.html)
+
+## Problems
+
+Review in the application section of the textbook, answers are now posted.
