@@ -1,0 +1,15 @@
+---
+title: GLM and Logistic regression
+---
+
+## Setup
+
+Read the textbook chapter -  [GLM 1](https://websites.umich.edu/~thofer/teach/hhcr-book/glm_1.html) and [Logistic regression](https://websites.umich.edu/~thofer/teach/hhcr-book/logistic_reg.html)
+
+The data for the problems in the Application section of this chapter can be loaded by running the following command:
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/cvd_data.dta
+```
+
+This command loads the data for the problems so you can follow along with the code presented in class.
