@@ -1,0 +1,96 @@
+---
+title: "NCCTG Lung Cancer survival data"
+author: "North Central Cancer Treatment Group"
+date: "11/10/2026"
+date-modified: "11/10/2026"
+categories: [Survival, Clinical measurements]
+---
+
+## Source
+
+Survival in patients with advanced lung cancer from the North Central Cancer Treatment Group (NCCTG). Performance scores rate how well the patient can perform usual daily activities.
+
+The data are distributed as the `lung` dataset in the R [survival](https://cran.r-project.org/package=survival) package. The Stata file is an export of that dataset with variable and value labels added, periods in variable names replaced by underscores, and a 0/1 death indicator (`stata_status`) added.
+
+Reference: Loprinzi CL, Laurie JA, Wieand HS, et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. *Journal of Clinical Oncology*. 1994;12(3):601-607.
+
+## Dataset
+
+### Stata
+
+Download: [lung.dta](../../data/lung.dta)
+
+or use directly in code
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/lung.dta
+```
+
+Example do-file (Kaplan-Meier curves, log-rank test, Cox model): [lung_cox.do](../../data/lung_cox.do)
+
+### R
+
+The dataset is included in the survival package
+
+```r
+library(survival)
+data(cancer, package = "survival")
+head(lung)
+```
+
+The R version uses the original variable names (`ph.ecog`, `ph.karno`, `pat.karno`, `meal.cal`, `wt.loss`) and does not contain `stata_status`.
+
+## Dataset description
+
+### Features
+
+time to death, right censoring, performance status, 228 patients
+
+### Variables
+
+```
+. codebook, compact
+
+Variable      Obs Unique      Mean  Min   Max  Label
+-----------------------------------------------------------------------------------
+inst          227     18  11.08811    1    33  Institution code
+time          228    186  305.2325    5  1022  Survival time (days)
+status        228      2  1.723684    1     2  Censoring status (1=censored, 2=dead)
+age           228     42  62.44737   39    82  Age (years)
+sex           228      2  1.394737    1     2  Sex
+ph_ecog       227      4  .9515419    0     3  ECOG performance score (physician)
+ph_karno      227      6  81.93833   50   100  Karnofsky score (physician)
+pat_karno     225      8  79.95556   30   100  Karnofsky score (patient)
+meal_cal      181     60   928.779   96  2600  Calories consumed at meals
+wt_loss       214     53  9.831776  -24    68  Weight loss in last six months (lbs)
+stata_status  228      2  .7236842    0     1  Death indicator (0=censored, 1=dead)
+-----------------------------------------------------------------------------------
+```
+
+### Value labels
+
+```
+stata_status:
+           0 Censored
+           1 Dead
+ph_ecog:
+           0 Asymptomatic
+           1 Symptomatic, ambulatory
+           2 In bed <50% of day
+           3 In bed >50% of day
+           4 Bedbound
+sex:
+           1 Male
+           2 Female
+status:
+           1 Censored
+           2 Dead
+```
+
+Karnofsky scores range from 0 (dead) to 100 (normal); `ph_karno` is rated by the physician and `pat_karno` by the patient.
+
+### Survival setup in Stata
+
+```stata
+stset time, failure(stata_status == 1)
+```
