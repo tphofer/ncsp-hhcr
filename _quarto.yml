@@ -20,6 +20,8 @@ website:
       - biostat1.qmd
       - biostat2.qmd
       - linear_reg2.qmd
+      - glm1.qmd
+      - time_to_event.qmd
 author: "TPH"
 date: "today"
 code-fold: true

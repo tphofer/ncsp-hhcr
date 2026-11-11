@@ -1,0 +1,30 @@
+---
+title: Time to event models
+---
+
+## Setup
+
+Read the textbook chapter - [Time to event models](https://websites.umich.edu/~thofer/teach/hhcr-book/time_to_event.html)
+
+The data for the lab can be loaded by running the following commands:
+
+Right heart catheterization data (SUPPORT study)
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/rhc_class_tph.dta, clear
+```
+
+Lung cancer data (NCCTG)
+
+```stata
+use https://tphofer.github.io/ncsp-hhcr/data/lung.dta, clear
+```
+
+The datasets are described on the [Datafiles](data.qmd) page.
+
+
+## Slides
+
+[In-class slides - Survival analysis lab](web-pages/surv_lab_slides.html)
+
+Slides with answers - to be added after class
