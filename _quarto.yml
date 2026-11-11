@@ -4,6 +4,7 @@ project:
   resources:
     - "data/**"
     - "code/**"
+    - "web-pages/**"
 
 website:
   title: "NCSP methods class website"
