@@ -4,7 +4,7 @@
     "href": "data.html",
     "title": "Datafiles",
     "section": "",
-    "text": "NCCTG Lung Cancer survival data\n\n\n\nSurvival\n\nClinical measurements\n\n\n\n\n\n\n\n\n\nNov 10, 2026\n\n\nNorth Central Cancer Treatment Group\n\n\n\n\n\n\n\n\n\n\n\n\nFEV increase with age\n\n\n\nClinical measurements\n\n\n\n\n\n\n\n\n\nAug 13, 2026\n\n\nTager\n\n\n\n\n\n\n\n\n\n\n\n\nMEPS Datat\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nAHRQ\n\n\n\n\n\n\n\n\n\n\n\n\nNHANES Dataset\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nRAND HIE\n\n\n\nUtilization\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nSynthetic CVD dataset\n\n\n\nLogistic regression\n\nSynthetic\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nTPH\n\n\n\n\n\n\n\n\n\n\n\n\nLeft Heart Catheterization data\n\n\n\nCausal I\n\nSUPPORT Study\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nSUPPORT trial\n\n\n\n\n\n\n\n\n\n\n\n\nLow birthweight and smoking\n\n\n\nCausal I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCattaneo\n\n\n\n\n\n\n\n\n\n\n\n\nUK School Testing Data\n\n\n\nMultilevel I\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nLeckie, G.\n\n\n\n\n\n\n\n\n\n\n\n\nDoctor Visit Data\n\n\n\nBootstrap-Simulation\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCameron & Trivedi\n\n\n\n\n\n\n\n\n\n\n\n\nCalifornia School API data\n\n\n\nSurvey\n\nSampling\n\n\n\n\n\n\n\n\n\nSep 20, 2018\n\n\nUCLA ATS site\n\n\n\n\n\n\n\n\n\n\n\n\nCMS Synthetic datasets\n\n\n\nData Management\n\nSynthetic\n\nNational\n\n\n\n\n\n\n\n\n\nJan 1, 2008\n\n\nCMS\n\n\n\n\n\nNo matching items",
+    "text": "NCCTG Lung Cancer survival data\n\n\n\nSurvival\n\nClinical measurements\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2026\n\n\nNorth Central Cancer Treatment Group\n\n\n\n\n\n\n\n\n\n\n\n\nFEV increase with age\n\n\n\nClinical measurements\n\n\n\n\n\n\n\n\n\n\n\nAug 13, 2026\n\n\nTager\n\n\n\n\n\n\n\n\n\n\n\n\nMEPS Datat\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nAHRQ\n\n\n\n\n\n\n\n\n\n\n\n\nNHANES Dataset\n\n\n\nSurvey\n\nNational\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nRAND HIE\n\n\n\nUtilization\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCDC\n\n\n\n\n\n\n\n\n\n\n\n\nSynthetic CVD dataset\n\n\n\nLogistic regression\n\nSynthetic\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nTPH\n\n\n\n\n\n\n\n\n\n\n\n\nLeft Heart Catheterization data\n\n\n\nCausal I\n\nSUPPORT Study\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nSUPPORT trial\n\n\n\n\n\n\n\n\n\n\n\n\nLow birthweight and smoking\n\n\n\nCausal I\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCattaneo\n\n\n\n\n\n\n\n\n\n\n\n\nUK School Testing Data\n\n\n\nMultilevel I\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nLeckie, G.\n\n\n\n\n\n\n\n\n\n\n\n\nDoctor Visit Data\n\n\n\nBootstrap-Simulation\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\nCameron & Trivedi\n\n\n\n\n\n\n\n\n\n\n\n\nCalifornia School API data\n\n\n\nSurvey\n\nSampling\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2018\n\n\nUCLA ATS site\n\n\n\n\n\n\n\n\n\n\n\n\nCMS Synthetic datasets\n\n\n\nData Management\n\nSynthetic\n\nNational\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2008\n\n\nCMS\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Datafiles"
     ]
@@ -152,6 +152,81 @@
     "text": "Dataset description\nDescription: Deb & Trivedi (2002)\n\nWe use data from the RHIE for this study. The experiment, conducted by the RAND Corporation from 1974 to 1982, is the longest and largest controlled social experiment in medical care research. The main goal of the experiment was to assess how a patient’s use of health services is affected by types of health insurance, including both fee-for-service and health maintenance organizations (HMOs). In the RHIE, data were collected from about 8000 enrollees in 2823 families, from six sites across the country. Each family was enrolled in one of fourteen different HIS insurance plans for either 3 or 5 years. The plans ranged from free care to 95% coinsurance below a maximum dollar expenditure (MDE), to assignment in a prepaid group practice. Data were collected on the enrollee’s use of medical care services and health status throughout the term of enrollment, randomly assigned for 3 or 5 years. Certain categories of individuals were excluded, e.g. the medicare eligibles and members of the military. Detailed information on the experimental design and data collection methods are reported in Morris (1979), Taylor et al. (1987), and Newhouse et al. (1993). The sample used in this study consists of individuals in the fee-for-service plans only. Will Manning kindly provided us with a data file consisting of the identifiers for the observations used in Manning et al. (1987) along with utilization and a number of covariates. These data were merged with the public-use RHIE files available from the Inter-University Consortium for Political and Social Research (ICPSR) to obtain some additional variables. The final sample consists of 20,186 observations; each observation represents data for an experimental subject in a given year."
   },
   {
+    "objectID": "posts/lung/index.html",
+    "href": "posts/lung/index.html",
+    "title": "NCCTG Lung Cancer survival data",
+    "section": "",
+    "text": "Survival in patients with advanced lung cancer from the North Central Cancer Treatment Group (NCCTG). Performance scores rate how well the patient can perform usual daily activities.\nThe data are distributed as the lung dataset in the R survival package. The Stata file is an export of that dataset with variable and value labels added, periods in variable names replaced by underscores, and a 0/1 death indicator (stata_status) added.\nReference: Loprinzi CL, Laurie JA, Wieand HS, et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. Journal of Clinical Oncology. 1994;12(3):601-607."
+  },
+  {
+    "objectID": "posts/lung/index.html#source",
+    "href": "posts/lung/index.html#source",
+    "title": "NCCTG Lung Cancer survival data",
+    "section": "",
+    "text": "Survival in patients with advanced lung cancer from the North Central Cancer Treatment Group (NCCTG). Performance scores rate how well the patient can perform usual daily activities.\nThe data are distributed as the lung dataset in the R survival package. The Stata file is an export of that dataset with variable and value labels added, periods in variable names replaced by underscores, and a 0/1 death indicator (stata_status) added.\nReference: Loprinzi CL, Laurie JA, Wieand HS, et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. Journal of Clinical Oncology. 1994;12(3):601-607."
+  },
+  {
+    "objectID": "posts/lung/index.html#dataset",
+    "href": "posts/lung/index.html#dataset",
+    "title": "NCCTG Lung Cancer survival data",
+    "section": "Dataset",
+    "text": "Dataset\n\nStata\nDownload: lung.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/lung.dta\nExample do-file (Kaplan-Meier curves, log-rank test, Cox model): lung_cox.do\n\n\nR\nThe dataset is included in the survival package\nlibrary(survival)\ndata(cancer, package = \"survival\")\nhead(lung)\nThe R version uses the original variable names (ph.ecog, ph.karno, pat.karno, meal.cal, wt.loss) and does not contain stata_status."
+  },
+  {
+    "objectID": "posts/lung/index.html#dataset-description",
+    "href": "posts/lung/index.html#dataset-description",
+    "title": "NCCTG Lung Cancer survival data",
+    "section": "Dataset description",
+    "text": "Dataset description\n\nFeatures\ntime to death, right censoring, performance status, 228 patients\n\n\nVariables\n. codebook, compact\n\nVariable      Obs Unique      Mean  Min   Max  Label\n-----------------------------------------------------------------------------------\ninst          227     18  11.08811    1    33  Institution code\ntime          228    186  305.2325    5  1022  Survival time (days)\nstatus        228      2  1.723684    1     2  Censoring status (1=censored, 2=dead)\nage           228     42  62.44737   39    82  Age (years)\nsex           228      2  1.394737    1     2  Sex\nph_ecog       227      4  .9515419    0     3  ECOG performance score (physician)\nph_karno      227      6  81.93833   50   100  Karnofsky score (physician)\npat_karno     225      8  79.95556   30   100  Karnofsky score (patient)\nmeal_cal      181     60   928.779   96  2600  Calories consumed at meals\nwt_loss       214     53  9.831776  -24    68  Weight loss in last six months (lbs)\nstata_status  228      2  .7236842    0     1  Death indicator (0=censored, 1=dead)\n-----------------------------------------------------------------------------------\n\n\nValue labels\nstata_status:\n           0 Censored\n           1 Dead\nph_ecog:\n           0 Asymptomatic\n           1 Symptomatic, ambulatory\n           2 In bed &lt;50% of day\n           3 In bed &gt;50% of day\n           4 Bedbound\nsex:\n           1 Male\n           2 Female\nstatus:\n           1 Censored\n           2 Dead\nKarnofsky scores range from 0 (dead) to 100 (normal); ph_karno is rated by the physician and pat_karno by the patient.\n\n\nSurvival setup in Stata\nstset time, failure(stata_status == 1)"
+  },
+  {
+    "objectID": "biostat2.html",
+    "href": "biostat2.html",
+    "title": "Biostatistics II",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Biostatistics II"
+    ]
+  },
+  {
+    "objectID": "biostat2.html#setup",
+    "href": "biostat2.html#setup",
+    "title": "Biostatistics II",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
+    "crumbs": [
+      "Biostatistics II"
+    ]
+  },
+  {
+    "objectID": "biostat1.html",
+    "href": "biostat1.html",
+    "title": "Biostatistics I",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
+    "crumbs": [
+      "Biostatistics I"
+    ]
+  },
+  {
+    "objectID": "biostat1.html#setup",
+    "href": "biostat1.html#setup",
+    "title": "Biostatistics I",
+    "section": "",
+    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
+    "crumbs": [
+      "Biostatistics I"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "NCSP methods class website",
+    "section": "",
+    "text": "MIT"
+  },
+  {
     "objectID": "posts/meps/index.html",
     "href": "posts/meps/index.html",
     "title": "MEPS Datat",
@@ -178,53 +253,6 @@
     "title": "MEPS Datat",
     "section": "Dataset description",
     "text": "Dataset description\nQuick Reference Guides\nExample do file for estimating 2019 Total Expenditures by event type and source of payment\n\nFeatures\nAHRQ website with full descriptions of MEPS\n\n\nVariables\nVary by file"
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "NCSP methods class website",
-    "section": "",
-    "text": "MIT"
-  },
-  {
-    "objectID": "biostat1.html",
-    "href": "biostat1.html",
-    "title": "Biostatistics I",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
-    "crumbs": [
-      "Biostatistics I"
-    ]
-  },
-  {
-    "objectID": "biostat1.html#setup",
-    "href": "biostat1.html#setup",
-    "title": "Biostatistics I",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics I\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat1.do\nThis command installs a number of programs which will facilitate the in-class work. (nothing will happen when you run this command but it will load the examples and problems into your stata environment so that you can run the commands in the examples and problems below)\nWe will also be using iclicker for answering questions in class.\niclicker class link (first time it will ask you to create an account - NOTE: be sure to use your &lt;uniqname&gt;@umich.edu address.",
-    "crumbs": [
-      "Biostatistics I"
-    ]
-  },
-  {
-    "objectID": "biostat2.html",
-    "href": "biostat2.html",
-    "title": "Biostatistics II",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
-    "crumbs": [
-      "Biostatistics II"
-    ]
-  },
-  {
-    "objectID": "biostat2.html#setup",
-    "href": "biostat2.html#setup",
-    "title": "Biostatistics II",
-    "section": "",
-    "text": "Read the textbook chapter - Foundations - Biostatistics II\nThe examples and problems for this chapter can be loaded into Stata by running the following command:\nrun https://tphofer.github.io/ncsp-hhcr/code/biostat2.do\nThis command installs a number of programs which will facilitate the in-class work.",
-    "crumbs": [
-      "Biostatistics II"
-    ]
   },
   {
     "objectID": "posts/nhanes/index.html",
@@ -419,33 +447,5 @@
     "title": "GLM and Logistic regression",
     "section": "Problems",
     "text": "Problems\nReview in the application section of the textbook, answers are now posted."
-  },
-  {
-    "objectID": "posts/lung/index.html",
-    "href": "posts/lung/index.html",
-    "title": "NCCTG Lung Cancer survival data",
-    "section": "",
-    "text": "Survival in patients with advanced lung cancer from the North Central Cancer Treatment Group (NCCTG). Performance scores rate how well the patient can perform usual daily activities.\nThe data are distributed as the lung dataset in the R survival package. The Stata file is an export of that dataset with variable and value labels added, periods in variable names replaced by underscores, and a 0/1 death indicator (stata_status) added.\nReference: Loprinzi CL, Laurie JA, Wieand HS, et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. Journal of Clinical Oncology. 1994;12(3):601-607."
-  },
-  {
-    "objectID": "posts/lung/index.html#source",
-    "href": "posts/lung/index.html#source",
-    "title": "NCCTG Lung Cancer survival data",
-    "section": "",
-    "text": "Survival in patients with advanced lung cancer from the North Central Cancer Treatment Group (NCCTG). Performance scores rate how well the patient can perform usual daily activities.\nThe data are distributed as the lung dataset in the R survival package. The Stata file is an export of that dataset with variable and value labels added, periods in variable names replaced by underscores, and a 0/1 death indicator (stata_status) added.\nReference: Loprinzi CL, Laurie JA, Wieand HS, et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. Journal of Clinical Oncology. 1994;12(3):601-607."
-  },
-  {
-    "objectID": "posts/lung/index.html#dataset",
-    "href": "posts/lung/index.html#dataset",
-    "title": "NCCTG Lung Cancer survival data",
-    "section": "Dataset",
-    "text": "Dataset\n\nStata\nDownload: lung.dta\nor use directly in code\nuse https://tphofer.github.io/ncsp-hhcr/data/lung.dta\nExample do-file (Kaplan-Meier curves, log-rank test, Cox model): lung_cox.do\n\n\nR\nThe dataset is included in the survival package\nlibrary(survival)\ndata(cancer, package = \"survival\")\nhead(lung)\nThe R version uses the original variable names (ph.ecog, ph.karno, pat.karno, meal.cal, wt.loss) and does not contain stata_status."
-  },
-  {
-    "objectID": "posts/lung/index.html#dataset-description",
-    "href": "posts/lung/index.html#dataset-description",
-    "title": "NCCTG Lung Cancer survival data",
-    "section": "Dataset description",
-    "text": "Dataset description\n\nFeatures\ntime to death, right censoring, performance status, 228 patients\n\n\nVariables\n. codebook, compact\n\nVariable      Obs Unique      Mean  Min   Max  Label\n-----------------------------------------------------------------------------------\ninst          227     18  11.08811    1    33  Institution code\ntime          228    186  305.2325    5  1022  Survival time (days)\nstatus        228      2  1.723684    1     2  Censoring status (1=censored, 2=dead)\nage           228     42  62.44737   39    82  Age (years)\nsex           228      2  1.394737    1     2  Sex\nph_ecog       227      4  .9515419    0     3  ECOG performance score (physician)\nph_karno      227      6  81.93833   50   100  Karnofsky score (physician)\npat_karno     225      8  79.95556   30   100  Karnofsky score (patient)\nmeal_cal      181     60   928.779   96  2600  Calories consumed at meals\nwt_loss       214     53  9.831776  -24    68  Weight loss in last six months (lbs)\nstata_status  228      2  .7236842    0     1  Death indicator (0=censored, 1=dead)\n-----------------------------------------------------------------------------------\n\n\nValue labels\nstata_status:\n           0 Censored\n           1 Dead\nph_ecog:\n           0 Asymptomatic\n           1 Symptomatic, ambulatory\n           2 In bed &lt;50% of day\n           3 In bed &gt;50% of day\n           4 Bedbound\nsex:\n           1 Male\n           2 Female\nstatus:\n           1 Censored\n           2 Dead\nKarnofsky scores range from 0 (dead) to 100 (normal); ph_karno is rated by the physician and pat_karno by the patient.\n\n\nSurvival setup in Stata\nstset time, failure(stata_status == 1)"
   }
 ]
